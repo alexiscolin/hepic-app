@@ -2,6 +2,8 @@
 
 > Hepic app made with VueJS + WebPack + LESS
 
+App accessible via Netlify sur https://hepic-app.netlify.com/
+
 ## Build Setup
 
 ``` bash
