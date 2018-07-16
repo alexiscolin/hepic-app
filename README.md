@@ -1,6 +1,6 @@
 # hepic
 
-> Hepic app made with VueJS + WebPack + LESS
+> Hepic app made with VueJS + WebPack + LESS + Pug(Jade)
 
 App accessible via Netlify sur https://hepic-app.netlify.com/
 
