@@ -2,7 +2,6 @@
   <div id="app">
     <spriteSvg/>
     <Header/>
-    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
