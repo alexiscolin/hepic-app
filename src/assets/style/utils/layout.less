@@ -1,0 +1,263 @@
+@import "./var.less";
+@import "./atom.less";
+
+
+html{
+  font-size: ~"calc(0.875em + 0.25 * (100vw - 25em) / 40)";
+}
+
+body{
+  background: @bg;
+  font-family: Grotesk;
+  font-weight: @f-reg;
+  line-height: 1.35;
+  font-size: .8rem;
+  color: @b-grey;
+}
+
+ul{
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+a{
+  color: @fg;
+}
+
+button{
+  background: none;
+  outline: none;
+  border: 0;
+}
+
+//------- LAYOUT ZONES -------
+// ---------------------------
+//
+
+.o-main{
+  padding-top: @maintop-margin;
+  min-height: 100vh;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.o-main__container{
+  @media (min-width: @tab){
+      padding: 0 @space * 6;
+  }
+}
+
+.o-title{ height: @space-h-unit * 2; }
+
+.o-plain-img{
+  height: 38vh;
+  max-width: 100%;
+  object-fit: contain;
+}
+.o-plain-img--large{
+  @media (min-width: @desktop){
+    height: 60vh;
+  }
+}
+
+
+//------- ICO BOX -------
+// ----------------------
+//
+.o-inlinebox{ display: inline-block; }
+.o-svgh-ico{
+  display: inline-block;
+  height: 100%;
+}
+.o-svgw-ico{
+  display: inline-block;
+  width: 100%;
+}
+
+
+
+//------- ICO MORE -------
+// ----------------------
+//
+.o-more{
+  position: relative;
+  @size: 4px;
+  display: block;
+  margin-right: @size + 2px;
+  width: @size;
+  height: @size;
+  background: @l-grey;
+  border-radius: @size;
+
+  &:before,
+  &:after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    right: @size + 3px;
+    width: @size;
+    height: @size;
+    background: @l-grey;
+    border-radius: @size;
+  }
+
+  &:after{ right: -@size*2; }
+}
+
+//------- ICO MEDALS -----
+// ----------------------
+//
+.o-ico-sprite{
+  @size: 1.5rem;
+  position: absolute;
+  width: @size;
+  height: @size;
+  top: @space;
+  right: @space;
+  border: 5px solid white;
+  box-sizing: content-box;
+  border-radius: @size;
+  background-color: @bg;
+  background-image: url('../../img/sprite@1x.png');
+  background-size: auto @size - .2em;
+  background-repeat: no-repeat;
+
+  @media only screen and (-webkit-min-device-pixel-ratio: @px-ratio), only screen and (min-device-pixel-ratio: @px-ratio){
+    background-image: url('../../img/sprite@2x.png');
+  }
+}
+.o-ico-sprite--or{ background-position: 1% 55%; }
+.o-ico-sprite--argent{ background-position: 49% 55%; }
+.o-ico-sprite--bronze{ background-position: 96% 55%; }
+
+.o-ico-sprite--little{
+  @size: 1rem;
+  border: 2px solid white;
+  width: @size;
+  height: @size;
+  background-size: auto @size - .11em;
+
+  // &.o-ico-sprite--or{ background-position: 0 1px; }
+  // &.o-ico-sprite--argent{ background-position: 48% 1px; }
+  // &.o-ico-sprite--bronze{ background-position: 96px 1px; }
+}
+
+.o-ico-sprite--inline{
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  border: 0;
+  top: inherit;
+  right: inherit;
+}
+
+.o-ico-sprite--num{ background: @bg; }
+
+//------- ICO BUTTON -------
+// ------------------------
+//
+.o-svg-btn{
+  width: @ico-width;
+  height: @ico-width;
+
+  @media (min-width: @desktop){
+    width: @ico-width / 1.5;
+    height: @ico-width / 1.5;
+  }
+}
+
+.checkbox-custom, .radio-custom {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.checkbox-custom-label, .radio-custom-label {
+    position: relative;
+}
+
+.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+
+//------- BACK BUTTON -------
+// --------------------------
+//
+
+.o-back{
+  position: absolute;
+  display: flex;
+  &:extend(.cf-grey);
+  &:extend(.d-flex-vm);
+}
+
+
+//------- CHECK BUTTON -------
+// --------------------------
+//
+
+.o-checkbox{
+  opacity: 0;
+  position: absolute;
+}
+
+.o-checkbox, .o-checkbox-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.o-checkbox-label{ position: relative; }
+
+.o-checkbox + .o-checkbox-label:before {
+  content: '';
+  background: #fff;
+  border: 1px solid @fg;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.o-checkbox:checked + .o-checkbox-label:before {
+  background: @fg;
+  box-shadow: inset 0px 0px 0px 2px #fff;
+}
+
+.o-checkbox:focus + .o-checkbox-label {
+  outline: 1px solid #ddd; /* focus style */
+}
+
+
+//------- CONTAINER -------
+// --------------------------
+//
+
+.o-container{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: @fg;
+}

@@ -1,0 +1,27 @@
+@import "../utils/var";
+
+// 1 column by default, hide columns 2 & 3
+.grid-col--2, .grid-col--3 { display: none }
+.grid-col--3 { margin-right: 0; }
+
+// 2 columns at medium size
+@media ( min-width: @tab ){
+  .grid-col{ margin-right: 2%; }
+
+  //show column 2
+  .grid-col--2 {
+    display: block;
+    margin-right: 0;
+  }
+}
+
+// 3 columns at large size
+@media ( min-width: @desktop ){
+  .grid-col--2{ margin-right: 2%; }
+
+  // show column 3
+  .grid-col--3 {
+    display: block;
+    margin-right: 0;
+  }
+}
