@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import spriteSvg from './components/layout/svg/Svg';
-import Header from './components/layout/header/Header';
-import Footer from './components/layout/footer/Footer';
+import spriteSvg from './components/layout/svg/Svg.vue';
+import Header from './components/layout/header/Header.vue';
+import Footer from './components/layout/footer/Footer.vue';
 
 export default {
   name: 'App',
