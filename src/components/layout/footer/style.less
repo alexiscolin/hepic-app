@@ -1,0 +1,30 @@
+@import "~@@/utils/var";
+
+.o-footer-gradient{
+  position: fixed;
+  bottom: 0;
+  height: 45vh;
+  width: 100%;
+  background: @dark-grad;
+  z-index: -1;
+
+  @media (min-width: @tab){
+    height: 35vh;
+
+    &::before{
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: 2vw;
+      right: 2vw;
+      width: 150px;
+      height: 60px;
+      background: no-repeat center / contain url('~@/assets/img/hepic@1x.png');
+      z-index: 1;
+
+      @media only screen and (-webkit-min-device-pixel-ratio: @px-ratio), only screen and (min-device-pixel-ratio: @px-ratio){
+        background: no-repeat center / contain url('~@/assets/img/hepic@2x.png');
+      }
+    }
+  }
+}
