@@ -1,10 +1,17 @@
 import Colcade from 'Colcade';
+import config from './config.json';
+import fluxTile from './tile';
+import fluxPodium from './podium';
 
 export default {
-  name: 'tilesFlux',
+  name: 'mainFlux',
+  components: {
+    fluxTile,
+    fluxPodium
+  },
   data() {
     return {
-      msg: 'Hello tout le monde !',
+      contests: config.contests,
     };
   },
   mounted: function(){

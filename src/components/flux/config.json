@@ -14,6 +14,21 @@
     },
     {
       "id": 1,
+      "brand": "Nike",
+      "desc": "Shoes contest 2018",
+      "gifts": "Bons d’achats 50€",
+      "logo": "https://d33wubrfki0l68.cloudfront.net/3688a18d8ddf38bd7dce9ffb70de38df493477e6/41ffb/assets/img/brands/nike/logo@2x.png",
+      "dateStart": "01/02/18",
+      "dateEnd": "30/03/18",
+      "target": "Vous au festival !",
+      "pictures": [
+        "https://d33wubrfki0l68.cloudfront.net/3d89602d464a4b85f89fe46f2ce0f71b0c1ae916/c221c/assets/img/brands/nike/nike-femme.jpg",
+        "https://d33wubrfki0l68.cloudfront.net/9bef1d49979b1c29d92cb5fab0f6323f0c5c31cd/bea0a/assets/img/brands/nike/nike-blanc.jpg",
+        "https://d33wubrfki0l68.cloudfront.net/1d80494c59e918e1e94ceb9079e29c0fb83170a0/ff447/assets/img/brands/nike/nike-course.jpg"
+      ]
+    },
+    {
+      "id": 2,
       "brand": "Imaginarium festival",
       "desc": "Dance photo contest",
       "target": "Vous au festival !",
@@ -25,7 +40,7 @@
       "logo": "https://d33wubrfki0l68.cloudfront.net/62538bbce3b5ad97d91e81e3b3720b415e524886/2bdd7/assets/img/brands/imaginarium/logo@2x.png"
     },
     {
-      "id": 2,
+      "id": 3,
       "brand": "SkiPass'",
       "desc": "Ski Photo Contest",
       "gifts": "1 paire de ski Rossignol",
@@ -36,7 +51,7 @@
       "target": "Le ski alpin en famille"
     },
     {
-      "id": 3,
+      "id": 4,
       "brand": "AirFrance",
       "desc": "Concours Dans les Airs",
       "ban": "https://d33wubrfki0l68.cloudfront.net/d70e6728b00b6a62b3498f223954047821b22840/5d5be/assets/img/brands/airfrance/airfrance.jpg",
