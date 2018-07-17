@@ -1,4 +1,4 @@
-import Colcade from 'Colcade';
+import Colcade from 'colcade';
 import config from './config.json';
 import fluxTile from './tile';
 import fluxPodium from './podium';
