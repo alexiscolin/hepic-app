@@ -1,0 +1,50 @@
+
+{
+  "contests": [
+    {
+      "id": 0,
+      "brand": "Bang & Olufsen",
+      "desc": "Grand Contests 2018",
+      "gifts": "10 enceintes B&O",
+      "ban": "https://d33wubrfki0l68.cloudfront.net/55b5141bf2a0b3b117b3f2cbefdf571f2c318363/a3e24/assets/img/brands/bangolufsen/bangolufsen.jpg",
+      "logo": "https://d33wubrfki0l68.cloudfront.net/03cb1692c63e26f8b07bc9be060a4f1b3b3151da/0d9d2/assets/img/brands/bangolufsen/logo.jpg",
+      "dateStart": "22/08/18",
+      "dateEnd": "30/09/18",
+      "target": "Enceinte portable B&O en pleine action"
+    },
+    {
+      "id": 1,
+      "brand": "Imaginarium festival",
+      "desc": "Dance photo contest",
+      "target": "Vous au festival !",
+      "ban": "https://d33wubrfki0l68.cloudfront.net/2d63b5cb6bc7b50975ad3f52aad08f0ced7ee653/4255c/assets/img/brands/imaginarium/imaginarium-pic.jpg",
+      "gifts": "Chèques Cadeaux 100€, 50€, 30€",
+      "infos": "Le grand Festival UTCéen rembourse les pass des danceurs les plus talentueux; que le meilleur gagne!",
+      "dateStart": "01/02/18",
+      "dateEnd": "30/03/18",
+      "logo": "https://d33wubrfki0l68.cloudfront.net/62538bbce3b5ad97d91e81e3b3720b415e524886/2bdd7/assets/img/brands/imaginarium/logo@2x.png"
+    },
+    {
+      "id": 2,
+      "brand": "SkiPass'",
+      "desc": "Ski Photo Contest",
+      "gifts": "1 paire de ski Rossignol",
+      "ban": "https://d33wubrfki0l68.cloudfront.net/31c8035630a9e4f516f403d65d67e6f5b33e0dd4/0f9a8/assets/img/brands/skipass/skipass.jpg",
+      "logo": "https://d33wubrfki0l68.cloudfront.net/83cf723c946caebac24bb30c468dd38a6489d75b/6f3b1/assets/img/brands/skipass/logo.png",
+      "dateStart": "01/02/18",
+      "dateEnd": "30/03/18",
+      "target": "Le ski alpin en famille"
+    },
+    {
+      "id": 3,
+      "brand": "AirFrance",
+      "desc": "Concours Dans les Airs",
+      "ban": "https://d33wubrfki0l68.cloudfront.net/d70e6728b00b6a62b3498f223954047821b22840/5d5be/assets/img/brands/airfrance/airfrance.jpg",
+      "target": "Photo de votre voyage AirFrance",
+      "gifts": "3 voyages aux Caraïbes",
+      "dateStart": "23/04/19",
+      "dateEnd": "23/05/19",
+      "logo": "https://d33wubrfki0l68.cloudfront.net/c583b6ddcda001fc9a0ee0d69257efe4ec1d4b7e/af218/assets/img/brands/airfrance/logo.jpg"
+    }
+  ]
+}
