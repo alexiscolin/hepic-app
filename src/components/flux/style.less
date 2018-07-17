@@ -1,5 +1,6 @@
 @import "~@@/utils/var";
 
+
 // 1 column by default, hide columns 2 & 3
 .grid-col--2, .grid-col--3 { display: none }
 .grid-col--3 { margin-right: 0; }
@@ -23,5 +24,21 @@
   .grid-col--3 {
     display: block;
     margin-right: 0;
+  }
+}
+
+
+
+//----------------
+//  TILES
+
+.o-tile{
+  position: relative;
+  overflow: hidden;
+  margin-bottom: @space * 2;
+  background: @bg;
+
+  @media (min-width: @tab){
+    margin-bottom: @space * 2;
   }
 }
