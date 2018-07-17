@@ -3,6 +3,6 @@ main.o-main.o-grid.pl-1.pr-1.pb-1.d-flex.p-center-auto
   .grid-col.grid-col--2.d-flex-eq
   .grid-col.grid-col--3.d-flex-eq
     
-  div(v-for="contest in contests" :key="contest.id")
+  article(v-for="contest in contests" :key="contest.id" class="o-tile o-tile-grided brad-4 shadbox-light")
     flux-tile(:data="contest" v-if="!contest.pictures")
     flux-podium(:data="contest" v-else="contest.pictures")
