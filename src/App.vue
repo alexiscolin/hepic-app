@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-    <spriteSvg/>
-    <Header/>
+    <sprite-svg/>
+    <app-header/>
     <router-view/>
-    <Footer/>
+    <app-footer/>
   </div>
 </template>
 
 <script>
-import spriteSvg from './components/layout/svg/Svg';
-import Header from './components/layout/header/Header';
-import Footer from './components/layout/footer/Footer';
+import spriteSvg from './components/layout/svg';
+import appHeader from './components/layout/header';
+import appFooter from './components/layout/footer';
 
 export default {
   name: 'App',
   components: {
     spriteSvg,
-    Header,
-    Footer,
+    appHeader,
+    appFooter,
   },
 };
 </script>

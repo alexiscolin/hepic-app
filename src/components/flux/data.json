@@ -1,0 +1,50 @@
+
+{
+  "contests": [
+    {
+      "id": 0,
+      "brand": "Bang & Olufsen",
+      "desc": "Grand Contests 2018",
+      "gifts": "10 enceintes B&O",
+      "ban": "@/assets/img/brands/bangolufsen/bangolufsen.jpg",
+      "logo": "@/assets/img/brands/bangolufsen/logo.jpg",
+      "dateStart": "22/08/18",
+      "dateEnd": "30/09/18",
+      "target": "Enceinte portable B&O en pleine action"
+    },
+    {
+      "id": 1,
+      "brand": "Imaginarium festival",
+      "desc": "Dance photo contest",
+      "target": "Vous au festival !",
+      "ban": "@/assets/img/brands/imaginarium/imaginarium-pic.jpg",
+      "gifts": "Chèques Cadeaux 100€, 50€, 30€",
+      "infos": "Le grand Festival UTCéen rembourse les pass des danceurs les plus talentueux; que le meilleur gagne!",
+      "dateStart": "01/02/18",
+      "dateEnd": "30/03/18",
+      "logo": "@/assets/img/brands/imaginarium/logo@2x.png"
+    },
+    {
+      "id": 2,
+      "brand": "SkiPass'",
+      "desc": "Ski Photo Contest",
+      "gifts": "1 paire de ski Rossignol",
+      "ban": "@/assets/img/brands/skipass/skipass.jpg",
+      "logo": "@/assets/img/brands/skipass/logo.png",
+      "dateStart": "01/02/18",
+      "dateEnd": "30/03/18",
+      "target": "Le ski alpin en famille"
+    },
+    {
+      "id": 3,
+      "brand": "AirFrance",
+      "desc": "Concours Dans les Airs",
+      "ban": "@/assets/img/brands/airfrance/airfrance.jpg",
+      "target": "Photo de votre voyage AirFrance",
+      "gifts": "3 voyages aux Caraïbes",
+      "dateStart": "23/04/19",
+      "dateEnd": "23/05/19",
+      "logo": "@/assets/img/brands/airfrance/logo.jpg"
+    }
+  ]
+}
