@@ -1,3 +1,3 @@
 <template src="./template.pug" lang="pug"></template>
-<script src="./index.js"></script>
+<script src="./script.js"></script>
 <style src="./style.less" lang="less"></style>

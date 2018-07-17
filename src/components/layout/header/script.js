@@ -1,5 +1,5 @@
 export default {
-  name: 'header',
+  name: 'appHeader',
   data() {
     return {
       msg: 'Hello tout le monde !',
