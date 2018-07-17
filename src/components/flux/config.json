@@ -10,6 +10,7 @@
       "logo": "https://d33wubrfki0l68.cloudfront.net/03cb1692c63e26f8b07bc9be060a4f1b3b3151da/0d9d2/assets/img/brands/bangolufsen/logo.jpg",
       "dateStart": "22/08/18",
       "dateEnd": "30/09/18",
+      "closed": false,
       "target": "Enceinte portable B&O en pleine action"
     },
     {
@@ -37,6 +38,7 @@
       "infos": "Le grand Festival UTCéen rembourse les pass des danceurs les plus talentueux; que le meilleur gagne!",
       "dateStart": "01/02/18",
       "dateEnd": "30/03/18",
+      "closed": false,
       "logo": "https://d33wubrfki0l68.cloudfront.net/62538bbce3b5ad97d91e81e3b3720b415e524886/2bdd7/assets/img/brands/imaginarium/logo@2x.png"
     },
     {
@@ -48,7 +50,8 @@
       "logo": "https://d33wubrfki0l68.cloudfront.net/83cf723c946caebac24bb30c468dd38a6489d75b/6f3b1/assets/img/brands/skipass/logo.png",
       "dateStart": "01/02/18",
       "dateEnd": "30/03/18",
-      "target": "Le ski alpin en famille"
+      "target": "Le ski alpin en famille",
+      "closed": false
     },
     {
       "id": 4,
@@ -56,10 +59,39 @@
       "desc": "Concours Dans les Airs",
       "ban": "https://d33wubrfki0l68.cloudfront.net/d70e6728b00b6a62b3498f223954047821b22840/5d5be/assets/img/brands/airfrance/airfrance.jpg",
       "target": "Photo de votre voyage AirFrance",
+      "closed": false,
       "gifts": "3 voyages aux Caraïbes",
       "dateStart": "23/04/19",
       "dateEnd": "23/05/19",
       "logo": "https://d33wubrfki0l68.cloudfront.net/c583b6ddcda001fc9a0ee0d69257efe4ec1d4b7e/af218/assets/img/brands/airfrance/logo.jpg"
+    },
+    {
+      "id": 5,
+      "brand": "McDonald's",
+      "desc": "Burger photo contest",
+      "gifts": "Une année de repas gratuit",
+      "logo": "https://d33wubrfki0l68.cloudfront.net/21c78290684ec37a245d26464e0212617dd73603/3097d/assets/img/brands/macdonalds/logo.png",
+      "dateStart": "01/06/18",
+      "dateEnd": "30/06/18",
+      "target": "Votre burger McDonald's !",
+      "pictures": [
+        "https://d33wubrfki0l68.cloudfront.net/2d360b7a3f4ceedf6c1ec2936e1d5eb9b45c0125/c260b/assets/img/brands/macdonalds/burgernoir.jpg",
+        "https://d33wubrfki0l68.cloudfront.net/e82d8e914ca54336a4551ece61049f10fd124f53/7016e/assets/img/brands/macdonalds/tortue.jpg",
+        "https://d33wubrfki0l68.cloudfront.net/0e91f1168706b6dc142d8818f77b9a8422adfd2e/de0f5/assets/img/brands/macdonalds/burgershoes.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "brand": "Nutella",
+      "desc": "Nutella Moment Contest",
+      "ban": "https://d33wubrfki0l68.cloudfront.net/3351235c9d7be695d113d79967d7fb865989d28d/34183/assets/img/brands/nutella/nutella.jpg",
+      "target": "Vous au festival !",
+      "closed": true,
+      "gifts": "1 an de nutella à volonté",
+      "dateStart": "01/02/18",
+      "dateEnd": "30/03/18",
+      "logo": "https://d33wubrfki0l68.cloudfront.net/5e69f8b241a550f6a09837158256a3d13f897921/58387/assets/img/brands/nutella/logo.jpg"
+
     }
   ]
 }

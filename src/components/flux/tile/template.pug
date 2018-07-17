@@ -1,25 +1,39 @@
 article.o-tile.o-tile-grided.brad-4.shadbox-light
   a(href="./contest.html").no-link
+  
+    div(v-if="data.closed")
+      img(srcset="@/assets/img/flag@2x.png 2x, @/assets/img/flag@1x.png 1x" src="@/assets/img/flag@1x.png").o-tile-closingimg.p-abs.p-init.w-60
+
     img(:src="data.ban", alt="").full-width
     .o-tile__info 
       img(:src="data.logo" alt="logo").o-tile__logo.b-10.brad-100
       h2.o-tile__name.p-hcenter-rel.f-cap.f-st {{ data.brand }}
       h3.o-tile__desc.p-hcenter-rel.f-grey.f-cap.f-light.f-stl {{ data.desc }}
       
-      ul.d-row-flex.no-list.pt-1.pb-1
-        li.p-hcenter-rel.d-flex-eq.f-light.f-si 
-          svg(viewBox="0 0 62.37 62.37").o-tile__ico
-            use(xlink:href="#ico-cible")
-          span {{ data.target }}
-        li.p-hcenter-rel.d-flex-eq.pl-1.pr-1.f-light.f-si 
-          svg(viewBox="0 0 64.22 62.67").o-tile__ico
-            use(xlink:href="#ico-gift")
-          span  {{ data.gifts }}
+      div(v-if="data.closed")
+        .f-bold.f-sfat.f-center.pt-05.pb-05
+          | Clotûre des participations
           
-        li.p-hcenter-rel.d-flex-eq.f-light.f-si 
-          //- state === "closing" -> pour tile de style fermeture imminente
-          svg(viewBox="0 0 60.09 60.09" class={"cf-orange": state === "closing"}).o-tile__ico
-            use(xlink:href="#ico-clock")
-          div
-            div(class={"c-grad-yo": state === "closing"}) du {{ data.dateStart }}
-            div(class={"c-grad-yo f-stl": state === "closing"}) au {{ data.dateEnd }}
+        .f-light.pb-05.f-center
+          svg(viewBox="0 0 64.22 62.67").o-tile__ico--inline.pb-05.mr-05.va-mid
+            use(xlink:href="#ico-gift")
+          span.va-mid.f-stl {{ data.gifts }}
+          
+      div(v-if="!data.closed")
+        ul.d-row-flex.no-list.pt-1.pb-1
+          li.p-hcenter-rel.d-flex-eq.f-light.f-si 
+            svg(viewBox="0 0 62.37 62.37").o-tile__ico
+              use(xlink:href="#ico-cible")
+            span {{ data.target }}
+          li.p-hcenter-rel.d-flex-eq.pl-1.pr-1.f-light.f-si 
+            svg(viewBox="0 0 64.22 62.67").o-tile__ico
+              use(xlink:href="#ico-gift")
+            span  {{ data.gifts }}
+            
+          li.p-hcenter-rel.d-flex-eq.f-light.f-si 
+            //- state === "closing" -> pour tile de style fermeture imminente
+            svg(viewBox="0 0 60.09 60.09" class={"cf-orange": state === "closing"}).o-tile__ico
+              use(xlink:href="#ico-clock")
+            div
+              div(class={"c-grad-yo": state === "closing"}) du {{ data.dateStart }}
+              div(class={"c-grad-yo f-stl": state === "closing"}) au {{ data.dateEnd }}
