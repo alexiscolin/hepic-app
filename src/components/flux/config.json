@@ -8,8 +8,8 @@
       "gifts": "10 enceintes B&O",
       "ban": "https://d33wubrfki0l68.cloudfront.net/55b5141bf2a0b3b117b3f2cbefdf571f2c318363/a3e24/assets/img/brands/bangolufsen/bangolufsen.jpg",
       "logo": "https://d33wubrfki0l68.cloudfront.net/03cb1692c63e26f8b07bc9be060a4f1b3b3151da/0d9d2/assets/img/brands/bangolufsen/logo.jpg",
-      "dateStart": "22/08/18",
-      "dateEnd": "30/09/18",
+      "dateStart": "2018-08-22",
+      "dateEnd": "2018-07-27",
       "closed": false,
       "target": "Enceinte portable B&O en pleine action"
     },
@@ -19,8 +19,8 @@
       "desc": "Shoes contest 2018",
       "gifts": "Bons d’achats 50€",
       "logo": "https://d33wubrfki0l68.cloudfront.net/3688a18d8ddf38bd7dce9ffb70de38df493477e6/41ffb/assets/img/brands/nike/logo@2x.png",
-      "dateStart": "01/02/18",
-      "dateEnd": "30/03/18",
+      "dateStart": "2018-02-01",
+      "dateEnd": "2018-03-25",
       "target": "Vous au festival !",
       "pictures": [
         "https://d33wubrfki0l68.cloudfront.net/3d89602d464a4b85f89fe46f2ce0f71b0c1ae916/c221c/assets/img/brands/nike/nike-femme.jpg",
@@ -36,8 +36,8 @@
       "ban": "https://d33wubrfki0l68.cloudfront.net/2d63b5cb6bc7b50975ad3f52aad08f0ced7ee653/4255c/assets/img/brands/imaginarium/imaginarium-pic.jpg",
       "gifts": "Chèques Cadeaux 100€, 50€, 30€",
       "infos": "Le grand Festival UTCéen rembourse les pass des danceurs les plus talentueux; que le meilleur gagne!",
-      "dateStart": "01/02/18",
-      "dateEnd": "30/03/18",
+      "dateStart": "2018-02-01",
+      "dateEnd": "2018-03-17",
       "closed": false,
       "logo": "https://d33wubrfki0l68.cloudfront.net/62538bbce3b5ad97d91e81e3b3720b415e524886/2bdd7/assets/img/brands/imaginarium/logo@2x.png"
     },
@@ -48,8 +48,8 @@
       "gifts": "1 paire de ski Rossignol",
       "ban": "https://d33wubrfki0l68.cloudfront.net/31c8035630a9e4f516f403d65d67e6f5b33e0dd4/0f9a8/assets/img/brands/skipass/skipass.jpg",
       "logo": "https://d33wubrfki0l68.cloudfront.net/83cf723c946caebac24bb30c468dd38a6489d75b/6f3b1/assets/img/brands/skipass/logo.png",
-      "dateStart": "01/02/18",
-      "dateEnd": "30/03/18",
+      "dateStart": "2018-02-01",
+      "dateEnd": "2018-08-25",
       "target": "Le ski alpin en famille",
       "closed": false
     },
@@ -61,8 +61,8 @@
       "target": "Photo de votre voyage AirFrance",
       "closed": false,
       "gifts": "3 voyages aux Caraïbes",
-      "dateStart": "23/04/19",
-      "dateEnd": "23/05/19",
+      "dateStart": "2018-04-19",
+      "dateEnd": "2019-05-23",
       "logo": "https://d33wubrfki0l68.cloudfront.net/c583b6ddcda001fc9a0ee0d69257efe4ec1d4b7e/af218/assets/img/brands/airfrance/logo.jpg"
     },
     {
@@ -71,8 +71,8 @@
       "desc": "Burger photo contest",
       "gifts": "Une année de repas gratuit",
       "logo": "https://d33wubrfki0l68.cloudfront.net/21c78290684ec37a245d26464e0212617dd73603/3097d/assets/img/brands/macdonalds/logo.png",
-      "dateStart": "01/06/18",
-      "dateEnd": "30/06/18",
+      "dateStart": "2018-06-01",
+      "dateEnd": "2018-06-30",
       "target": "Votre burger McDonald's !",
       "pictures": [
         "https://d33wubrfki0l68.cloudfront.net/2d360b7a3f4ceedf6c1ec2936e1d5eb9b45c0125/c260b/assets/img/brands/macdonalds/burgernoir.jpg",
@@ -88,8 +88,8 @@
       "target": "Vous au festival !",
       "closed": true,
       "gifts": "1 an de nutella à volonté",
-      "dateStart": "01/02/18",
-      "dateEnd": "30/03/18",
+      "dateStart": "2018-02-01",
+      "dateEnd": "2018-03-20",
       "logo": "https://d33wubrfki0l68.cloudfront.net/5e69f8b241a550f6a09837158256a3d13f897921/58387/assets/img/brands/nutella/logo.jpg"
 
     }

@@ -35,9 +35,10 @@ article.o-tile.o-tile-grided.brad-4.shadbox-light
             span  {{ data.gifts }}
             
           li.p-hcenter-rel.d-flex-eq.f-light.f-si 
+              
             //- state === "closing" -> pour tile de style fermeture imminente
-            svg(viewBox="0 0 60.09 60.09" class={"cf-orange": state === "closing"}).o-tile__ico
+            svg(viewBox="0 0 60.09 60.09" :class="{'cf-orange': closeSoon}").o-tile__ico
               use(xlink:href="#ico-clock")
             div
-              div(class={"c-grad-yo": state === "closing"}) du {{ data.dateStart }}
-              div(class={"c-grad-yo f-stl": state === "closing"}) au {{ data.dateEnd }}
+              div(:class="{'c-grad-yo': closeSoon}") du {{ getStartDate }}
+              div(:class="{'c-grad-yo f-stl': closeSoon}") au {{ getEndDate }}
