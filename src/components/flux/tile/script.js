@@ -2,7 +2,12 @@ import dateFormat from '@/utils/date-format';
 
 export default {
   name: 'fluxTile',
-  props: ['data'],
+  props: {
+    data: {
+      type: Object,
+      required: true
+    }
+  },
   computed: {
 
     // conv date début

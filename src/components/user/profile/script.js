@@ -1,4 +1,9 @@
 export default {
   name: 'userProfile',
-  props: ['user'],
+  props: {
+    user: {
+      type: Object,
+      required: true
+    }
+  }
 }

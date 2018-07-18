@@ -1,4 +1,9 @@
 export default {
   name: 'fluxPodium',
-  props: ['data'],
+  props: {
+    data: {
+      type: Object,
+      required: true
+    }
+  }
 }
