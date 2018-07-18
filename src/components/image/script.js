@@ -13,7 +13,8 @@ export default {
   },
   computed: {
     media: function() {
-      return config.pictures.find(item => item.id === 2); // recup item verifiant l'id demandé
+      let id = parseInt(this.$route.params.id);
+      return config.pictures.find(item => item.id === id); // recup item verifiant l'id demandé
     }
   }
 }

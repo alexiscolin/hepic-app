@@ -22,7 +22,7 @@ export default new Router({
     },
     {
       // path: '/image/:id',
-      path: '/image',
+      path: '/image/:id',
       name: 'Image',
       component: displayImage,
     },
