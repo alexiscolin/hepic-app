@@ -1,0 +1,9 @@
+section.o-profil-pics.d-flex
+  a(v-for="item in user.images" href="/image.html" :class="{'o-profil-pics__img--large': item.rank === 'gold' || item.rank === 'silver'}").o-profil-pics__img.m-025
+    img(:src="item.image")
+    .o-profil-logo
+      img(:src="item.brand").w-100.h-100.brad-100
+    div(:class="{'o-ico-sprite--num': Number.isInteger(item.rank), 'o-ico-sprite--or': item.rank === 'gold', 'o-ico-sprite--argent': item.rank === 'silver', 'o-ico-sprite--bronze': item.rank === 'bronze'}").o-ico-sprite.o-ico-sprite--little.va-mid.f-center
+      span(v-if="Number.isInteger(item.rank)").p-abs.p-vhcenter-abs.pt-025.f-sxs.f-bold.f-lgrey {{ item.rank }}
+  
+    

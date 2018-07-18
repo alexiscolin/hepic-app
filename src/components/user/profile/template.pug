@@ -1,0 +1,13 @@
+.o-title.d-row-flex.d-flex-spacebet.d-flex-vm.mb-2
+  a(@click="$router.go(-1)")
+    svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
+      use(xlink:href="#ico-arrow")
+        
+  div.d-row-flex.d-flex-vm
+    img(:src="user.portrait").o-profil-pic.brad-100
+    span.pl-1.f-bold.f-stm {{ user.name }}
+    span.pl-05.f-grey.f-stl {{ user.id }}
+  
+  button(value="config", type="button")
+    svg(viewBox="0 0 35.37 35.35").o-svg-btn.va-mid
+      use(xlink:href="#ico-config") 
