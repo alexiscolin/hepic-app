@@ -1,5 +1,5 @@
 section.o-profil-pics.d-flex
-  a(v-for="item in user.images" href="/image.html" :class="{'o-profil-pics__img--large': item.rank === 'gold' || item.rank === 'silver'}").o-profil-pics__img.m-025
+  a(v-for="item in user.images" :key="item.id" href="/image" :class="{'o-profil-pics__img--large': item.rank === 'gold' || item.rank === 'silver'}").o-profil-pics__img.m-025
     img(:src="item.image")
     .o-profil-logo
       img(:src="item.brand").w-100.h-100.brad-100
