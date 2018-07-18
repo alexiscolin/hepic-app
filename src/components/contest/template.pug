@@ -3,7 +3,7 @@ main.o-main.c-backbg.pb-1
     img(:src="contest.ban").o-contest-img
   
   block backlink  
-    a(href="/flux.html").o-title.o-back.pl-1.mt-1.pt-025.z-5000
+    a(@click="$router.go(-1)").o-title.o-back.pl-1.mt-1.pt-025.z-5000
       svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
         use(xlink:href="#ico-arrow")
     
