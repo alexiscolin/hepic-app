@@ -74,7 +74,20 @@ button{
   width: 100%;
 }
 
+.o-tile__logo--long{
+  @width: 6vw;
+  top: -@width / 1.8;
+  width: @width;
+  height: @width;
+  border-color: @l-grey;
+  border-style: solid;
 
+  @media (min-width: @tab){
+    top: -15px;
+    width: 30px;
+    height: 30px;
+  }
+}
 
 //------- ICO MORE -------
 // ----------------------
@@ -153,6 +166,7 @@ button{
 }
 
 .o-ico-sprite--num{ background: @bg; }
+.o-ico-sprite--none{ display: none; }
 
 //------- ICO BUTTON -------
 // ------------------------
