@@ -1,0 +1,18 @@
+.o-container.pl-1.pr-1
+  .o-title.o-main.p-rel
+    a(@click="$router.go(-1)").o-title.p-abs.d-flex.d-flex-vm.mt-05.cf-grey
+      svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
+        use(xlink:href="#ico-arrow")
+    
+    .p-abs.p-vhcenter-abs.w-100.f-center
+      .o-width-container.d-inblock
+        .o-tile__infos--long.d-row-flex.d-flex-spacebet.d-flex-vm.pt-2.pb-1
+          a(href="profil.html").no-link.d-row-flex.d-flex-spacebet.d-flex-vm 
+            img(:src="media.winner.portrait" alt="logo").o-tile__logo--long.b-1.brad-100.mt-neg025
+            span.va-mid
+              span.pl-1.f-stm.pr-1.f-grey {{ media.winner.name }}
+              div(:class="{'o-ico-sprite--none': Number.isInteger(media.rank), 'o-ico-sprite--or': media.rank === 'gold', 'o-ico-sprite--argent': media.rank === 'silver', 'o-ico-sprite--bronze': media.rank === 'bronze'}").o-ico-sprite.o-ico-sprite--inline.va-mid.mt-neg025.f-center    
+          a(href="#").no-link
+            span.o-more
+              
+        img(:src="media.image").o-plain-img.o-plain-img--large

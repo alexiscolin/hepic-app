@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import tilesFlux from '@/components/flux';
 import userProfile from '@/components/user';
+import displayImage from '@/components/image';
 
 Vue.use(Router);
 
@@ -18,6 +19,12 @@ export default new Router({
       path: '/user',
       name: 'User',
       component: userProfile,
+    },
+    {
+      // path: '/image/:id',
+      path: '/image',
+      name: 'Image',
+      component: displayImage,
     },
   ],
 });
