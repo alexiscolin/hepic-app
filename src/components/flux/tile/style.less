@@ -1,33 +1,6 @@
 @import "~@@/utils/var";
 @import "~@@/utils/atom";
 
-.o-tile__logo{
-  @width: 15vw;
-  position: absolute;
-  top: -@width / 1.8;
-  .p-hcenter-abs();
-  width: @width;
-  height: @width;
-  border-color: @bg;
-  border-style: solid;
-  background: @bg;
-
-  @media (min-width: @tab){
-    top: -40px;
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.o-tile__info{
-  position: relative;
-  padding: 8vw (@space * 1) 0;
-
-  @media (min-width: @tab){
-    padding: 3em (@space * 1) 0;
-  }
-}
-
 .o-tile__name{
   padding: 0 (@space * 3.5) 0;
 
@@ -36,12 +9,6 @@
   }
 }
 
-.o-tile__ico{
-  display: block;
-  width: 20%;
-  margin: 0 auto (@space / 2);
-
-}
 .o-tile__ico--large{
   @media (min-width: @tab){ width: 15%; }
   @media (min-width: @desktop){ width: 10%; }

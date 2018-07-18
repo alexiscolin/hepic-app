@@ -47,8 +47,6 @@ button{
   }
 }
 
-.o-title{ height: @space-h-unit * 2; }
-
 .o-plain-img{
   height: 38vh;
   max-width: 100%;
@@ -60,18 +58,37 @@ button{
   }
 }
 
-
-//------- ICO BOX -------
-// ----------------------
+//------- TILE ZONES -------
+// ---------------------------
 //
-.o-inlinebox{ display: inline-block; }
-.o-svgh-ico{
-  display: inline-block;
-  height: 100%;
+
+.o-title{ height: @space-h-unit * 2; }
+
+.o-tile__info{
+  position: relative;
+  padding: 8vw (@space * 1) 0;
+
+  @media (min-width: @tab){
+    padding: 3em (@space * 1) 0;
+  }
 }
-.o-svgw-ico{
-  display: inline-block;
-  width: 100%;
+
+.o-tile__logo{
+  @width: 15vw;
+  position: absolute;
+  top: -@width / 1.8;
+  .p-hcenter-abs();
+  width: @width;
+  height: @width;
+  border-color: @bg;
+  border-style: solid;
+  background: @bg;
+
+  @media (min-width: @tab){
+    top: -40px;
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .o-tile__logo--long{
@@ -87,6 +104,26 @@ button{
     width: 30px;
     height: 30px;
   }
+}
+
+.o-tile__ico{
+  display: block;
+  width: 20%;
+  margin: 0 auto (@space / 2);
+}
+
+
+//------- ICO BOX -------
+// ----------------------
+//
+.o-inlinebox{ display: inline-block; }
+.o-svgh-ico{
+  display: inline-block;
+  height: 100%;
+}
+.o-svgw-ico{
+  display: inline-block;
+  width: 100%;
 }
 
 //------- ICO MORE -------
