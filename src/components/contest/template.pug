@@ -47,6 +47,7 @@ main.o-main.c-backbg.pb-1
       div.pl-4.pr-4.mt-4
         h3.p-rel.sep-bef.f-stl.f-reg Règlement complet
         p(v-html="contest.rules").pt-1.f-grey.f-stl
-        
-  layer-popin(v-if="displayPopin")
-    validation-rules
+    
+  //- popin de reglement ici
+  layer-popin(v-show="displayPopin")
+    validation-rules(@update:popin="displayPopin = $event")

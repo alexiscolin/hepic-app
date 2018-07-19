@@ -22,4 +22,4 @@ div
     input(type="file")#participer.o-participation
     label(for="participer") Participer
    
-  a(href="contest-validation.html").no-link.d-block.mt-2.f-right.pr-2.pb-1.f-grey.f-dec-it annuler
+  a(@click="$emit('update:popin', false)").no-link.d-block.mt-2.f-right.pr-2.pb-1.f-grey.f-dec-it annuler

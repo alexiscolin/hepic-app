@@ -26,5 +26,5 @@ export default {
       const contestDateEnd = new Date(this.contest.dateEnd);
       return dateFormat(contestDateEnd);
     },
-  }
+  },
 }
