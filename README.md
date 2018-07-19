@@ -1,4 +1,4 @@
-# Hepic App
+# 🥇 Hepic App
 
 > Hepic app is made with ❤️ by de jaune et de bleu thanks to VueJS + WebPack + LESS + Pug(Jade)
 
