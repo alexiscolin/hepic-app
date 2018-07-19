@@ -50,4 +50,4 @@ main.o-main.c-backbg.pb-1
     
   //- popin de reglement ici
   layer-popin(v-show="displayPopin")
-    validation-rules(@update:popin="displayPopin = $event")
+    validation-rules(@update:popin="displayPopin = $event" :brand="contest.brand" :logo="contest.logo" :desc="contest.desc" :rules="contest.rules")
