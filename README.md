@@ -1,8 +1,8 @@
 # 🥇 Hepic App
 
-> Hepic app is made with ❤️ by de jaune et de bleu thanks to VueJS + WebPack + LESS + Pug(Jade)
+> Hepic app is made with ♡ by de jaune et de bleu thanks to VueJS + WebPack + LESS + Pug(Jade)
 
-App accessible via Netlify sur https://hepic-app.netlify.com/
+App available on Netlify - https://hepic-app.netlify.com/
 
 ## Assets management
 
@@ -49,5 +49,3 @@ npm run e2e
 # run all tests
 npm test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
