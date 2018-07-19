@@ -1,15 +1,18 @@
 import config from './config.json';
 import dateFormat from '@/utils/date-format';
 import layerPopin from '@/components/layout/layer-popin';
+import validationRules from './validation-rules';
 
 export default {
   name: 'brandContest',
   components: {
-    layerPopin
+    layerPopin,
+    validationRules
   },
   data() {
     return {
       contest: config.contest,
+      displayPopin: false,
     };
   },
   computed: {
