@@ -37,9 +37,7 @@ export default new Router({
       name: 'Upload',
       component: brandContestUpload,
       beforeEnter: (to, from, next) => {
-        window.console.log(store.state);
-
-        const rules = store.state.contestEntry.contest.agreement ? true : '/';
+        const rules = store.state.contestEntry.contest.agreement === true ? true : '/';
         next(rules);
       },
     },
