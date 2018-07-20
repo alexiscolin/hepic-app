@@ -16,6 +16,8 @@ Webpack is setup to use [LESS](http://lesscss.org/) for CSS and [Babel](https://
 This project is written using frammeworks and libraries and various preprocessors for HTML, JS and CSS
 
 * VueJS (js ES6 -> VueX / VueRouter / Axios)
+* Axios (RESTfull APIs)
+* Colcade library (grid style)
 * LESS (Atomic CSS - BEM style)
 * PUG/Jade (Web Components OOP)
 
