@@ -38,7 +38,7 @@ main.o-main.c-backbg.pb-1
               div {{ getEndDate }}
             
       div.d-col-flex.mt-2.pr-4.pl-4
-        a(@click="displayPopin = true").f-bold.f-sfat.pt-05.pb-05.f-center.c-grad-yo.shadbox-light.brad-4 Participer
+        a(@click="displayPopin = true" v-if="!contest.participation").f-bold.f-sfat.pt-05.pb-05.f-center.c-grad-yo.shadbox-light.brad-4 Participer
         a(href="/vote.html").no-link.f-center.shadbox-light.pt-1.pb-1.mt-1.brad-4 
           svg(viewBox="0 0 42 42").mt-neg025.o-svgh-ico.o-svg-btn.mr-05.va-mid
             use(xlink:href="#ico-vote")
