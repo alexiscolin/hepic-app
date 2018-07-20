@@ -1,0 +1,17 @@
+main.o-main.c-backbg.pb-1
+  .mt-negMain.w-full
+    img(:src="contest.ban").o-contest-img
+  
+  block backlink  
+    a(@click="$router.go(-1)").o-title.o-back.pl-1.mt-1.pt-025.z-5000
+      svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
+        use(xlink:href="#ico-arrow")
+    
+  .o-main__container
+    .pl-2.pr-2  
+      .o-tile__info
+        img(:src="contest.logo" alt="logo").o-tile__logo.b-10.brad-100
+        h2.o-tile__name.p-hcenter-rel.f-cap.f-st {{ contest.brand }}
+        h3.o-tile__desc.p-hcenter-rel.f-grey.f-cap.f-light.f-stl {{ contest.desc }}
+  
+  slot

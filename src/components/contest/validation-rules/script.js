@@ -25,7 +25,12 @@ export default {
   },
   methods: {
     confirm: function(){
-      this.rulesAccepted && this.$router.push('/contest/upload');
+      this.rulesAccepted && this.$router.push({
+        path: '/contest/upload',
+        query: {
+          brand: this.brand
+        }
+      });
     },
   },
 }
