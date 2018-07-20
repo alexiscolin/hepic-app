@@ -16,6 +16,10 @@ export default {
     rules: {
       type: String,
       required: true
+    },
+    ban: {
+      type: String,
+      required: true
     }
   },
   data(){
@@ -25,12 +29,15 @@ export default {
   },
   methods: {
     confirm: function(){
-      this.rulesAccepted && this.$router.push({
-        path: '/contest/upload',
-        query: {
-          brand: this.brand
-        }
+      this.$store.commit({
+        type: 'populateState',
+        brand: this.brand,
+        logo: this.logo,
+        desc: this.desc,
+        ban: this.ban,
+        agreement: this.rulesAccepted ? true : false
       });
+      this.rulesAccepted && this.$router.push('/contest/upload');
     },
   },
 }

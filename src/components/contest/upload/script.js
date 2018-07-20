@@ -1,15 +1,16 @@
 import contestLayout from '../layout';
+import { mapState } from 'vuex'
 
 export default {
   name: 'contestUpload',
   components: {
     contestLayout
   },
-  data(){
-    return {
-      contest: {
-        brand: this.$route.query.brand
+  computed: {
+    ...mapState({
+      contest: function(state){
+        return state.contestEntry.contest
       }
-    }
-  },
+    })
+  }
 }

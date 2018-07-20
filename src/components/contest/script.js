@@ -18,6 +18,7 @@ export default {
     };
   },
   computed: {
+
     getStartDate: function(){
       const contestDateStart = new Date(this.contest.dateStart);
       return  dateFormat(contestDateStart);
