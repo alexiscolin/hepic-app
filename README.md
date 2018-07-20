@@ -32,6 +32,12 @@ Static folder manage all asset that will not be processed by Webpack and require
 * You have thousands of images and need to dynamically reference their paths.
 * Some library may be incompatible with Webpack and you have no other option but to include it as a `<script>` tag.
 
+## Store
+
+Hepic app store management is made by following one rule: **all that need to be share between two components (excepts for direct linking from a child) needs to be coded inside the store**. This allows us to ensure the constent reliability on data across all components and let us create a two way binding simulation.
+
+Here, the store is built thanks to VueX store modules.
+
 ## Build Setup
 
 ``` bash
