@@ -11,11 +11,11 @@ contest-layout(:data="contest")
       span.o-warning__title Attention
       span.o-warning__info En cas de validation, il ne sera plus possible de modifier la photo ou de participer à ce concours avec une autre photo, même en cas de suppression
 
-  div(v-show="picUploaded").d-col-flex.mt-3.pr-4.pl-4
-    a(@click.prevent="confirmUpload").f-bold.f-sfat.pt-05.pb-05.f-center.c-grad-yo.shadbox-light.brad-4 Valider la Participation
+  div(v-show="picUploaded && !picValidated").d-col-flex.mt-3.pr-4.pl-4
+    a(@click.prevent="validate").f-bold.f-sfat.pt-05.pb-05.f-center.c-grad-yo.shadbox-light.brad-4 Valider la Participation
     
-  a(@click="$router.go(-1)").no-link.d-block.mt-2.f-right.pr-2.pb-1.f-grey.f-dec-it annuler
+  a(@click="$router.go(-1)" v-if="!picValidated").no-link.d-block.mt-2.f-right.pr-2.pb-1.f-grey.f-dec-it annuler
 
-  //- div.d-col-flex.mt-3.pr-4.pl-4
-  //-   h2.f-bold.f-sfat.pt-05.pb-05.f-center.f-green Participation validée !
-  //- a(href="flux.html").no-link.d-block.mt-2.f-right.pr-2.pb-1.f-grey.f-dec-it retour au flux
+  div(v-show="picValidated").d-col-flex.mt-3.pr-4.pl-4
+    h2.f-bold.f-sfat.pt-05.pb-05.f-center.f-green Participation validée !
+  router-link(to="/" v-if="picValidated").no-link.d-block.mt-2.f-right.pr-2.pb-1.f-grey.f-dec-it retour au flux

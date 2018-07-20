@@ -9,6 +9,7 @@ export default {
   data(){
     return {
       picUploaded: false,
+      picValidated: false,
       picture: null,
       pictureRender: null,
     }
@@ -38,8 +39,9 @@ export default {
       }, false);
       this.picture && reader.readAsDataURL(this.picture);
     },
-    confirmUpload: function(){
 
-    }
+    validate: function(){
+       this.picValidated = true;
+    },
   }
 }
