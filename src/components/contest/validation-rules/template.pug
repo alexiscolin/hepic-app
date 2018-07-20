@@ -15,11 +15,14 @@ div
     | ...
       
   .pl-2.pr-2.mt-1
-    input(type="checkbox" name="validRules")#validrules.o-checkbox.mr-05
+    input(type="checkbox" name="validRules" v-model="rulesAccepted")#validrules.o-checkbox.mr-05
     label(for="validrules").o-checkbox-label.f-light.f-si J’accepte les conditions d’utilisation
     
-  div.d-col-flex.mt-2.pr-4.pl-4
-    input(type="file")#participer.o-participation
-    label(for="participer") Participer
+    div.d-col-flex.mt-2.pr-4.pl-4
+      a(@click.prevent="confirm" :class="{'s--is-disabled': rulesAccepted === false}").o-participation__label Participer
+      
+  //- div.d-col-flex.mt-2.pr-4.pl-4
+  //-   input(type="file" :disabled="rulesAccepted === false")#participer.o-participation
+  //-   label(for="participer" :class="{'s--is-disabled': rulesAccepted === false}").o-participation__label Participer
    
   a(@click="$emit('update:popin', false)").no-link.d-block.mt-2.f-right.pr-2.pb-1.f-grey.f-dec-it annuler

@@ -17,5 +17,15 @@ export default {
       type: String,
       required: true
     }
-  }
+  },
+  data(){
+    return {
+      rulesAccepted: false,
+    }
+  },
+  methods: {
+    confirm: function(){
+      this.rulesAccepted && this.$router.push('/go-somewhere');
+    },
+  },
 }
