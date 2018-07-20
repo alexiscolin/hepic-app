@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     confirm: function(){
-      this.rulesAccepted && this.$router.push('/go-somewhere');
+      this.rulesAccepted && this.$router.push('/contest/upload');
     },
   },
 }
