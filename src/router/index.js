@@ -5,6 +5,7 @@ import userProfile from '@/components/user';
 import displayImage from '@/components/image';
 import brandContest from '@/components/contest';
 import brandContestUpload from '@/components/contest/upload';
+import store from '../store';
 
 Vue.use(Router);
 
@@ -35,6 +36,12 @@ export default new Router({
       path: '/contest/upload',
       name: 'Upload',
       component: brandContestUpload,
+      beforeEnter: (to, from, next) => {
+        window.console.log(store.state);
+
+        const rules = store.state.contestEntry.contest.agreement ? true : '/';
+        next(rules);
+      },
     },
   ],
 });
