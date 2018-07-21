@@ -1,5 +1,5 @@
 import contestLayout from '../layout';
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'contestUpload',
@@ -39,9 +39,17 @@ export default {
       }, false);
       this.picture && reader.readAsDataURL(this.picture);
     },
+    ...mapActions({
 
+    }),
     validate: function(){
-       this.picValidated = true;
+      this.$store.dispatch('postPicture', { test: "bonjour" }).then(() => {
+        console.log(res)
+      }).catch((res) => {
+        console.log('error ' + res)
+      });
+
+      this.picValidated = true;
     },
   }
 }

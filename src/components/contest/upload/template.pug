@@ -14,7 +14,7 @@ contest-layout(:data="contest")
   div(v-show="picUploaded && !picValidated").d-col-flex.mt-3.pr-4.pl-4
     a(@click.prevent="validate").f-bold.f-sfat.pt-05.pb-05.f-center.c-grad-yo.shadbox-light.brad-4 Valider la Participation
     
-  a(@click="$router.go(-1)" v-if="!picValidated").no-link.d-block.mt-2.f-right.pr-2.pb-1.f-grey.f-dec-it annuler
+  a(@click="$router.go(-1)" v-if="!picValidated").no-link.d-block.mt-4.f-right.pr-2.pb-1.f-grey.f-dec-it annuler
 
   div(v-show="picValidated").d-col-flex.mt-3.pr-4.pl-4
     h2.f-bold.f-sfat.pt-05.pb-05.f-center.f-green Participation validée !
