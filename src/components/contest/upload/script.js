@@ -43,7 +43,16 @@ export default {
 
     }),
     validate: function(){
-      this.$store.dispatch('postPicture', { test: "bonjour" }).then(() => {
+      // crea formulaire
+      const formData = new FormData();
+      const dataKeys = {
+        contest: this.contest.brand,
+        image: this.picture,
+      };
+      Object.keys(dataKeys).forEach(key => formData.append(key, dataKeys[key]));
+
+      // API post
+      this.$store.dispatch('postPicture', formData).then(() => {
         console.log(res)
       }).catch((res) => {
         console.log('error ' + res)

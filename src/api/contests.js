@@ -9,7 +9,13 @@ const getContestInfo = function getContestInfo(data) {
 
 // POST - contest picture
 const postContestPicture = function postContestPicture(data) {
-  return axios.post('http://ptsv2.com/t/5ipu6-1532204830/post', data);
+  const opt = {
+    method: 'post',
+    headers: { 'Content-Type': 'multipart/form-data' },
+    data,
+    url: 'http://ptsv2.com/t/5ipu6-1532204830/post',
+  };
+  return axios(opt);
 };
 
 export default {
