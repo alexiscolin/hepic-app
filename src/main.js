@@ -7,7 +7,7 @@ import router from './router';
 import store from './store';
 import './registerServiceWorker';
 
-// import './assets/style/style.less';
+import './assets/style/style.less';
 
 Vue.config.productionTip = false;
 
