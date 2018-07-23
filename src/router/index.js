@@ -4,6 +4,7 @@ import tilesFlux from '@/components/flux';
 import userProfile from '@/components/user';
 import displayImage from '@/components/image';
 import brandContest from '@/components/contest';
+import brandContestVote from '@/components/vote';
 import brandContestUpload from '@/components/contest/upload';
 // import store from '../store';
 
@@ -31,6 +32,11 @@ export default new Router({
       path: '/contest',
       name: 'Contest',
       component: brandContest,
+    },
+    {
+      path: '/contest/vote',
+      name: 'Vote',
+      component: brandContestVote,
     },
     {
       path: '/contest/upload',

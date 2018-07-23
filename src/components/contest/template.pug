@@ -23,10 +23,10 @@ contest-layout(:data="contest")
             
     div.d-col-flex.mt-2.pr-4.pl-4
       a(@click="displayPopin = true" v-if="!contest.participation").f-bold.f-sfat.pt-05.pb-05.f-center.c-grad-yo.shadbox-light.brad-4 Participer
-      a().no-link.f-center.shadbox-light.pt-1.pb-1.mt-1.brad-4 
+      router-link(to="contest/vote").no-link.f-center.shadbox-light.pt-1.pb-1.mt-1.brad-4 
         svg(viewBox="0 0 42 42").mt-neg025.o-svgh-ico.o-svg-btn.mr-05.va-mid
           use(xlink:href="#ico-vote")
-        span() Photos
+        span Photos
       
     div.pl-4.pr-4.mt-4
       h3.p-rel.sep-bef.f-stl.f-reg Règlement complet
