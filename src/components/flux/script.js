@@ -7,15 +7,15 @@ export default {
   name: 'mainFlux',
   components: {
     fluxTile,
-    fluxPodium
+    fluxPodium,
   },
   data() {
     return {
       contests: config.contests,
     };
   },
-  mounted: function(){
+  mounted: function $mounted() {
     const elem = document.querySelector('.o-grid');
-    let colc = elem && new Colcade( elem, { columns: '.grid-col', items: '.o-tile-grided'});
-  }
-}
+    elem && new Colcade(elem, { columns: '.grid-col', items: '.o-tile-grided' });
+  },
+};

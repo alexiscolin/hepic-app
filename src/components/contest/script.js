@@ -1,7 +1,7 @@
-import config from './config.json';
-import dateFormat from '@/utils/date-format';
-import contestLayout from './layout';
 import layerPopin from '@/components/layout/layer-popin';
+import dateFormat from '@/utils/date-format';
+import config from './config.json';
+import contestLayout from './layout';
 import validationRules from './validation-rules';
 
 export default {
@@ -9,7 +9,7 @@ export default {
   components: {
     contestLayout,
     layerPopin,
-    validationRules
+    validationRules,
   },
   data() {
     return {
@@ -19,15 +19,15 @@ export default {
   },
   computed: {
 
-    getStartDate: function(){
+    getStartDate: function $getStartDate() {
       const contestDateStart = new Date(this.contest.dateStart);
-      return  dateFormat(contestDateStart);
+      return dateFormat(contestDateStart);
     },
 
     // conv date fin
-    getEndDate: function(){
+    getEndDate: function $getEndDate() {
       const contestDateEnd = new Date(this.contest.dateEnd);
       return dateFormat(contestDateEnd);
     },
   },
-}
+};

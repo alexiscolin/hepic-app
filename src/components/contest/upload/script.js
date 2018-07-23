@@ -1,40 +1,40 @@
+import { mapState, mapActions } from 'vuex';
 import contestLayout from '../layout';
-import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'contestUpload',
   components: {
-    contestLayout
+    contestLayout,
   },
-  data(){
+  data() {
     return {
       picUploaded: false,
       picValidated: false,
       picture: null,
       pictureRender: null,
-    }
+    };
   },
   computed: {
     ...mapState({
-      contest: function(state){
-        return state.contestEntry.contest
-      }
-    })
+      contest: function $contest(state) {
+        return state.contestEntry.contest;
+      },
+    }),
   },
   methods: {
-    upload: function(e){
+    upload: function $upload(e) {
       this.picture = e.target.files[0];
 
       // validation type image
       const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
-      if(!allowedExtensions.exec(e.target.value)) return;
+      if (!allowedExtensions.exec(e.target.value)) return;
 
       // confirmation state
       this.picUploaded = true;
 
       // lecture
       const reader = new FileReader();
-      reader.addEventListener("load", () => {
+      reader.addEventListener('load', () => {
         this.pictureRender = reader.result;
       }, false);
       this.picture && reader.readAsDataURL(this.picture);
@@ -42,7 +42,7 @@ export default {
     ...mapActions({
 
     }),
-    validate: function(){
+    validate: function $validate() {
       // crea formulaire
       const formData = new FormData();
       const dataKeys = {
@@ -52,13 +52,13 @@ export default {
       Object.keys(dataKeys).forEach(key => formData.append(key, dataKeys[key]));
 
       // API post
-      this.$store.dispatch('postPicture', formData).then(() => {
-        console.log(res)
+      this.$store.dispatch('postPicture', formData).then((res) => {
+        console.log(res);
       }).catch((res) => {
-        console.log('error ' + res)
+        console.log(`error ${res}`);
       });
 
       this.picValidated = true;
     },
-  }
-}
+  },
+};

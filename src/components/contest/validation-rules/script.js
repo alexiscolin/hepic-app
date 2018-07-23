@@ -3,41 +3,41 @@ export default {
   props: {
     logo: {
       type: String,
-      required: true
+      required: true,
     },
     brand: {
       type: String,
-      required: true
+      required: true,
     },
     desc: {
       type: String,
-      required: true
+      required: true,
     },
     rules: {
       type: String,
-      required: true
+      required: true,
     },
     ban: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
-  data(){
+  data() {
     return {
       rulesAccepted: false,
-    }
+    };
   },
   methods: {
-    confirm: function(){
+    confirm: function $confirm() {
       this.$store.commit({
         type: 'populateState',
         brand: this.brand,
         logo: this.logo,
         desc: this.desc,
         ban: this.ban,
-        agreement: this.rulesAccepted ? true : false
+        agreement: this.rulesAccepted || false,
       });
       this.rulesAccepted && this.$router.push('/contest/upload');
     },
   },
-}
+};

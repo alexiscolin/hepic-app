@@ -3,12 +3,12 @@ export default {
   props: {
     data: {
       type: Object,
-      required: true
+      required: true,
     },
   },
-  data(){
+  data() {
     return {
       contest: this.data,
-    }
-  }
-}
+    };
+  },
+};

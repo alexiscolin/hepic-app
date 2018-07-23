@@ -62,25 +62,25 @@ Here, the store is built thanks to VueX store modules.
 
 ## Build Setup
 
+The Hepic project is served by Yarn package manager.
+
 ``` bash
 # install dependencies
-npm install
+yarn install
 
 # serve with hot reload at localhost:8080
-npm run dev
+yarn run serve
 
 # build for production with minification
-npm run build
+yarn run build
 
 # build for production and view the bundle analyzer report
-npm run build --report
+yarn run lint
 
 # run unit tests
-npm run unit
+yarn run test:unit
 
 # run e2e tests
-npm run e2e
+yarn run test:e2e
 
-# run all tests
-npm test
 ```
