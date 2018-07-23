@@ -12,10 +12,14 @@ export default {
   data() {
     return {
       contests: config.contests,
+      gridColcade: null,
     };
   },
   mounted: function $mounted() {
     const elem = document.querySelector('.o-grid');
-    elem && new Colcade(elem, { columns: '.grid-col', items: '.o-tile-grided' });
+    this.gridColcade = elem && new Colcade(elem, { columns: '.grid-col', items: '.o-tile-grided' });
+  },
+  destroyed: function $beforeDestroy() {
+    this.gridColcade.destroy();
   },
 };
