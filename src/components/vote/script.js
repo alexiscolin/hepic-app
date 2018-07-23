@@ -5,7 +5,7 @@ export default {
   data() {
     return {
       vote: config.vote,
-      index: 0,
+      index: config.vote.queryIndex,
       indexMin: 0,
       indexMax: config.vote.images.length - 1,
     };
