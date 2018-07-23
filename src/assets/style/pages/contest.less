@@ -13,7 +13,10 @@
 .o-participation__label{
   display: inline-block;
   cursor: pointer;
-  &:extend(.c-grad-yo);
+  // &:extend(.c-grad-yo);
+  background: @grad;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   &:extend(.brad-4);
   &:extend(.shadbox-light);
   &:extend(.pb-05);
