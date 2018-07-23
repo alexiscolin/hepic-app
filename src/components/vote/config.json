@@ -7,26 +7,32 @@
     "images": [
       {
         "id": 0,
+        "voted": false,
         "src": "https://d33wubrfki0l68.cloudfront.net/f27d6ecbe4210bc741c5a27a24c3a847ec4af6f4/a94c7/assets/img/brands/imaginarium/ifdance.jpg"
       },
       {
         "id": 1,
+        "voted": false,
         "src": "https://d33wubrfki0l68.cloudfront.net/bc95c7d6560235789878c5c33ee1577703e0931e/d1dd7/assets/img/profil/plage.png"
       },
       {
         "id": 2,
+        "voted": false,
         "src": "https://d33wubrfki0l68.cloudfront.net/00774da2b362fcdbd73db67691c8a43bf1e05d33/a29a8/assets/img/profil/smoothie.jpg"
       },
       {
         "id": 3,
+        "voted": false,
         "src": "https://d33wubrfki0l68.cloudfront.net/c3589f7d6868dc9109721c9bf014241d64fb18cc/9b252/assets/img/profil/neige.jpg"
       },
       {
         "id": 4,
+        "voted": false,
         "src": "https://d33wubrfki0l68.cloudfront.net/80890cc8a2a21462237c711ce5bf6642f0bd26a7/f9b48/assets/img/profil/plage2.jpg"
       },
       {
         "id": 5,
+        "voted": false,
         "src": "https://d33wubrfki0l68.cloudfront.net/381551b6df72a55e49ac4fced5194cbcda8dbcf4/a06d9/assets/img/profil/paysage.jpg"
       }
     ]
