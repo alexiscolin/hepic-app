@@ -6,7 +6,7 @@ import displayImage from '@/components/image';
 import brandContest from '@/components/contest';
 import brandContestVote from '@/components/vote';
 import brandContestUpload from '@/components/contest/upload';
-// import store from '../store';
+import store from '../store';
 
 Vue.use(Router);
 
@@ -43,8 +43,8 @@ export default new Router({
       name: 'Upload',
       component: brandContestUpload,
       beforeEnter: (to, from, next) => {
-        // const rules = store.state.contestEntry.contest.agreement === true ? true : '/';
-        // next(rules);
+        const rules = store.state.contestEntry.contest.agreement === true ? true : '/';
+        next(rules);
         next(true);
       },
     },
