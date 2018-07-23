@@ -18,15 +18,15 @@ main.o-main.pb-1.c-backbg.f-center
       span.f-light n°1
       a(href="#").no-link
         span.o-more
-    img(:src="vote.images[0].src").o-plain-img
+    img(:src="displayImage").o-plain-img
   
   .o-vote-btns.d-row-flex.d-flex-spacebet.pl-1.pr-1.mt-6
-    a(href="#").h-100.w-30.f-center
+    a(@click="prevImg").h-100.w-30.f-center
       svg(viewBox="0 0 132.98 257").o-svg-btn.va-mid.h-100.w-30
         use(xlink:href="#ico-leftArrow")
     a(href="/vote-validation.html").brad-100.h-100.w-30.f-center
       svg(viewBox="0 0 42 42").o-votefor.h-100.p-05.brad-100.b-regFg
         use(xlink:href="#ico-vote")
-    a(href="#").h-100.w-30.f-center
+    a(@click="nextImg").h-100.w-30.f-center
       svg(viewBox="0 0 132.98 257").o-svg-btn.va-mid.h-100.w-30.trotZ-180
         use(xlink:href="#ico-leftArrow")
