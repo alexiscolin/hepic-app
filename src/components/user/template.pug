@@ -1,5 +1,5 @@
 main.o-main.pl-1.pr-1.pb-1
-  user-profile(:user="user" v-on:displayPopin="displayPopin = true")
+  user-profile(:user="user" @displayPopin="displayPopin = $event")
     
   //- uniquement sur page perso
   user-notification 
@@ -7,6 +7,6 @@ main.o-main.pl-1.pr-1.pb-1
   user-content(:user="user")
     
   layer-popin(v-show="displayPopin")
-    user-settings
+    user-settings(@displayPopin="displayPopin = $event")
 
   
