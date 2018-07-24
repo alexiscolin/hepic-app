@@ -18,13 +18,9 @@ module.exports = {
   productionSourceMap: undefined,
   parallel: undefined,
 
-  org: {
-    vue: {
-      pwa: {
-        name: 'Hepic',
-        msTileColor: '#FFFFFF',
-        workboxPluginMode: 'InjectManifest'
-      }
-    }
+  pwa: {
+    name: 'Hepic',
+    msTileColor: '#FFFFFF',
+    workboxPluginMode: 'InjectManifest'
   }
 }
