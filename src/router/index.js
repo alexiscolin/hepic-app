@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import tilesFlux from '@/components/flux';
 import userProfile from '@/components/user';
+import userSettings from '@/components/user/settings';
 import displayImage from '@/components/image';
 import brandContest from '@/components/contest';
 import brandContestVote from '@/components/vote';
@@ -22,6 +23,11 @@ export default new Router({
       path: '/user',
       name: 'User',
       component: userProfile,
+    },
+    {
+      path: '/user/settings/:type',
+      name: 'Settings',
+      component: userSettings,
     },
     {
       path: '/image/:id',

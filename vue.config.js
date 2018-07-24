@@ -1,21 +1,14 @@
 const path = require('path');
 
 module.exports = {
-  css: undefined,
-
+  css: {
+    sourceMap: true
+  },
   configureWebpack: {
     resolve: {
       alias: {
         '@@': path.resolve('src/assets/style'),
       }
     }
-  },
-
-  baseUrl: undefined,
-  outputDir: undefined,
-  assetsDir: undefined,
-  runtimeCompiler: undefined,
-  productionSourceMap: undefined,
-  parallel: undefined,
-
+  }
 }
