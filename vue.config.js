@@ -2,7 +2,7 @@ const path = require('path');
 const PrerenderSpaPlugin = require('prerender-spa-plugin');
 
 module.exports = {
-  assetsDir: '/',
+  // assetsDir: '/',
 
   css: {
     sourceMap: true
