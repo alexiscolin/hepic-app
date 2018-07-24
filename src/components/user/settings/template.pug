@@ -1,11 +1,15 @@
 main.o-main.c-backbg.pl-1.pr-1.pb-1
-  .o-title.mt-1.pt-05
+  .o-title.mt-1.mb-1.pt-05
     a(@click="$router.go(-1)").p-abs
       svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
         use(xlink:href="#ico-arrow")
     span.d-block.w-100.f-bold.f-stl.pt-025.f-center {{ title }}
     span(v-if="desc").d-block.w-100.pt-025.f-center.f-grey.f-light.f-si {{ desc }}
 
-  .o-setting__content.p-1
+  div(v-if="type !== 'contact'").o-setting__content.p-1
     | {{ settingsContent }}
+    
+  div(v-else).o-setting__content.p-1
+    | blala
+  
     
