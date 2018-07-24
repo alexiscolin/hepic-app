@@ -16,5 +16,15 @@ module.exports = {
   assetsDir: undefined,
   runtimeCompiler: undefined,
   productionSourceMap: undefined,
-  parallel: undefined
+  parallel: undefined,
+
+  org: {
+    vue: {
+      pwa: {
+        name: 'Hepic',
+        themeColor: '#ec6730',
+        msTileColor: '#FFFFFF'
+      }
+    }
+  }
 }
