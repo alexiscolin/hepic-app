@@ -8,6 +8,6 @@
     span.pl-1.f-bold.f-stm {{ user.name }}
     span.pl-05.f-grey.f-stl {{ user.id }}
   
-  button(value="config", type="button")
+  button(@click="displayPopin" value="config", type="button")
     svg(viewBox="0 0 35.37 35.35").o-svg-btn.va-mid
       use(xlink:href="#ico-config") 

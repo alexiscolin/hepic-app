@@ -6,4 +6,9 @@ export default {
       required: true,
     },
   },
+  methods: {
+    displayPopin: function $displayPopin() {
+      this.$emit('displayPopin', true);
+    },
+  },
 };

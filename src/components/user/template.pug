@@ -1,8 +1,12 @@
 main.o-main.pl-1.pr-1.pb-1
-  user-profile(:user="user")
+  user-profile(:user="user" v-on:displayPopin="displayPopin = true")
     
   //- uniquement sur page perso
   user-notification 
   
   user-content(:user="user")
+    
+  layer-popin(v-show="displayPopin")
+    user-settings
+
   
