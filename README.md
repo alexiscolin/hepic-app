@@ -28,6 +28,7 @@ This project requires some Tools
 * Babel (transpiling)
 * EsLint (js correction -> airBnB rules)
 * PostCSS (not directly used here)
+* Puppeteer (Prerendering)
 * Jest (Unit Test)
 * Nightwatch (Automated testing)
 * Git (Github Flow -> Netlify CI connection)
@@ -59,6 +60,10 @@ Static folder manage all asset that will not be processed by Webpack and require
 Hepic app store management is made by following one rule: **all that need to be share between two components (excepts for direct linking from a child) needs to be coded inside the store**. This allows us to ensure the constent reliability on data across all components and let us create a two way binding simulation.
 
 Here, the store is built thanks to VueX store modules.
+
+## Prerendering
+
+The Hepic app need Puppeteer to load static files in order to make a good prerendering for SEO. This is a part of Vue `Prerender SPA Plugin` that renders index page.
 
 ## Build Setup
 

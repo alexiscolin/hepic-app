@@ -2,6 +2,8 @@ const path = require('path');
 const PrerenderSpaPlugin = require('prerender-spa-plugin');
 
 module.exports = {
+  assetsDir: '/',
+
   css: {
     sourceMap: true
   },
@@ -17,7 +19,7 @@ module.exports = {
         // Required - The path to the webpack-outputted app to prerender.
         staticDir: path.join(__dirname, 'dist'),
         // Required - Routes to render.
-        routes: [ '/'],
+        routes: [ '/' ],
       })
     ]
   }
