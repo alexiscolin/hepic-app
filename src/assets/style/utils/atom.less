@@ -114,6 +114,8 @@
 .b-10{ border-width: @space / 3; }
 .b-1{ border-width: 1px; }
 
+.b-noresize{ resize: none; }
+
 // ----- POSITION -----
 //
 .p-rel{ position: relative; }
@@ -228,9 +230,11 @@
 .mt-3{ margin-top: @space * 3; }
 
 .mt-4{ margin-top: @space * 4; }
-.pl-4{ margin-left: @space * 4; }
-.pr-4{ margin-right: @space * 4; }
-.pt-4{ margin-top: @space * 4; }
+.pl-4{ padding-left: @space * 4; }
+.pr-4{ padding-right: @space * 4; }
+.pt-4{ padding-top: @space * 4; }
+
+.pl-5{ padding-left: @space * 5; }
 
 .mt-6{ margin-top: @space * 6; }
 .mt-10{ margin-top: @space * 10; }
@@ -253,6 +257,11 @@
 }
 
 .ttransY-neg50{ transform: translate3d(0, -50%, 0); }
+
+// ----- CURSOR -----
+//
+.cur-none{ pointer-events: none; }
+.cur-point{ cursor: pointer; }
 
 .a-grow{
   transition: transform .4s ease;
