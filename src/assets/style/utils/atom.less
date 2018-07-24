@@ -105,7 +105,6 @@
 .b-reg{ border: solid @l-grey @border-width; }
 .b-regFg{ border: solid @fg @border-width; }
 
-
 .brad-2{ border-radius: @radius-reg; }
 .brad-4{ border-radius: @radius-reg * 2; }
 .brad-6{ border-radius: @radius-reg * 4; }
@@ -115,6 +114,15 @@
 .b-1{ border-width: 1px; }
 
 .b-noresize{ resize: none; }
+.b-nodeco{
+  outline: none;
+  box-shadow: none;
+  &:focus{
+    outline: none;
+    box-shadow: none;
+  }
+}
+
 
 // ----- POSITION -----
 //
