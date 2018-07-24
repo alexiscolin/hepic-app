@@ -18,9 +18,4 @@ module.exports = {
   productionSourceMap: undefined,
   parallel: undefined,
 
-  pwa: {
-    name: 'Hepic',
-    msTileColor: '#FFFFFF',
-    workboxPluginMode: 'InjectManifest'
-  }
 }
