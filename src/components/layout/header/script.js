@@ -11,7 +11,7 @@ export default {
   },
   methods: {
     onScroll: throttle(function $throttleOnScroll() {
-      const down = this.yPos < window.pageYOffset;
+      const down = window.pageYOffset > 0 && this.yPos < window.pageYOffset;
       if (down && !this.hidden) {
         this.$el.classList.add('s--is-transY-100');
         this.hidden = true;
