@@ -22,8 +22,8 @@ module.exports = {
     vue: {
       pwa: {
         name: 'Hepic',
-        themeColor: '#ec6730',
-        msTileColor: '#FFFFFF'
+        msTileColor: '#FFFFFF',
+        workboxPluginMode: 'InjectManifest'
       }
     }
   }
