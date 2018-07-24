@@ -7,7 +7,7 @@ main.o-main.c-backbg.pl-1.pr-1.pb-1
     span(v-if="desc").d-block.w-100.pt-025.f-center.f-grey.f-light.f-si {{ desc }}
 
   div(v-if="type !== 'contact'").o-setting__content.mt-1
-    | {{ settingsContent }}
+    | {{ settingsContent }} {{ type }}
     
   div(v-else).mt-1
     .p-rel
