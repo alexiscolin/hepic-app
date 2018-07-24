@@ -3,12 +3,14 @@ import config from './config.json';
 export default {
   name: 'settings',
   data() {
-    return {
+    const test = {
       data: config.data,
       type: this.$route.params.type,
       title: String,
       settingsContent: 'blabla from API',
     };
+    console.log(test.type);
+    return test;
   },
   created: function $created() {
     const vue = Array.from(this.data).find(el => el.type === this.type);
