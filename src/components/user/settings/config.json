@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "type": "cgu",
+      "title": "Condition Générales d'Utilisation"
+    },
+    {
+      "type": "confidential",
+      "title": "Politique de Confidentialité de Hepic"
+    },
+    {
+      "type": "personal-information",
+      "title": "Mes Informations Personnelles",
+      "desc": "Informations qu’Hepic possède à propos de vous"
+    },
+    {
+      "type": "contact",
+      "title": "Nous contacter"
+    }
+  ]
+}
