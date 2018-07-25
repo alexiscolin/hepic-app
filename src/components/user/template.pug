@@ -1,12 +1,13 @@
-main.o-main.pl-1.pr-1.pb-1
-  user-profile(:user="user" @displayPopin="displayPopin = $event")
+shell-app
+  main.o-main.pl-1.pr-1.pb-1
+    user-profile(:user="user" @displayPopin="displayPopin = $event")
+      
+    //- uniquement sur page perso
+    user-notification 
     
-  //- uniquement sur page perso
-  user-notification 
-  
-  user-content(:user="user")
-    
-  layer-popin(v-show="displayPopin")
-    user-settings(@displayPopin="displayPopin = $event")
+    user-content(:user="user")
+      
+    layer-popin(v-show="displayPopin")
+      user-settings(@displayPopin="displayPopin = $event")
 
   

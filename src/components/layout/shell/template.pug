@@ -1,0 +1,4 @@
+div
+  <app-header v-if="$route.path !== '/'"/>
+  <slot/>
+  <app-footer v-if="$route.path !== '/'"/>

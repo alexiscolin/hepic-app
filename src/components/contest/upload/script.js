@@ -1,9 +1,11 @@
 import { mapState, mapActions } from 'vuex';
+import shellApp from '@/components/layout/shell';
 import contestLayout from '../layout';
 
 export default {
   name: 'contestUpload',
   components: {
+    shellApp,
     contestLayout,
   },
   data() {

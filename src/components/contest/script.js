@@ -1,3 +1,4 @@
+import shellApp from '@/components/layout/shell';
 import layerPopin from '@/components/layout/layer-popin';
 import dateFormat from '@/utils/date-format';
 import config from './config.json';
@@ -7,6 +8,7 @@ import validationRules from './validation-rules';
 export default {
   name: 'brandContest',
   components: {
+    shellApp,
     contestLayout,
     layerPopin,
     validationRules,

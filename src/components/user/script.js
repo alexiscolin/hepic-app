@@ -1,3 +1,4 @@
+import shellApp from '@/components/layout/shell';
 import layerPopin from '@/components/layout/layer-popin';
 import config from './config.json';
 import userProfile from './profile';
@@ -8,6 +9,7 @@ import userNotification from './notification';
 export default {
   name: 'user',
   components: {
+    shellApp,
     userProfile,
     userContent,
     userNotification,

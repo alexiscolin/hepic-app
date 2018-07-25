@@ -1,4 +1,5 @@
 import Colcade from 'colcade';
+import shellApp from '@/components/layout/shell';
 import config from './config.json';
 import fluxTile from './tile';
 import fluxPodium from './podium';
@@ -6,6 +7,7 @@ import fluxPodium from './podium';
 export default {
   name: 'mainFlux',
   components: {
+    shellApp,
     fluxTile,
     fluxPodium,
   },
