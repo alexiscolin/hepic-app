@@ -1,7 +1,8 @@
 @import "~@@/utils/var";
 
 @padding-btn: @space/2  @space;
-@font-reg: .9em;
+@font-reg: 1vw;
+@ico: @ico-width * 1.4;
 
 .i-intro{
   position: relative;
@@ -94,12 +95,21 @@
   float: left;
 }
 .i-discover{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: @space * 4;
 }
 
 
 .i-section__text{
-  width: 65%;
+  width: 60%;
+}
+.i-section__text--vote{
+  width: 80%;
+}
+.i-section__text--gift{
+  width: 45%;
 }
 .i-section__img{
   display: flex;
@@ -129,6 +139,23 @@
 .i-title{
   font-weight: @f-bold;
   font-size: @font-reg * 4;
+}
+.i-icon{
+  width: @ico;
+  margin-right: 1rem;
+}
+.i-icon--arrow{
+  margin-top: @space;
+  width: @ico / 1.5;
+  transform: rotate(-90deg);
+}
+.i-icon--vote{
+  border: solid @fg 1px;
+  border-radius: 100%;
+}
+
+.i-subtitle--under{
+  padding-left: ~"calc(1rem + " @ico ~")";
 }
 .i-subtitle{
   font-weight: @f-reg;
