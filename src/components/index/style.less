@@ -1,4 +1,5 @@
 @import "~@@/utils/var";
+@import "~@@/utils/mixins";
 
 @padding-btn: @space/2  @space;
 @font-reg: 1vw;
@@ -36,9 +37,9 @@
   flex-direction: row;
   align-items: center;
 }
-.i-header__logo{
-  width: 10vw;
-}
+
+.i-header__logo{ width: 10vw; }
+
 .i-main__title{
   font-size: @font-reg;
   margin: 0 0 0 @space;
@@ -66,7 +67,6 @@
   }
 }
 
-
 .i-section__pane{
   float: left;
   display: flex;
@@ -76,9 +76,7 @@
   width: 50%;
   min-height:100vh;
 }
-.i-section__pane--ft{
-  min-height: 85vh;
-}
+.i-section__pane--ft{ min-height: 85vh; }
 .i-section__pane--bot{
   align-items: center;
   justify-content: flex-end;
@@ -86,7 +84,7 @@
 
 .i-section__social{
   position: fixed;
-  bottom: @space;
+  bottom: @space * 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,6 +92,9 @@
   width: 100%;
   float: left;
 }
+
+.i-section__social__nav{ display: flex; }
+
 .i-discover{
   display: flex;
   flex-direction: column;
@@ -102,15 +103,9 @@
 }
 
 
-.i-section__text{
-  width: 60%;
-}
-.i-section__text--vote{
-  width: 80%;
-}
-.i-section__text--gift{
-  width: 45%;
-}
+.i-section__text{ width: 60%; }
+.i-section__text--vote{ width: 80%; }
+.i-section__text--gift{  width: 45%; }
 .i-section__img{
   display: flex;
   flex-direction: column;
@@ -120,9 +115,8 @@
   position: relative;
 }
 
-.i-section__text--min{
-  padding-right: @space * 8;
-}
+.i-section__text--min{ padding-right: @space * 8; }
+
 .i-hottile-text{
   color: @bg;
   margin-bottom: @space;
@@ -154,9 +148,7 @@
   border-radius: 100%;
 }
 
-.i-subtitle--under{
-  padding-left: ~"calc(1rem + " @ico ~")";
-}
+.i-subtitle--under{ padding-left: ~"calc(1rem + " @ico ~")"; }
 .i-subtitle{
   font-weight: @f-reg;
   font-size: @font-reg * 1.4;
@@ -188,7 +180,7 @@
   text-decoration: none;
   border-radius: 50px;
   padding: @padding-btn;
-  border: solid @l-grey @border-width;
+  border: solid @fg @border-width;
 }
 
 .i-footer{
@@ -202,5 +194,55 @@
 .i-footer__link{
   color: @bg;
   font-size: @font-reg / 1.5;
-  margin: @space;
+  margin: @space / 2 @space;
+}
+
+.o-connect-btn{
+  position: relative;
+  display: inline-block;
+  max-width: 700px;
+  padding: .5rem .7rem .4rem 2rem;
+  margin: .5rem @space / 2;
+  font-size: @font-reg / 1.4;
+
+  &::before{
+    .mixin-before-abpos();
+    width: 1.5rem;
+    height: 100%;
+    background: url('~@/assets/img/ico-fb.svg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: ~"calc(100% -  @{radius-reg} )";
+    left: 0;
+    bottom: 0;
+  }
+
+  &:hover{
+    text-decoration: underline;
+    color: @prim;
+  }
+}
+
+.o-connect-btn--fb{ background: #3c5997; }
+
+.connect-ico-mixin(@url){
+  background-image: url( @url );
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: center;
+}
+
+.o-connect-btn--tw{
+  background: #1da0f1;
+  &::before{ .connect-ico-mixin('~@/assets/img/ico-tw.svg'); }
+}
+
+.o-connect-btn--gml{
+   background: #de4a32;
+   &::before{ .connect-ico-mixin('~@/assets/img/ico-gml.svg'); }
+}
+
+.o-connect-btn--inst{
+  background: linear-gradient(to right, #fe6a39, #ef52c1);
+  &::before{ .connect-ico-mixin('~@/assets/img/ico-insta.svg'); }
 }
