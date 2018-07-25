@@ -12,9 +12,9 @@ main.o-main.c-backbg.pl-1.pr-1.pb-1
   div(v-else).mt-1
     .p-rel
       span.p-abs.p-vcenter-abs.ml-1.f-si.f-bold.cur-none Objet :
-      input(type="text").w-100.brad-4.b-reg.p-1.pl-5.no-deco
+      input(type="text" v-model="contactObjet").w-100.brad-4.b-reg.p-1.pl-5.no-deco
       
-    textarea(type="text" placeholder="Votre message").o-setting__textarea.w-100.brad-4.b-reg.mt-2.p-1.p-1.b-noresize.no-deco
+    textarea(type="text" v-model="contactMessage" placeholder="Votre message").o-setting__textarea.w-100.brad-4.b-reg.mt-2.p-1.p-1.b-noresize.no-deco
     a.d-block.f-bold.f-stl.pt-05.pb-05.pl-2.pr-2.mt-2.f-center.c-grad-yo.shadbox-light.brad-4.no-link envoyer
       
     
