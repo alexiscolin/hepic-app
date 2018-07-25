@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import indexHp from '@/components/index';
 import tilesFlux from '@/components/flux';
 import userProfile from '@/components/user';
 import userSettings from '@/components/user/settings';
@@ -16,6 +17,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'Index',
+      component: indexHp,
+    },
+    {
+      path: '/flux',
       name: 'Flux',
       component: tilesFlux,
     },

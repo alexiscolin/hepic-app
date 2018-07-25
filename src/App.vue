@@ -1,9 +1,10 @@
 <template>
   <div id="app">
     <sprite-svg/>
-    <app-header/>
-    <router-view/>
-    <app-footer/>
+    <app-header v-if="$route.path !== '/'"/>
+    <router-view>
+    </router-view>
+    <app-footer v-if="$route.path !== '/'"/>
   </div>
 </template>
 
