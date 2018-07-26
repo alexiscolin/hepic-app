@@ -3,7 +3,10 @@ const PrerenderSpaPlugin = require('prerender-spa-plugin');
 
 module.exports = {
   // assetsDir: '/',
-
+  //
+  pwa: {
+    appleMobileWebAppCapable: 'yes',
+  },
   css: {
     sourceMap: true
   },
