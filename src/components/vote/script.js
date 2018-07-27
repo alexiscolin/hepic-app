@@ -1,7 +1,11 @@
+import shellApp from '@/components/layout/shell';
 import config from './config.json';
 
 export default {
   name: 'vote',
+  components: {
+    shellApp,
+  },
   data() {
     return {
       vote: config.vote,

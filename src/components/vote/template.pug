@@ -1,32 +1,33 @@
-main.o-main.pb-1.c-backbg.f-center 
-  a(@click="$router.go(-1)").o-title.o-back.pl-1
-    svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
-      use(xlink:href="#ico-arrow")
+shell-app
+  main.o-main.pb-1.c-backbg.f-center 
+    a(@click="$router.go(-1)").o-title.o-back.pl-1
+      svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
+        use(xlink:href="#ico-arrow")
+          
+    .d-row-flex.f-center.d-flex-vm.d-flex-hm.mb-2    
+      div.d-row-flex.d-flex-vm
+        router-link(to="/contest").no-link
+          img(:src="vote.logo").o-profil-pic.p-hcenter-rel.b-reg.d-block.brad-100
+          h2.d-block.m-025.mb-0.f-bold.f-stm {{ vote.brand }}
+          span.d-block.pl-05.f-grey {{ vote.desc }}
+          span.d-block.pt-025.f-sxs.f-grey Voir la page du concours
+          
+    
         
-  .d-row-flex.f-center.d-flex-vm.d-flex-hm.mb-2    
-    div.d-row-flex.d-flex-vm
-      router-link(to="/contest").no-link
-        img(:src="vote.logo").o-profil-pic.p-hcenter-rel.b-reg.d-block.brad-100
-        h2.d-block.m-025.mb-0.f-bold.f-stm {{ vote.brand }}
-        span.d-block.pl-05.f-grey {{ vote.desc }}
-        span.d-block.pt-025.f-sxs.f-grey Voir la page du concours
-        
-  
-      
-  .o-width-container.p-rel.d-inblock
-    .d-row-flex.d-flex-spacebet.pl-1.pr-1
-      span.f-light n°{{ index + 1}}
-      a(href="#").no-link
-        span.o-more
-    img(:src="displayImage").o-plain-img
-  
-  .o-vote-btns.d-row-flex.d-flex-spacebet.pl-1.pr-1.mt-6
-    a(@click="prevImg").h-100.w-30.f-center
-      svg(v-show="index !== indexMin" viewBox="0 0 132.98 257").o-svg-btn.va-mid.h-100.w-30
-        use(xlink:href="#ico-leftArrow")
-    a(href="/vote-validation.html").brad-100.h-100.w-30.f-center
-      svg(viewBox="0 0 42 42").o-votefor.h-100.p-05.brad-100.b-regFg
-        use(xlink:href="#ico-vote")
-    a(@click="nextImg").h-100.w-30.f-center
-      svg(v-show="index !== indexMax" viewBox="0 0 132.98 257").o-svg-btn.va-mid.h-100.w-30.trotZ-180
-        use(xlink:href="#ico-leftArrow")
+    .o-width-container.p-rel.d-inblock
+      .d-row-flex.d-flex-spacebet.pl-1.pr-1
+        span.f-light n°{{ index + 1}}
+        a(href="#").no-link
+          span.o-more
+      img(:src="displayImage").o-plain-img
+    
+    .o-vote-btns.d-row-flex.d-flex-spacebet.pl-1.pr-1.mt-6
+      a(@click="prevImg").h-100.w-30.f-center
+        svg(v-show="index !== indexMin" viewBox="0 0 132.98 257").o-svg-btn.va-mid.h-100.w-30
+          use(xlink:href="#ico-leftArrow")
+      a(href="/vote-validation.html").brad-100.h-100.w-30.f-center
+        svg(viewBox="0 0 42 42").o-votefor.h-100.p-05.brad-100.b-regFg
+          use(xlink:href="#ico-vote")
+      a(@click="nextImg").h-100.w-30.f-center
+        svg(v-show="index !== indexMax" viewBox="0 0 132.98 257").o-svg-btn.va-mid.h-100.w-30.trotZ-180
+          use(xlink:href="#ico-leftArrow")
