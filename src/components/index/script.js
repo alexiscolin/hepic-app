@@ -1,8 +1,8 @@
-import facebookBtn from './facebook-btn';
+import socialBtn from './social-btn';
 
 export default {
   name: 'index',
   components: {
-    facebookBtn,
+    socialBtn,
   },
 };

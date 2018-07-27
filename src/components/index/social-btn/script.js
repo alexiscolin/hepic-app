@@ -1,5 +1,5 @@
 export default {
-  name: 'facebookBtn',
+  name: 'socialBtn',
   methods: {
     auth(network) {
       const hello = this.hello;

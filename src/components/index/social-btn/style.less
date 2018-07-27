@@ -1,0 +1,88 @@
+@import "~@@/utils/var";
+@import "~@@/utils/mixins";
+
+@font-reg: 1vw;
+@font-reg-tab: @font-reg * 2;
+@font-reg-mob: @font-reg * 3;
+
+.i-section__social__nav{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: @tab){
+    flex-direction: row;
+  }
+}
+
+.o-connect-btn{
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  max-width: 250px;
+  padding: .8rem 1rem .7rem 2.4rem;
+  margin: .5rem @space / 2;
+  font-size: @font-reg-mob;
+  color: @bg;
+  border-radius: @radius-reg;
+  text-align: center;
+  cursor: pointer;
+
+  @media (min-width: @tab){
+    padding: .5rem .7rem .4rem 2rem;
+    font-size: @font-reg-tab / 1.4;
+    max-width: 200px;
+  }
+  @media (min-width: @desktop){
+    padding: .5rem .7rem .4rem 2rem;
+    font-size: @font-reg / 1.4;
+    max-width: 200px;
+  }
+
+
+  &::before{
+    .mixin-before-abpos();
+    width: 2.5rem;
+    height: 100%;
+    background: url('~@/assets/img/ico-fb.svg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: ~"calc(100% -  @{radius-reg} )";
+    left: 0;
+    bottom: 0;
+
+    @media (min-width: @tab){
+      width: 1.5rem;
+    }
+  }
+
+  &:hover{
+    text-decoration: underline;
+    color: @prim;
+  }
+}
+
+.o-connect-btn--fb{ background: #3c5997; }
+
+.connect-ico-mixin(@url){
+  background-image: url( @url );
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: center;
+}
+
+.o-connect-btn--tw{
+  background: #1da0f1;
+  &::before{ .connect-ico-mixin('~@/assets/img/ico-tw.svg'); }
+}
+
+.o-connect-btn--gml{
+   background: #de4a32;
+   &::before{ .connect-ico-mixin('~@/assets/img/ico-gml.svg'); }
+}
+
+.o-connect-btn--inst{
+  background: linear-gradient(to right, #fe6a39, #ef52c1);
+  &::before{ .connect-ico-mixin('~@/assets/img/ico-insta.svg'); }
+}
