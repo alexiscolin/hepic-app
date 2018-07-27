@@ -8,5 +8,5 @@ div
         strong.i-popin__title Installer Hepic
         p.i-popin__text Installer cette application sur votre écran d'accueil afin d'y accéder rapidement en toute simplicité.
       div.i-popin__detail
-        p.i-popin__detail__text Appuyer sur <img src="@/assets/img/UIBarButtonAction_2x.png" class="i-icon-tab"> puis sur "Ajouter à l'écran d'accueil"
-        p.i-popin__detail__text Appuyer sur <img src="@/assets/img/UIBarButtonThreeDots_2x.png" class="i-icon-tab"> puis sur "Ajouter à l'écran d'accueil"
+        p(v-if="os === 'iOS'").i-popin__detail__text Appuyer sur <img src="@/assets/img/UIBarButtonAction_2x.png" class="i-icon-tab"> puis sur "Ajouter à l'écran d'accueil"
+        p(v-if="os === 'Android'").i-popin__detail__text Appuyer sur <img src="@/assets/img/UIBarButtonThreeDots_2x.png" class="i-icon-tab"> puis sur "Ajouter à l'écran d'accueil"
