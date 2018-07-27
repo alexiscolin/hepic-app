@@ -5,13 +5,14 @@ const PrerenderSpaPlugin = require('prerender-spa-plugin');
 module.exports = {
   // assetsDir: '/',
   //
-  devServer: {
-    https: {
-      key: fs.readFileSync('./ssl/server.key'),
-      cert: fs.readFileSync('./ssl/server.crt'),
-      ca: fs.readFileSync('./ssl/rootCA.pem'),
-    },
-  },
+  // devServer: {
+  //   https: {
+  //     key: fs.readFileSync('./ssl/server.key'),
+  //     cert: fs.readFileSync('./ssl/server.crt'),
+  //     ca: fs.readFileSync('./ssl/rootCA.pem'),
+  //   },
+  //   hot: true,
+  // },
   pwa: {
     appleMobileWebAppCapable: 'yes',
   },
