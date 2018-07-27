@@ -10,5 +10,5 @@ div
         p.i-popin__text Installer cette application sur votre écran d'accueil afin d'y accéder rapidement en toute simplicité.
       div.i-popin__detail
         p(v-if="os === 'iOS'").i-popin__detail__text Appuyer sur <img src="@/assets/img/UIBarButtonAction_2x.png" class="i-icon-tab"> puis sur "Ajouter à l'écran d'accueil"
-        p(v-if="os === 'Android'").i-popin__detail__text Appuyer sur <img src="@/assets/img/UIBarButtonThreeDots_2x.png" class="i-icon-tab"> puis sur "Ajouter à l'écran d'accueil"
+        p(v-else-if="os === 'Android'").i-popin__detail__text Appuyer sur <img src="@/assets/img/UIBarButtonThreeDots_2x.png" class="i-icon-tab"> puis sur "Ajouter à l'écran d'accueil"
         p(v-else).i-popin__detail__text A installer sur iOS ou Android
