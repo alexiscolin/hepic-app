@@ -24,6 +24,6 @@ new Vue({
 HelloJs.init({
   facebook: 699411133760678,
 }, {
-  redirect_uri: 'auth/',
+  redirect_uri: 'authcallback/',
 });
 Vue.use(VueHello, HelloJs);
