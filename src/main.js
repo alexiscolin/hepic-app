@@ -24,6 +24,6 @@ new Vue({
 HelloJs.init({
   facebook: 699411133760678,
 }, {
-  redirect_uri: 'authcallback/',
+  redirect_uri: 'https://hepic-app.netlify.com/auth/',
 });
 Vue.use(VueHello, HelloJs);
