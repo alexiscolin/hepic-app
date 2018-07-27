@@ -1,7 +1,11 @@
+import shellApp from '@/components/layout/shell';
 import config from './config.json';
 
 export default {
   name: 'settings',
+  components: {
+    shellApp,
+  },
   data() {
     return {
       data: config.data,
