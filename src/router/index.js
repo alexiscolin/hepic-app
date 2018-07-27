@@ -62,6 +62,6 @@ export default new Router({
     },
   ],
   scrollBehavior(to, from, savedPosition) {
-    return savedPosition || { x: 0, y: 0 };
+    return savedPosition || to.hash || { x: 0, y: 0 };
   },
 });
