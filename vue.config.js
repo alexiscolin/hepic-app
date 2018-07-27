@@ -7,9 +7,9 @@ module.exports = {
   //
   devServer: {
     https: {
-      key: fs.readFileSync('./server.key'),
-      cert: fs.readFileSync('./server.crt'),
-      ca: fs.readFileSync('./rootCA.pem'),
+      key: fs.readFileSync('./ssl/server.key'),
+      cert: fs.readFileSync('./ssl/server.crt'),
+      ca: fs.readFileSync('./ssl/rootCA.pem'),
     },
   },
   pwa: {
