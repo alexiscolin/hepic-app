@@ -58,6 +58,7 @@
   display: none;
 
   @media (min-width: @desktop){
+    display: block;
     font-size: @font-reg;
     margin: 0 0 0 @space;
     font-weight: @f-bold;
@@ -114,16 +115,23 @@
   min-height: 30vh;
   @media (min-width: @desktop){
     padding: 0;
-    min-height: 85vh;
+    min-height: 95vh;
   }
 }
+
+@height-bot: 70vh;
 .i-section__pane--bot{
   margin-bottom: 0;
   align-items: center;
   justify-content: flex-end;
 
   @media (min-width: @desktop){
-    min-height:100vh;
+    min-height:@height-bot;
+  }
+}
+.i-section__pane--last{
+  @media (min-width: @desktop){
+    min-height:@height-bot;
   }
 }
 
