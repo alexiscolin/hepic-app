@@ -66,17 +66,20 @@
 
 .i-popin__close{
   position: absolute;
-  display: block;
-  transform: rotate(45deg);
+  padding: 0;
   font-size: @font-reg-tab * 5;
   top: @space / 2;
-  right: @space / 2;
+  right: @space * 1.5;
   cursor: pointer;
   .outlinenone();
 
   @media (min-width: @tab){
     font-size: @font-reg * 3;
   }
+}
+.i-popin__close__trans{
+  display: block;
+  transform: rotate(45deg);
 }
 .i-icon-tab{
   height: 2em;

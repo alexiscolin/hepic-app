@@ -2,7 +2,8 @@ div
   button(@click="displayPopin").i-header__ddl télécharger la web application
   div(v-show="popinDisplayed").i-layer
     .i-popin
-      button(@click="displayPopin").i-popin__close +
+      button(@click="displayPopin").i-popin__close
+        span.i-popin__close__trans +
       div.i-popin__info
         img(src="@/assets/img/homescreen192.png" width="90").i-popin__icon
         strong.i-popin__title Installer Hepic
