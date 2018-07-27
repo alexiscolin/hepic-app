@@ -30,7 +30,7 @@ module.exports = {
     "prefer-destructuring": ["error", {
       "VariableDeclarator": {
         "array": false,
-        "object": true
+        "object": false
       },
       "AssignmentExpression": {
         "array": false,
