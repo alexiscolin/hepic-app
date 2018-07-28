@@ -12,6 +12,8 @@ export default {
         hello(network).api('me').then((json) => {
           const profile = json;
           console.log(profile);
+
+          this.$router.push('/flux');
           /*
 
             performs operations using the user info from profile
