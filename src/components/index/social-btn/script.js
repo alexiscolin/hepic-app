@@ -1,3 +1,5 @@
+// import { mapActions } from 'vuex';
+
 export default {
   name: 'socialBtn',
   methods: {
@@ -5,7 +7,14 @@ export default {
       const hello = this.hello;
       hello(network).login().then(() => {
         const authRes = hello(network).getAuthResponse();
+        console.log(network);
         console.log(authRes);
+
+        this.$store.dispatch('getToken', {
+          platform: network,
+          token: authRes.access_token,
+        });
+
         /*
           performs operations using the token from authRes
         */
@@ -13,7 +22,7 @@ export default {
           const profile = json;
           console.log(profile);
 
-          this.$router.push('/flux');
+          // this.$router.push('/flux');
           /*
 
             performs operations using the user info from profile
