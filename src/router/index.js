@@ -12,6 +12,22 @@ import store from '../store';
 
 Vue.use(Router);
 
+// règles d'autorisation à la connexion
+const ifNotAuthenticated = (to, from, next) => {
+  if (!store.getters.isAuthenticated) {
+    next();
+    return;
+  }
+  next('/flux');
+};
+const ifAuthenticated = (to, from, next) => {
+  if (store.getters.isAuthenticated) {
+    next();
+    return;
+  }
+  next('/');
+};
+
 export default new Router({
   mode: 'history',
   routes: [
@@ -19,36 +35,43 @@ export default new Router({
       path: '/',
       name: 'Index',
       component: indexHp,
+      beforeEnter: ifNotAuthenticated,
     },
     {
       path: '/flux',
       name: 'Flux',
       component: tilesFlux,
+      beforeEnter: ifAuthenticated,
     },
     {
       path: '/user',
       name: 'User',
       component: userProfile,
+      beforeEnter: ifAuthenticated,
     },
     {
       path: '/user/settings/:type',
       name: 'Settings',
       component: userSettings,
+      beforeEnter: ifAuthenticated,
     },
     {
       path: '/image/:id',
       name: 'Image',
       component: displayImage,
+      beforeEnter: ifAuthenticated,
     },
     {
       path: '/contest',
       name: 'Contest',
       component: brandContest,
+      beforeEnter: ifAuthenticated,
     },
     {
       path: '/contest/vote',
       name: 'Vote',
       component: brandContestVote,
+      beforeEnter: ifAuthenticated,
     },
     {
       path: '/contest/upload',
@@ -56,8 +79,11 @@ export default new Router({
       component: brandContestUpload,
       beforeEnter: (to, from, next) => {
         const rules = store.state.contestEntry.contest.agreement === true ? true : '/';
-        next(rules);
-        next(true);
+        if (store.getters.isAuthenticated && rules) {
+          next();
+          return;
+        }
+        next('/');
       },
     },
   ],

@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-// axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-
 // GET - info contest
 const getContestInfo = function getContestInfo(data) {
   return axios.get('https://api.coindesk.com/v1/bpi/currentprice.json', { params: data });

@@ -1,3 +1,4 @@
+import axios from '@/plugins/axios';
 import api from '@/api/connexion';
 
 // ACTION
@@ -19,6 +20,7 @@ const actions = {
   },
   logout: () => new Promise((resolve) => {
     localStorage.removeItem('user-token'); // desctruction token
+    delete axios.defaults.headers.common.Authorization;
     resolve(); // on redirige sur la vue
   }),
 };

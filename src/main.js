@@ -3,7 +3,8 @@
 import Vue from 'vue';
 import HelloJs from 'hellojs/dist/hello.all.min';
 import VueHello from 'vue-hellojs';
-import './plugins/axios';
+import '@/plugins/axios';
+import axios from 'axios';
 import App from './App';
 import router from './router';
 import store from './store';
@@ -26,3 +27,7 @@ HelloJs.init({
   redirect_uri: 'authcallback/',
 });
 Vue.use(VueHello, HelloJs);
+
+// rec auth token pour axios
+const token = localStorage.getItem('user-token');
+if (token) axios.defaults.headers.common.Authorization = `Token ${token}`;

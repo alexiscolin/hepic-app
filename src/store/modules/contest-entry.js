@@ -1,4 +1,4 @@
-import api from '@/api/contests';
+import api from '@/api/connexion';
 
 // ACTION
 const actions = {
