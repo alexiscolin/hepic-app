@@ -3,6 +3,15 @@ div
     svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
       use(xlink:href="#ico-arrow")
         
+  .d-row-flex.f-center.d-flex-vm.d-flex-hm.mb-2.mt-2   
+    div.d-row-flex.d-flex-vm
+      router-link(to="/contest").no-link
+        img(:src="logo").o-profil-pic.p-hcenter-rel.b-reg.d-block.brad-100
+        h2.d-block.m-025.mb-0.f-bold.f-stm {{ brand }}
+        span.d-block.pl-05.f-grey {{ desc }}
+        span.d-block.pt-025.f-sxs.f-grey Voir la page du concours
+  hr.o-sep
+              
   ul.d-col-flex.d-flex-vm.mt-2.mb-2.no-list
     li.p-1.f-stl.f-reg
       button().no-link.f-dgrey Signaler

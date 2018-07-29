@@ -11,8 +11,6 @@ shell-app
           h2.d-block.m-025.mb-0.f-bold.f-stm {{ vote.brand }}
           span.d-block.pl-05.f-grey {{ vote.desc }}
           span.d-block.pt-025.f-sxs.f-grey Voir la page du concours
-          
-    
         
     .o-width-container.p-rel.d-inblock
       .d-row-flex.d-flex-spacebet.pl-1.pr-1
@@ -33,4 +31,4 @@ shell-app
           use(xlink:href="#ico-leftArrow")
   
   layer-popin(v-show="displayPopin")
-    share-popin(@displayPopin="displayPopin = $event")
+    share-popin(@displayPopin="displayPopin = $event" :brand="vote.brand" :desc="vote.desc" :logo="vote.logo")

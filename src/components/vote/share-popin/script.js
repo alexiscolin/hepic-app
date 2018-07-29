@@ -5,7 +5,21 @@ export default {
   components: {
     socialSharing,
   },
-  data (){
+  props: {
+    logo: {
+      type: String,
+      required: true,
+    },
+    brand: {
+      type: String,
+      required: true,
+    },
+    desc: {
+      type: String,
+      required: true,
+    },
+  },
+  data() {
     return {
       title: 'photo du concours',
     };
