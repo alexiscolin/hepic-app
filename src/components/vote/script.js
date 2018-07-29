@@ -32,4 +32,7 @@ export default {
       this.index = (this.index > this.indexMin) ? this.index - 1 : this.indexMin;
     },
   },
+  created: function $created() {
+    document.querySelector('meta[property="og:image"]').setAttribute('content', 'ttps://d33wubrfki0l68.cloudfront.net/bc95c7d6560235789878c5c33ee1577703e0931e/d1dd7/assets/img/profil/plage.png');
+  },
 };

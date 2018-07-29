@@ -5,9 +5,14 @@ export default {
   components: {
     socialSharing,
   },
+  data (){
+    return {
+      title: 'photo du concours',
+    };
+  },
   computed: {
     currentUrl: function $currentUrl() {
-      return `${window.location.hostname}:${window.location.port + this.$route.fullPath}`;
+      return `https://${window.location.hostname}:${window.location.port + this.$route.fullPath}`;
     },
   },
 };
