@@ -5,28 +5,14 @@ export default {
   methods: {
     auth(network) {
       const hello = this.hello;
-      hello(network).login().then(() => {
+      hello(network).login().then(() => { // helloJS connexion
         const authRes = hello(network).getAuthResponse();
-        console.log(network);
-        console.log(authRes);
 
-        this.$store.dispatch('getToken', {
+        this.$store.dispatch('getToken', { // demande au store de récupérer infos sur API Hepic
           platform: network,
           token: authRes.access_token,
-        });
-
-        /*
-          performs operations using the token from authRes
-        */
-        hello(network).api('me').then((json) => {
-          const profile = json;
-          console.log(profile);
-
-          // this.$router.push('/flux');
-          /*
-
-            performs operations using the user info from profile
-          */
+        }).then(() => {
+          this.$router.push('/flux'); // redirection
         });
       });
     },
