@@ -7,9 +7,8 @@ const postConnectId = function $postConnectId(data) {
   const opt = {
     method: 'post',
     headers: {
-      'Access-Control-Allow-Origin': 'http://192.168.1.15:8080/',
-      'Access-Control-Allow-Methods': 'POST',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      'Access-Control-Allow-Origin': '*',
+      'crossDomain': true,
     },
     data,
     url: 'https://api.hepic.fr/auth/login',
