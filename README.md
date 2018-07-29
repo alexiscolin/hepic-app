@@ -20,6 +20,8 @@ This project is written using frammeworks and libraries and various preprocessor
 * Colcade library (grid style)
 * LESS (Atomic CSS - BEM style)
 * PUG/Jade (Web Components OOP)
+* HelloJS (Social Login)
+
 
 #### Tools
 This project requires some Tools

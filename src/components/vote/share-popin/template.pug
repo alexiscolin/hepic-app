@@ -9,10 +9,12 @@ div
     li.w-100.p-1.pl-5.pr-5.f-stl.f-reg.f-center.f-dgrey
       .pb-1 lien à partager :
       .f-break  www.hepic.com/lzskieuvlkeqrbvnmiqerbvgknqjdebkm
-  .d-flex.d-flex-hm.mb-2
-    a(href="#").pr-1
-      svg(viewBox="0 0 248 247.98").o-svg-share--fb.va-mid
-        use(xlink:href="#ico-facebook-btn")
-    a(href="#").pl-1
-      svg(viewBox="0 0 246 172.09").o-svg-share.va-mid
-        use(xlink:href="#ico-twitter-btn")
+  <social-sharing inline-template>
+    .d-flex.d-flex-hm.mb-2
+      network(network="facebook").pr-1
+        svg(viewBox="0 0 248 247.98").o-svg-share--fb.va-mid
+          use(xlink:href="#ico-facebook-btn")
+      network(network="twitter").pl-1
+        svg(viewBox="0 0 246 172.09").o-svg-share.va-mid
+          use(xlink:href="#ico-twitter-btn")
+  </social-sharing>
