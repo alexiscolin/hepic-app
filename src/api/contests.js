@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+// axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
 // GET - info contest
 const getContestInfo = function getContestInfo(data) {
