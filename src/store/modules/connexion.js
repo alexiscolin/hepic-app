@@ -1,4 +1,4 @@
-import axios from '@/plugins/axios';
+import axios from 'axios';
 import api from '@/api/connexion';
 
 // ACTION
@@ -18,7 +18,8 @@ const actions = {
       });
     });
   },
-  logout: () => new Promise((resolve) => {
+  logout: ({ commit }) => new Promise((resolve) => {
+    commit('authLogout');
     localStorage.removeItem('user-token'); // desctruction token
     delete axios.defaults.headers.common.Authorization;
     resolve(); // on redirige sur la vue
@@ -36,6 +37,9 @@ const mutations = {
   },
   authError: (state) => {
     state.status = 'error';
+  },
+  authLogout: (state) => {
+    state.token = '';
   },
 };
 

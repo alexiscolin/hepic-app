@@ -22,6 +22,9 @@ module.exports = {
         'e' // for e.returnvalue
       ]
     }],
+    'no-underscore-dangle': ["error", {
+      "allow": ["__isRetryRequest"]
+    }],
     'no-unused-expressions': ['error', {
       allowShortCircuit: true,
       allowTernary: true,
