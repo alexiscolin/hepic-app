@@ -17,7 +17,7 @@ shell-app
     .o-width-container.p-rel.d-inblock
       .d-row-flex.d-flex-spacebet.pl-1.pr-1
         span.f-light n°{{ index + 1}}
-        a(href="#").no-link
+        a(@click="displayPopin = true" ).no-link
           span.o-more
       img(:src="displayImage").o-plain-img
     
@@ -31,3 +31,6 @@ shell-app
       a(@click="nextImg").h-100.w-30.f-center
         svg(v-show="index !== indexMax" viewBox="0 0 132.98 257").o-svg-btn.va-mid.h-100.w-30.trotZ-180
           use(xlink:href="#ico-leftArrow")
+  
+  layer-popin(v-show="displayPopin")
+    share-popin(@displayPopin="displayPopin = $event")

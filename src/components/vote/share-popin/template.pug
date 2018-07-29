@@ -1,0 +1,18 @@
+div
+  a(@click="$emit('displayPopin', false)").p-abs.ml-2.mt-05.z-5000
+    svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
+      use(xlink:href="#ico-arrow")
+        
+  ul.d-col-flex.d-flex-vm.mt-2.mb-2.no-list
+    li.p-1.f-stl.f-reg
+      button().no-link.f-dgrey Signaler
+    li.w-100.p-1.pl-5.pr-5.f-stl.f-reg.f-center.f-dgrey
+      .pb-1 lien à partager :
+      .f-break  www.hepic.com/lzskieuvlkeqrbvnmiqerbvgknqjdebkm
+  .d-flex.d-flex-hm.mb-2
+    a(href="#").pr-2
+      svg(viewBox="0 0 248 247.98").o-svg-share.va-mid
+        use(xlink:href="#ico-facebook-btn")
+    a(href="#").pl-2
+      svg(viewBox="0 0 246 172.09").o-svg-share.va-mid
+        use(xlink:href="#ico-twitter-btn")

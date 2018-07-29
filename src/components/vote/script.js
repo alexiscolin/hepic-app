@@ -1,10 +1,14 @@
 import shellApp from '@/components/layout/shell';
+import layerPopin from '@/components/layout//layer-popin';
+import sharePopin from './share-popin';
 import config from './config.json';
 
 export default {
   name: 'vote',
   components: {
     shellApp,
+    layerPopin,
+    sharePopin,
   },
   data() {
     return {
@@ -12,6 +16,7 @@ export default {
       index: config.vote.queryIndex,
       indexMin: 0,
       indexMax: config.vote.images.length - 1,
+      displayPopin: false,
     };
   },
   computed: {
