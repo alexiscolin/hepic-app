@@ -1,16 +1,18 @@
 .i-intro
   header.i-header
     .i-header__brand
-      img(srcset="~@/assets/img/hepic@2x.png 2x, ~@/assets/img/hepic@1x.png 1x" src="~@/assets/img/hepic@1x.png").i-header__logo
+      img(srcset="~@/assets/img/hepic@2x.png 2x, ~@/assets/img/hepic@1x.png 1x" src="~@/assets/img/hepic@1x.png" alt="Logo Hepic").i-header__logo
       h1.i-main__title Trouvez, tentez et gagnez des concours photo gratuits et faits pour vous
     install-btn
     
   section.i-section
     .i-section__pane.i-section__pane--ft
       .i-section__text
-        h2.i-text.i-section__text--min Hepic vous rapproche des marques et des organismes que vous aimez, en vous donnant un accès simple et gratuit à leurs concours photo. Et cela en quelques clics, sur le web ou depuis l'application. Sur Hepic, partagez votre talent photo et remportez des lots !
+        h2.i-text.i-section__text--min 
+          | Hepic vous rapproche des marques et des organismes que vous aimez, en vous donnant un accès simple et gratuit à leurs concours photo. Et cela en quelques clics, sur le web ou depuis l'application.
+          | <br><br><span class="i-subtitle">Sur Hepic, partagez votre talent photo et remportez des lots !</span>
       .i-discover.i-section__text--min
-        a(href="#discover").i-btn.i-text comment ça marche
+        a(href="#discover").i-btn.i-text Comment ça marche
         svg(viewBox="0 0 64.22 62.67").i-icon--arrow
           use(xlink:href="#ico-arrow")
             
@@ -21,7 +23,7 @@
     .i-section__pane.i-section__pane--ft.i-bg-skew
       .i-section__img.i-section__img--isskewed
         h3.i-hottile-text.i-subtitle En ce moment sur Hepic
-        img(srcset="@/assets/img/index/hot-tile@2x.png 2x, @/assets/img/index/hot-tile@1x.png 1x" src="@/assets/img/index/hot-tile@1x.png" width="350").i-img__hottile
+        img(srcset="@/assets/img/index/hot-tile@2x.png 2x, @/assets/img/index/hot-tile@1x.png 1x" src="@/assets/img/index/hot-tile@1x.png" alt="Concours photos challenge - Integ' UTC 2018" width="350").i-img__hottile
                 
   section#discover.i-section
     .i-section__pane
@@ -33,11 +35,11 @@
         p.i-text.i-subtitle--under Repérez et suivez les concours photo qui correspondent à vos envies. Retrouvez des challenges exclusifs organisés par vos marques, évènements, associations et organismes préférés.
         strong.i-subtitle.i-subtitle--under Sur Hepic, découvrez des prix et une vitrine pour votre créativité. 
     .i-section__pane
-      img(srcset="@/assets/img/index/page2@2x.png 2x, @/assets/img/index/page2@1x.png 1x" src="@/assets/img/index/page2@1x.png" width="500").i-img 
+      img(srcset="@/assets/img/index/page2@2x.png 2x, @/assets/img/index/page2@1x.png 1x" src="@/assets/img/index/page2@1x.png" alt="Sur Hepic, découvrez des prix et une vitrine pour votre créativité" width="500").i-img 
        
   section.i-section
     .i-section__pane 
-      img(srcset="@/assets/img/index/page3@2x.png 2x, @/assets/img/index/page3@1x.png 1x" src="@/assets/img/index/page3@1x.png" width="500").i-img
+      img(srcset="@/assets/img/index/page3@2x.png 2x, @/assets/img/index/page3@1x.png 1x" src="@/assets/img/index/page3@1x.png" alt="Restez notifié de votre performance en téléchargeant l'application Hepic" width="500").i-img
         
     .i-section__pane
       .i-section__text--vote
@@ -45,23 +47,23 @@
           svg(viewBox="0 0 64.22 62.67").i-icon.i-icon--vote
             use(xlink:href="#ico-vote")
           | Participer & Voter 
-        p.i-text.i-subtitle--under Envie de partager vos créations, de gagner un lot, d'encourager un organisateur un participant ou un organisateur ? Tentez votre chance en postant votre photo sur les concours qui vous intéressent, ou votez simplement pour les photos que vous aimez. 
-        strong.i-subtitle.i-subtitle--under Restez notifié de votre performance en téléchargeant l'application Hepic 
+        p.i-text.i-subtitle--under Envie de partager vos créations, de gagner un lot, d'encourager un participant ou un organisateur ? Tentez votre chance en postant votre photo sur les concours qui vous intéressent, ou votez simplement pour les photos que vous aimez. 
+        strong.i-subtitle.i-subtitle--under Restez notifié de votre performance en téléchargeant l'application Hepic.
   section.i-section.i-section__pane--last
     .i-section__pane.i-section__pane--last
       .i-section__text--gift
         h2.i-title
           svg(viewBox="0 0 64.22 62.67").i-icon
             use(xlink:href="#ico-gift")
-          | Gagnez
+          | Gagner
         p.i-text.i-subtitle--under Remportez les prix spécialement préparés par nos organisateurs partenaires. Faites-vous remarquer aux concours où vous avez brillé ! 
-        strong.i-subtitle.i-subtitle--under Commencez par vous connecter avec votre réseau social favori
+        strong.i-subtitle.i-subtitle--under Commencez par vous connecter avec votre réseau social favori.
 
     .i-section__pane.i-section__pane--bot
-      img(srcset="@/assets/img/index/page4@2x.png 2x, @/assets/img/index/page4@1x.png 1x" src="@/assets/img/index/page4@1x.png" width="700").i-img
+      img(srcset="@/assets/img/index/page4@2x.png 2x, @/assets/img/index/page4@1x.png 1x" src="@/assets/img/index/page4@1x.png" alt="Remportez les prix spécialement préparés par nos organisateurs partenaires" width="700").i-img
 
   footer.i-footer
-    a(href="/ml.html").i-footer__link Mentions Légales
+    a(href="/mentions-legales.html").i-footer__link Mentions Légales
     a(href="/cgu.html").i-footer__link Conditions Générales d’Utilisation
     a(href="/confidentialite.html").i-footer__link Confidentialité
     a(href="/donnees-personnelles.html").i-footer__link Données Personnelles

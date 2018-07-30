@@ -1,14 +1,14 @@
 div
-  button(@click="displayPopin").i-header__ddl télécharger la web application
+  button(@click="displayPopin").i-header__ddl Télécharger la web application
   div(v-show="popinDisplayed").i-layer
     .i-popin
       button(@click="displayPopin").i-popin__close
         span.i-popin__close__trans +
       div.i-popin__info
-        img(src="@/assets/img/homescreen192.png" width="90").i-popin__icon
+        img(src="@/assets/img/homescreen192.png" width="90" alt="Logo Hepic").i-popin__icon
         strong.i-popin__title Installer Hepic
-        p.i-popin__text Installer cette application sur votre écran d'accueil afin d'y accéder rapidement en toute simplicité.
+        p.i-popin__text Installez l'application sur votre écran d'accueil afin d'y accéder rapidement et en toute simplicité.
       div.i-popin__detail
-        p(v-if="os === 'iOS'").i-popin__detail__text Appuyer sur <img src="@/assets/img/UIBarButtonAction_2x.png" class="i-icon-tab"> puis sur "Ajouter à l'écran d'accueil"
-        p(v-else-if="os === 'Android'").i-popin__detail__text Appuyer sur <img src="@/assets/img/UIBarButtonThreeDots_2x.png" class="i-icon-tab"> puis sur "Ajouter à l'écran d'accueil"
+        p(v-if="os === 'iOS'").i-popin__detail__text Appuyer sur <img src="@/assets/img/UIBarButtonAction_2x.png" class="i-icon-tab" alt=""> puis sur "Ajouter à l'écran d'accueil"
+        p(v-else-if="os === 'Android'").i-popin__detail__text Appuyer sur <img src="@/assets/img/UIBarButtonThreeDots_2x.png" class="i-icon-tab" alt=""> puis sur "Ajouter à l'écran d'accueil"
         p(v-else).i-popin__detail__text A installer sur iOS ou Android
