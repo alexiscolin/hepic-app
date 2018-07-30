@@ -1,2 +1,2 @@
+Sitemap: https://hepic.fr/sitemap.xml
 User-agent: *
-Disallow:
