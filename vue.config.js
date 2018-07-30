@@ -14,7 +14,7 @@ module.exports = {
   //   hot: true,
   // },
   pwa: {
-    appleMobileWebAppCapable: 'yes',
+    appleMobileWebAppCapable: 'no',
   },
   css: {
     sourceMap: true
