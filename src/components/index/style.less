@@ -128,12 +128,17 @@
 }
 
 
-.i-section__text{ width: 60%; }
+.i-section__text{
+  width: 80%;
+    @media (min-width: @desktop){
+      width: 60%;
+    }
+}
 .i-section__text--vote{ width: 80%; }
 .i-section__text--gift{
-  width: 70%;
+  width: 80%;
   @media (min-width: @desktop){
-    width: 45%;
+    width: 50%;
   }
 }
 .i-section__img{
