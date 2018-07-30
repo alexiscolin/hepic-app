@@ -16,6 +16,8 @@ module.exports = {
   // pwa: {
   //   appleMobileWebAppCapable: 'no',
   // },
+  baseUrl: process.env.NODE_ENV === 'production' ? 'https://hepic-app.netlify.com/' : '/',
+
   css: {
     sourceMap: true
   },
