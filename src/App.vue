@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <sprite-svg/>
+    <!-- <sprite-svg/> -->
     <!-- <app-header v-if="$route.path !== '/'"/> -->
     <router-view/>
     <!-- <app-footer v-if="$route.path !== '/'"/> -->
