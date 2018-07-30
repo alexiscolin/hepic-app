@@ -13,9 +13,11 @@ module.exports = {
   //   },
   //   hot: true,
   // },
-  // pwa: {
-  //   appleMobileWebAppCapable: 'no',
-  // },
+  pwa: {
+    // appleMobileWebAppCapable: 'no',
+    themeColor: '#ec6730',
+    msTileColor: '#FFFFFF',
+  },
   baseUrl: process.env.NODE_ENV === 'production' ? 'https://hepic-app.netlify.com/' : '/',
 
   css: {
