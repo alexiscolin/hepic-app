@@ -3,20 +3,20 @@ div
     svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
       use(xlink:href="#ico-arrow")
         
-  .d-row-flex.f-center.d-flex-vm.d-flex-hm.mb-2.mt-2   
+  .d-row-flex.f-center.d-flex-vm.d-flex-hm.mb-1.mt-2   
     div.d-row-flex.d-flex-vm
       router-link(to="/contest").no-link
         img(:src="logo").o-profil-pic.p-hcenter-rel.b-reg.d-block.brad-100
         h2.d-block.m-025.mb-0.f-bold.f-stm {{ brand }}
         span.d-block.pl-05.f-grey {{ desc }}
-        span.d-block.pt-025.f-sxs.f-grey Voir la page du concours
+        span.d-block.f-sxs.f-grey Voir la page du concours
   hr.o-sep
               
-  ul.d-col-flex.d-flex-vm.mt-2.mb-2.no-list
+  ul.d-col-flex.d-flex-vm.mb-1.no-list
     li.p-1.f-stl.f-reg
       button().no-link.f-dgrey Signaler
     li.w-100.p-1.pl-5.pr-5.f-stl.f-reg.f-center.f-dgrey
-      .pb-1 lien à partager :
+      .pb-05 lien à partager :
       .f-break  www.hepic.com/lzskieuvlkeqrbvnmiqerbvgknqjdebkm
       
   social-sharing(:url="currentUrl" :title="title" :quote="title" inline-template)
