@@ -31,7 +31,10 @@ export default {
   },
   methods: {
     displayOptin: function $displayOptin() {
-      this.$store.commit('dispayOptin', { text: 'Signaler cette photo' });
+      this.$store.commit('dispayOptin', {
+        text: 'Signaler cette photo',
+        type: 'signalPhoto',
+      });
     },
   },
 };

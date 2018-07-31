@@ -8,4 +8,12 @@ export default {
       return this.$store.state.layerOptin.text;
     },
   },
+  methods: {
+    hide: function $hide() {
+      this.$store.commit('dispayOptin');
+    },
+    action: function $action() {
+      this.$store.dispatch('optinAction');
+    },
+  },
 };

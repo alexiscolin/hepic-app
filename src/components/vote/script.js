@@ -16,7 +16,7 @@ export default {
       index: config.vote.queryIndex,
       indexMin: 0,
       indexMax: config.vote.images.length - 1,
-      displayPopin: false,
+      displayedPopin: false,
     };
   },
   computed: {
@@ -30,6 +30,10 @@ export default {
     },
     prevImg: function $prevImg() {
       this.index = (this.index > this.indexMin) ? this.index - 1 : this.indexMin;
+    },
+    displayPopin: function $displayPopin(e) {
+      this.displayedPopin = e;
+      this.$store.commit('hideOptin');
     },
   },
   created: function $created() {
