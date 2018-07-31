@@ -5,7 +5,7 @@
 const actions = {
   postSignal: ({ state }, data) => {
     console.log(data.id);
-    state.send = true;
+    state.send = true; // utile le send ?
   },
 };
 
