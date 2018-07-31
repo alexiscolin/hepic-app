@@ -13,7 +13,11 @@ shell-app
               span.va-mid
                 span.pl-1.f-stm.pr-1.f-grey {{ media.winner.name }}
                 div(:class="{'o-ico-sprite--none': Number.isInteger(media.rank), 'o-ico-sprite--or': media.rank === 'gold', 'o-ico-sprite--argent': media.rank === 'silver', 'o-ico-sprite--bronze': media.rank === 'bronze'}").o-ico-sprite.o-ico-sprite--inline.va-mid.mt-neg025.f-center    
-            a(href="#").no-link
+            a(@click="displayPopin").no-link
               span.o-more
                 
           img(:src="media.image").o-plain-img.o-plain-img--large
+
+    layer-popin(v-show="displayedPopin")
+      info-popin(@displayPopin="displayPopin" :id="getId" :brand="media.brand" :desc="media.desc" :logo="media.logo") 
+      //- share-popin(@displayPopin="displayPopin" :id="getId" :brand="vote.brand" :desc="vote.desc" :logo="vote.logo")

@@ -3,7 +3,10 @@
     {
       "id": 0,
       "rank": "gold",
-      "brand": "https://d33wubrfki0l68.cloudfront.net/62538bbce3b5ad97d91e81e3b3720b415e524886/2bdd7/assets/img/brands/imaginarium/logo@2x.png",
+      "brand": "brand",
+      "desc": "descriptif",
+      "idContest": 2,
+      "logo": "https://d33wubrfki0l68.cloudfront.net/62538bbce3b5ad97d91e81e3b3720b415e524886/2bdd7/assets/img/brands/imaginarium/logo@2x.png",
       "image": "https://d33wubrfki0l68.cloudfront.net/f27d6ecbe4210bc741c5a27a24c3a847ec4af6f4/a94c7/assets/img/brands/imaginarium/ifdance.jpg",
       "winner": {
         "name": "Julie",
@@ -13,7 +16,10 @@
     {
       "id": 1,
       "rank": 10,
-      "brand": "https://d33wubrfki0l68.cloudfront.net/9b9a0306592b79f2327d04d89957f229694febf9/645de/assets/img/brands/club-med/logo.png",
+      "brand": "brand",
+      "desc": "descriptif",
+      "idContest": 2,
+      "logo": "https://d33wubrfki0l68.cloudfront.net/9b9a0306592b79f2327d04d89957f229694febf9/645de/assets/img/brands/club-med/logo.png",
       "image": "https://d33wubrfki0l68.cloudfront.net/bc95c7d6560235789878c5c33ee1577703e0931e/d1dd7/assets/img/profil/plage.png",
       "winner": {
         "name": "Julie",
@@ -23,7 +29,10 @@
     {
       "id": 2,
       "rank": 8,
-      "brand": "https://d33wubrfki0l68.cloudfront.net/21c78290684ec37a245d26464e0212617dd73603/3097d/assets/img/brands/macdonalds/logo.png",
+      "brand": "brand",
+      "desc": "descriptif",
+      "idContest": 2,
+      "logo": "https://d33wubrfki0l68.cloudfront.net/21c78290684ec37a245d26464e0212617dd73603/3097d/assets/img/brands/macdonalds/logo.png",
       "image": "https://d33wubrfki0l68.cloudfront.net/00774da2b362fcdbd73db67691c8a43bf1e05d33/a29a8/assets/img/profil/smoothie.jpg",
       "winner": {
         "name": "Julie",
@@ -33,7 +42,10 @@
     {
       "id": 3,
       "rank": 12,
-      "brand": "https://d33wubrfki0l68.cloudfront.net/83cf723c946caebac24bb30c468dd38a6489d75b/6f3b1/assets/img/brands/skipass/logo.png",
+      "desc": "descriptif",
+      "brand": "brand",
+      "idContest": 2,
+      "logo": "https://d33wubrfki0l68.cloudfront.net/83cf723c946caebac24bb30c468dd38a6489d75b/6f3b1/assets/img/brands/skipass/logo.png",
       "image": "https://d33wubrfki0l68.cloudfront.net/c3589f7d6868dc9109721c9bf014241d64fb18cc/9b252/assets/img/profil/neige.jpg",
       "winner": {
         "name": "Julie",
@@ -43,7 +55,10 @@
     {
       "id": 4,
       "rank": 9,
-      "brand": "https://d33wubrfki0l68.cloudfront.net/9b9a0306592b79f2327d04d89957f229694febf9/645de/assets/img/brands/club-med/logo.png",
+      "brand": "brand",
+      "idContest": 2,
+      "desc": "descriptif",
+      "logo": "https://d33wubrfki0l68.cloudfront.net/9b9a0306592b79f2327d04d89957f229694febf9/645de/assets/img/brands/club-med/logo.png",
       "image": "https://d33wubrfki0l68.cloudfront.net/80890cc8a2a21462237c711ce5bf6642f0bd26a7/f9b48/assets/img/profil/plage2.jpg",
       "winner": {
         "name": "Julie",
@@ -53,7 +68,10 @@
     {
       "id": 5,
       "rank": "silver",
-      "brand": "https://d33wubrfki0l68.cloudfront.net/9b9a0306592b79f2327d04d89957f229694febf9/645de/assets/img/brands/club-med/logo.png",
+      "brand": "brand",
+      "idContest": 2,
+      "desc": "descriptif",
+      "logo": "https://d33wubrfki0l68.cloudfront.net/9b9a0306592b79f2327d04d89957f229694febf9/645de/assets/img/brands/club-med/logo.png",
       "image": "https://d33wubrfki0l68.cloudfront.net/381551b6df72a55e49ac4fced5194cbcda8dbcf4/a06d9/assets/img/profil/paysage.jpg",
       "winner": {
         "name": "Julie",

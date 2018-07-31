@@ -7,6 +7,10 @@ const actions = {
     console.log(data.id);
     state.send = true; // utile le send ?
   },
+  deletePhoto: ({ state }, data) => {
+    console.log(data.id);
+    state.send = true; // utile le send ?
+  },
 };
 
 // MUTATIONS

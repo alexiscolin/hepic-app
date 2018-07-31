@@ -1,5 +1,14 @@
-// import axios from 'axios';
-// import api from '@/api/connexion';
+// func util pour le dispatch
+const dispatchAction = function $dispatchAction(dispatch, state, entry) {
+  if (state.active) {
+    dispatch(entry, state.data).then(() => {
+      state.text = state.cbText;
+      state.color = 'green';
+      state.active = false;
+      dispatch('breakPopin');
+    });
+  }
+};
 
 // ACTION
 const actions = {
@@ -7,16 +16,11 @@ const actions = {
   optinAction: ({ dispatch, state }) => {
     switch (state.type) {
       case 'signalPhoto':
-        if (state.active) {
-          dispatch('postSignal', state.data).then(() => {
-            state.text = state.cbText;
-            state.color = 'green';
-            state.active = false;
-            dispatch('breakPopin');
-          });
-        }
+        dispatchAction(dispatch, state, 'postSignal');
         break;
-
+      case 'deletePhoto':
+        dispatchAction(dispatch, state, 'deletePhoto');
+        break;
       default:
         console.log('error: no type action involved!');
     }
