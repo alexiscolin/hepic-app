@@ -3,10 +3,12 @@
 
 // ACTION
 const actions = {
-  optinAction: ({ dispatch, state }) => {
+  optinAction: ({ dispatch, commit, state }) => {
     switch (state.type) {
       case 'signalPhoto':
-        dispatch('postSignal', state.data);
+        dispatch('postSignal', state.data).then(() => {
+          commit('hideOptin');
+        });
         break;
 
       default:
@@ -19,9 +21,9 @@ const actions = {
 const mutations = {
   dispayOptin: (state, payload) => {
     state.displayed = !state.displayed && true;
-    state.text = payload.text ? payload.text : '';
-    state.type = payload.type ? payload.type : false;
-    state.data = payload.data ? payload.data : null;
+    state.text = payload ? payload.text : '';
+    state.type = payload ? payload.type : false;
+    state.data = payload ? payload.data : null;
   },
   hideOptin: (state) => {
     state.displayed = false;
