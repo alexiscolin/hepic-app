@@ -50,6 +50,14 @@ const mutations = {
   },
 };
 
+// GUETTERS
+const getters = {
+  colorCSS: (state) => {
+    const color = state.color === 'green' ? 'f-green' : 'f-red';
+    return color;
+  },
+};
+
 // STATE
 const state = {
   text: '',
@@ -63,6 +71,7 @@ const state = {
 
 export default {
   state,
+  getters,
   mutations,
   actions,
 };

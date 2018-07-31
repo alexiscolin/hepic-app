@@ -8,7 +8,7 @@ export default {
       return this.$store.state.layerOptin.text;
     },
     color: function $color() {
-      return this.$store.state.layerOptin.color === 'green' ? 'f-green' : 'f-red';
+      return this.$store.getters.colorCSS;
     },
   },
   methods: {
