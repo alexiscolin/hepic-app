@@ -29,4 +29,9 @@ export default {
       return `https://${window.location.hostname}${(window.location.port && ':') + window.location.port + this.$route.fullPath}`;
     },
   },
+  methods: {
+    displayOptin: function $displayOptin() {
+      this.$store.commit('dispayOptin', { text: 'Signaler cette photo' });
+    },
+  },
 };
