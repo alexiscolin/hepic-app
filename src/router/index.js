@@ -56,7 +56,7 @@ export default new Router({
       beforeEnter: ifAuthenticated,
     },
     {
-      path: '/image/:id',
+      path: '/user/picture/:id',
       name: 'Image',
       component: displayImage,
       beforeEnter: ifAuthenticated,
