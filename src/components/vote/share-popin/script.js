@@ -26,7 +26,7 @@ export default {
   },
   computed: {
     currentUrl: function $currentUrl() {
-      return `https://${window.location.hostname}:${window.location.port + this.$route.fullPath}`;
+      return `https://${window.location.hostname}${(window.location.port && ':') + window.location.port + this.$route.fullPath}`;
     },
   },
 };

@@ -17,7 +17,7 @@ div
       button().no-link.f-dgrey Signaler
     li.w-100.p-1.pl-5.pr-5.f-stl.f-reg.f-center.f-dgrey
       .pb-05 lien à partager :
-      .f-break  www.hepic.com/lzskieuvlkeqrbvnmiqerbvgknqjdebkm
+      .f-break {{ currentUrl }}
       
   social-sharing(:url="currentUrl" :title="title" :quote="title" inline-template)
     .d-flex.d-flex-hm.mb-2
