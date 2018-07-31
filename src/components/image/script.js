@@ -19,7 +19,6 @@ export default {
   computed: {
     media: function $media() {
       const id = parseInt(this.$route.params.id, 10);
-      console.log(config.pictures.find(item => item.id === id));
       return config.pictures.find(item => item.id === id); // recup item verifiant l'id demandé
     },
     getId: function $getId() {

@@ -23,7 +23,7 @@ export default {
       const data = { id: this.id };
       this.$store.commit('dispayOptin', {
         reqText: 'Supprimer et quitter le concours',
-        cbText: 'Supprimé !!',
+        cbText: 'Supprimé !',
         type: 'deletePhoto',
         data,
       });
