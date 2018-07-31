@@ -37,7 +37,8 @@ export default {
     displayOptin: function $displayOptin() {
       const data = { id: this.id };
       this.$store.commit('dispayOptin', {
-        text: 'Signaler cette photo',
+        reqText: 'Signaler cette photo',
+        cbText: 'Photo signalée!',
         type: 'signalPhoto',
         data,
       });

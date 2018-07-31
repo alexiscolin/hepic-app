@@ -7,6 +7,9 @@ export default {
     text: function $text() {
       return this.$store.state.layerOptin.text;
     },
+    color: function $color() {
+      return this.$store.state.layerOptin.color === 'green' ? 'f-green' : 'f-red';
+    },
   },
   methods: {
     hide: function $hide() {
