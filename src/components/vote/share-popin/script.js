@@ -18,6 +18,10 @@ export default {
       type: String,
       required: true,
     },
+    id: {
+      type: Number,
+      required: true,
+    },
   },
   data() {
     return {
@@ -31,9 +35,11 @@ export default {
   },
   methods: {
     displayOptin: function $displayOptin() {
+      const data = { id: this.id };
       this.$store.commit('dispayOptin', {
         text: 'Signaler cette photo',
         type: 'signalPhoto',
+        data,
       });
     },
   },

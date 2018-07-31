@@ -23,6 +23,9 @@ export default {
     displayImage: function $displayImage() {
       return config.vote.images[this.index].src;
     },
+    getId: function $getId() {
+      return config.vote.images[this.index].id;
+    },
   },
   methods: {
     nextImg: function $nextImg() {

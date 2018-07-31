@@ -3,8 +3,15 @@
 
 // ACTION
 const actions = {
-  optinAction: ({ state }) => {
-    console.log(state.type);
+  optinAction: ({ dispatch, state }) => {
+    switch (state.type) {
+      case 'signalPhoto':
+        dispatch('postSignal', state.data);
+        break;
+
+      default:
+        console.log('error: no type action involved!');
+    }
   },
 };
 
@@ -12,8 +19,9 @@ const actions = {
 const mutations = {
   dispayOptin: (state, payload) => {
     state.displayed = !state.displayed && true;
-    state.text = payload ? payload.text : '';
-    state.type = payload ? payload.type : false;
+    state.text = payload.text ? payload.text : '';
+    state.type = payload.type ? payload.type : false;
+    state.data = payload.data ? payload.data : null;
   },
   hideOptin: (state) => {
     state.displayed = false;
@@ -27,6 +35,7 @@ const state = {
   text: '',
   type: false,
   displayed: false,
+  data: null,
 };
 
 export default {
