@@ -1,27 +1,28 @@
 export default {
   name: 'validation-rules',
-  props: {
-    logo: {
-      type: String,
-      required: true,
-    },
-    brand: {
-      type: String,
-      required: true,
-    },
-    desc: {
-      type: String,
-      required: true,
-    },
-    rules: {
-      type: String,
-      required: true,
-    },
-    ban: {
-      type: String,
-      required: true,
-    },
-  },
+  // props: {
+  //   logo: {
+  //     type: String,
+  //     required: true,
+  //   },
+  //   brand: {
+  //     type: Number, // string
+  //     required: true,
+  //   },
+  //   desc: {
+  //     type: String,
+  //     required: true,
+  //   },
+  //   rules: {
+  //     type: String,
+  //     required: false,
+  //   },
+  //   ban: {
+  //     type: String,
+  //     required: true,
+  //   },
+  // },
+  props: ['logo', 'desc', 'brand', 'rules', 'ban'],
   data() {
     return {
       rulesAccepted: false,

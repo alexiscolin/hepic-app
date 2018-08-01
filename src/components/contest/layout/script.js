@@ -6,9 +6,9 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      contest: this.data,
-    };
+  computed: {
+    contest: function $contest() {
+      return this.data;
+    },
   },
 };

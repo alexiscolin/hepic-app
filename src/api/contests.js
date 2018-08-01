@@ -1,8 +1,13 @@
 import axios from 'axios';
 
-// GET - info contest
-const GET_CONTESTS = function getContestInfo() {
+// GET - info contests
+const GET_CONTESTS = function $GET_CONTESTS() {
   return axios.get('https://api.hepic.fr/contests/');
+};
+
+// GET - info contest
+const GET_CONTEST = function $GET_CONTEST(id) {
+  return axios.get(`https://api.hepic.fr/contest/${id}`);
 };
 
 // POST - contest picture
@@ -19,4 +24,5 @@ const postContestPicture = function postContestPicture(data) {
 export default {
   postContestPicture,
   GET_CONTESTS,
+  GET_CONTEST,
 };

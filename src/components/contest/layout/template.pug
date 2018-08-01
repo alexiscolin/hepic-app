@@ -1,6 +1,6 @@
 main.o-main.c-backbg.pb-1
   .mt-negMain.w-full
-    img(:src="contest.ban").o-contest-img
+    img(:src="contest.ban" v-show="contest.ban").o-contest-img
   
   block backlink  
     a(@click="$router.go(-1)").o-title.o-back.pl-1.mt-1.pt-025.z-5000
