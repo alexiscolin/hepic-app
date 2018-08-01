@@ -48,6 +48,7 @@ const mutations = {
 const getters = {
   isAuthenticated: state => !!state.token,
   authStatus: state => state.status,
+  authToken: state => state.token,
 };
 
 // STATE

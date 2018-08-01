@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 // GET - info contest
-const getContestInfo = function getContestInfo(data) {
-  return axios.get('https://api.coindesk.com/v1/bpi/currentprice.json', { params: data });
+const GET_CONTESTS = function getContestInfo() {
+  return axios.get('https://api.hepic.fr/contests/');
 };
 
 // POST - contest picture
@@ -18,5 +18,5 @@ const postContestPicture = function postContestPicture(data) {
 
 export default {
   postContestPicture,
-  getContestInfo,
+  GET_CONTESTS,
 };

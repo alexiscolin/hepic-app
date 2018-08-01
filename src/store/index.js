@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 import connexion from './modules/connexion';
 import layerOptin from './modules/validation-action';
 import callPhoto from './modules/call-photo';
+import callcontest from './modules/call-contest';
 import contestEntry from './modules/contest-entry';
 
 Vue.use(Vuex);
@@ -12,6 +13,7 @@ export default new Vuex.Store({
     connexion,
     layerOptin,
     callPhoto,
+    callcontest,
     contestEntry,
   },
 });

@@ -1,6 +1,7 @@
 import Colcade from 'colcade';
+import { mapState } from 'vuex';
 import shellApp from '@/components/layout/shell';
-import config from './config.json';
+// import config from './config.json';
 import fluxTile from './tile';
 import fluxPodium from './podium';
 
@@ -13,13 +14,20 @@ export default {
   },
   data() {
     return {
-      contests: config.contests,
       gridColcade: null,
     };
   },
+  computed: mapState({
+    contests: state => state.callcontest.all,
+  }),
+  created: function $created() {
+    this.PgetContests = this.$store.dispatch('getContests');
+  },
   mounted: function $mounted() {
     const elem = document.querySelector('.o-grid');
-    this.gridColcade = elem && new Colcade(elem, { columns: '.grid-col', items: '.o-tile-grided' });
+    Promise.all([this.PgetContests]).then(() => {
+      this.gridColcade = elem && new Colcade(elem, { columns: '.grid-col', items: '.o-tile-grided' });
+    });
   },
   destroyed: function $beforeDestroy() {
     this.gridColcade.destroy();
