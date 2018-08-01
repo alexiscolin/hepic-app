@@ -25,7 +25,7 @@ export default {
   },
   mounted: function $mounted() {
     const elem = document.querySelector('.o-grid');
-    Promise.all([this.PgetContests]).then(() => {
+    Promise.all([this.PgetContests]).finally(() => {
       this.gridColcade = elem && new Colcade(elem, { columns: '.grid-col', items: '.o-tile-grided' });
     });
   },
