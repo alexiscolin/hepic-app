@@ -1,5 +1,5 @@
 div
-  router-link(to="/contest").no-link
+  router-link(:to="'/contest/' + data.id").no-link
     
     //- CLOSED
     div(v-if="data.closed")

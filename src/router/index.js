@@ -62,7 +62,7 @@ export default new Router({
       beforeEnter: ifAuthenticated,
     },
     {
-      path: '/contest',
+      path: '/contest/:id',
       name: 'Contest',
       component: brandContest,
       beforeEnter: ifAuthenticated,
