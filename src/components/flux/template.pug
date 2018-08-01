@@ -5,5 +5,5 @@ shell-app
     .grid-col.grid-col--3.d-flex-eq
       
     article(v-for="contest in contests" :key="contest.id" class="o-tile o-tile-grided brad-4 shadbox-light a-grow")
-      flux-tile(:data="contest" v-if="!contest.pictures")
-      flux-podium(:data="contest" v-else="contest.pictures")
+      flux-tile(:data="contest" v-if="!contest.winners.length")
+      flux-podium(:data="contest" v-else="contest.winners.length")

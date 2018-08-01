@@ -5,7 +5,7 @@ import api from '@/api/contests';
 const actions = {
   getContests: ({ commit }, data) => new Promise((resolve, reject) => {
     api.GET_CONTESTS(data).then((res) => {
-      console.log(res);
+      console.log(res.data);
       commit('setContests', res.data);
       resolve(res);
     }).catch((res) => {

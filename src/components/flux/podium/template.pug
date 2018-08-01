@@ -10,8 +10,8 @@ div
     //-   span.o-more
         
   .o-tile__pictures
-    a(href="#" v-for="pic in data.pictures").p-rel
-      img(:src="pic", alt="")
+    router-link(:to="'/user/'+ winner.profileId" v-for="winner in winners" :key="winner.profileId").p-rel
+      img(:src="winner.photo", alt="")
       .o-ico-sprite
 
   .p-1.pt-025.pb-025.f-right
