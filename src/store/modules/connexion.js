@@ -9,6 +9,7 @@ const actions = {
       api.postConnectId(data).then((res) => {
         const token = res.data.token;
         localStorage.setItem('user-token', token); // rec token
+        axios.defaults.headers.common.Authorization = `Token ${token}`;
         commit('authSuccess', token);
         resolve(res);
       }, (error) => {
