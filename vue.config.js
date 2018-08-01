@@ -23,6 +23,7 @@ module.exports = {
   css: {
     sourceMap: true
   },
+  
   configureWebpack: {
     resolve: {
       alias: {
@@ -32,10 +33,9 @@ module.exports = {
 
     plugins: [
       new PrerenderSpaPlugin({
-        // Required - The path to the webpack-outputted app to prerender.
-        staticDir: path.join(__dirname, 'dist'),
-        // Required - Routes to render.
-        routes: [ '/' ],
+        staticDir: path.join(__dirname, 'dist'),  // Required - le chemin de création du prérendu.
+        routes: [ '/' ], // Required - Routes vers le rendu.
+
       })
     ]
   }
