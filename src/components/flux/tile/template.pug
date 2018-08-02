@@ -44,6 +44,6 @@ div
               div(:class="{'c-grad-yo f-stl': closeSoon}") au {{ getEndDate }}
                   //- OPEN -> bouton de vote  
   div(v-if="!data.closed && data.hasPhoto")     
-    a(href="/vote.html").o-tile__vote.brad-100
+    router-link(:to="'/contest/'+ data.id +'/vote'").o-tile__vote.brad-100
       svg(viewBox="0 0 42 42").o-svgw-ico
         use(xlink:href="#ico-vote") 
