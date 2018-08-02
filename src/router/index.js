@@ -74,7 +74,7 @@ export default new Router({
       beforeEnter: ifAuthenticated,
     },
     {
-      path: '/contest/upload',
+      path: '/contest/:id/upload',
       name: 'Upload',
       component: brandContestUpload,
       beforeEnter: (to, from, next) => {

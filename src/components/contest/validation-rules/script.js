@@ -38,7 +38,7 @@ export default {
         ban: this.ban,
         agreement: this.rulesAccepted || false,
       });
-      this.rulesAccepted && this.$router.push('/contest/upload');
+      this.rulesAccepted && this.$router.push(`/contest/${this.$route.params.id}/upload`);
     },
   },
 };
