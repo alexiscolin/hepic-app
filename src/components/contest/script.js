@@ -47,7 +47,7 @@ export default {
     }
   },
   beforeRouteLeave: function $beforeRouteLeave(to, from, next) {
-    this.$store.commit('eraseContest'); // effacer le contenu du store avant changement de page
+    to.name !== 'Vote' && this.$store.commit('eraseContest'); // effacer le contenu du store avant changement de page
     next();
   },
 };
