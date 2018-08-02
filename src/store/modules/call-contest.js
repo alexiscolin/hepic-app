@@ -1,35 +1,13 @@
 // import axios from 'axios';
 import api from '@/api/contests';
 import findBy from '@/utils/find-by';
+import apiPromise from '@/utils/api-promise';
 
 // ACTION
 const actions = {
-  getContests: ({ commit }, data) => new Promise((resolve, reject) => {
-    api.GET_CONTESTS(data).then((res) => {
-      commit('setContests', res.data);
-      resolve(res);
-    }).catch((res) => {
-      reject(res);
-    });
-  }),
-  getContest: ({ commit }, id) => new Promise((resolve, reject) => {
-    api.GET_CONTEST(id).then((res) => {
-      console.log(res.data);
-      commit('setContest', res.data);
-      resolve(res);
-    }).catch((res) => {
-      reject(res);
-    });
-  }),
-  getPhotos: ({ commit }, id) => new Promise((resolve, reject) => {
-    api.GET_CONTEST_PHOTOS(id).then((res) => {
-      console.log(res.data);
-      commit('setContestPhotos', res.data);
-      resolve(res);
-    }).catch((res) => {
-      reject(res);
-    });
-  }),
+  getContests: ({ commit }, data) => apiPromise(api.GET_CONTESTS(data), 'setContests', commit),
+  getContest: ({ commit }, id) => apiPromise(api.GET_CONTEST(id), 'setContest', commit),
+  getPhotos: ({ commit }, id) => apiPromise(api.GET_CONTEST_PHOTOS(id), 'setContestPhotos', commit),
 };
 
 // MUTATIONS
