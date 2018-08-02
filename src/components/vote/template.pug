@@ -7,9 +7,9 @@ shell-app
     .d-row-flex.f-center.d-flex-vm.d-flex-hm.mb-2    
       div.d-row-flex.d-flex-vm
         router-link(to="/contest").no-link
-          img(:src="vote.logo").o-profil-pic.p-hcenter-rel.b-reg.d-block.brad-100
-          h2.d-block.m-025.mb-0.f-bold.f-stm {{ vote.brand }}
-          span.d-block.pl-05.f-grey {{ vote.desc }}
+          img(:src="contest.logo").o-profil-pic.p-hcenter-rel.b-reg.d-block.brad-100
+          h2.d-block.m-025.mb-0.f-bold.f-stm {{ contest.brand }}
+          span.d-block.pl-05.f-grey {{ contest.desc }}
           span.d-block.f-sxs.f-grey Voir la page du concours
         
     .o-width-container.p-rel.d-inblock
@@ -31,4 +31,4 @@ shell-app
           use(xlink:href="#ico-leftArrow")
   
   layer-popin(v-show="displayedPopin")
-    share-popin(@displayPopin="displayPopin" :id="getId" :url="url" :brand="vote.brand" :desc="vote.desc" :logo="vote.logo")
+    share-popin(@displayPopin="displayPopin" :id="getId" :url="url" :brand="contest.brand" :desc="contest.desc" :logo="contest.logo")

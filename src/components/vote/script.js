@@ -20,6 +20,10 @@ export default {
     };
   },
   computed: {
+    contest: function $contest() {
+      const id = this.$route.params.id;
+      return this.$store.getters.getContest(id) || this.$store.state.callcontest.contest;
+    },
     getId: function $getId() {
       // id photo demandé par la route ou la première tableau
       const idPhoto = this.$route.params.photo;
@@ -47,12 +51,25 @@ export default {
     },
   },
   created: function $created() {
-    this.$store.dispatch('getPhotos', this.$route.params.id).then(() => {
+    const idContest = this.$route.params.id;
+    let contest = this.$store.getters.getContest(idContest);
+
+    // recherche en cache si venu depuis le flux
+    if (!contest) {
+      this.$store.dispatch('getContest', idContest).then((res) => {
+        contest = res.data;
+      });
+    }
+
+    this.$store.dispatch('getPhotos', idContest).then(() => {
       // on change url pour avoir l'id photo même si inconnu après GET photos
-      const idContest = this.$route.params.id;
       const idPhoto = this.getId;
       this.url = `/contest/${idContest}/vote/${idPhoto}`;
       window.history.replaceState(null, null, this.url);
     });
+  },
+  beforeRouteLeave: function $beforeRouteLeave(to, from, next) {
+    this.$store.commit('eraseContestPhotos'); // effacer le contenu du store avant changement de page
+    next();
   },
 };

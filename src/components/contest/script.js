@@ -37,15 +37,14 @@ export default {
     },
   },
   created: function $created() {
-    const contestId = this.$route.params.id;
+    const idContest = this.$route.params.id;
+    let contest = this.$store.getters.getContest(idContest);
 
-    let contest = this.$store.getters.getContest(contestId);
     if (!contest) {
-      this.$store.dispatch('getContest', contestId).then((res) => {
+      this.$store.dispatch('getContest', idContest).then((res) => {
         contest = res.data;
       });
     }
-    return contest;
   },
   beforeRouteLeave: function $beforeRouteLeave(to, from, next) {
     this.$store.commit('eraseContest'); // effacer le contenu du store avant changement de page

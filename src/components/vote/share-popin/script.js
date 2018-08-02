@@ -11,7 +11,7 @@ export default {
       required: false, // a changer en true
     },
     brand: {
-      type: String,
+      type: Number, // a changer String
       required: false, // a changer en true
     },
     desc: {
@@ -20,7 +20,7 @@ export default {
     },
     url: {
       type: String,
-      required: false,
+      required: false, // a changer en true
     },
     id: {
       type: Number,

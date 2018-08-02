@@ -24,7 +24,7 @@ const actions = {
   getPhotos: ({ commit }, id) => new Promise((resolve, reject) => {
     api.GET_CONTEST_PHOTOS(id).then((res) => {
       console.log(res.data);
-      commit('setPhotos', res.data);
+      commit('setContestPhotos', res.data);
       resolve(res);
     }).catch((res) => {
       reject(res);
@@ -43,8 +43,12 @@ const mutations = {
   eraseContest: (state) => {
     state.contest = {};
   },
-  setPhotos: (state, photos) => {
+  setContestPhotos: (state, photos) => {
     state.photos = photos;
+  },
+  eraseContestPhotos: (state) => {
+    // effacer selection de photo en vote
+    state.photos = [];
   },
 };
 
