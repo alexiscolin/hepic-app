@@ -52,6 +52,7 @@ const mutations = {
 const getters = {
   getContest: state => id => findBy(state.all, id),
   getContestPhoto: state => id => findBy(state.photos, id),
+  getContestPhotoIndex: state => el => state.photos.indexOf(el),
 };
 
 // STATE

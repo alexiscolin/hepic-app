@@ -18,6 +18,10 @@ export default {
       type: String,
       required: false, // a changer en true
     },
+    url: {
+      type: String,
+      required: false,
+    },
     id: {
       type: Number,
       required: false, // a changer en true
@@ -30,7 +34,7 @@ export default {
   },
   computed: {
     currentUrl: function $currentUrl() {
-      return `https://${window.location.hostname}${(window.location.port && ':') + window.location.port + this.$route.fullPath}`;
+      return `https://${window.location.hostname}${(window.location.port && ':') + window.location.port + this.url}`;
     },
   },
   methods: {

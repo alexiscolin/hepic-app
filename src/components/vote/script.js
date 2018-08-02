@@ -1,7 +1,6 @@
 import shellApp from '@/components/layout/shell';
 import layerPopin from '@/components/layout//layer-popin';
 import sharePopin from './share-popin';
-import config from './config.json';
 
 export default {
   name: 'vote',
@@ -12,27 +11,27 @@ export default {
   },
   data() {
     return {
-      // vote: config.vote,
+      vote: this.$store.state.callcontest.photos,
+      url: this.$route.fullPath,
       index: 0,
       indexMin: 0,
-      indexMax: config.vote.images.length - 1,
+      indexMax: Math.max(0, this.$store.state.callcontest.photos.length - 1), // load sans photo
       displayedPopin: false,
-      // displayImage: null,
     };
   },
   computed: {
-    vote: function $vote() {
-      return this.$store.state.callcontest.photos;
-    },
     getId: function $getId() {
-      return config.vote.images[this.index].id;
-    },
-    displayImage: function $displayImage() {
-      // photo demandé par la route ou la première du tableau
+      // id photo demandé par la route ou la première tableau
       const idPhoto = this.$route.params.photo;
       const photo1 = this.$store.state.callcontest.photos[0];
       const photoX = this.$store.getters.getContestPhoto(idPhoto);
-      return idPhoto ? (photoX && photoX.file) : photo1 && photo1.file;
+      this.index = photoX ? this.$store.getters.getContestPhotoIndex(photoX) : 0;
+
+      return idPhoto ? (photoX && photoX.id) : photo1 && photo1.id;
+    },
+    displayImage: function $displayImage() {
+      const photo = this.$store.state.callcontest.photos[this.index];
+      return photo && photo.file; // si marche pas -> passer dans un commit du store
     },
   },
   methods: {
@@ -48,7 +47,12 @@ export default {
     },
   },
   created: function $created() {
-    this.$store.dispatch('getPhotos', this.$route.params.id);
-    document.querySelector('meta[property="og:image"]').setAttribute('content', 'ttps://d33wubrfki0l68.cloudfront.net/bc95c7d6560235789878c5c33ee1577703e0931e/d1dd7/assets/img/profil/plage.png');
+    this.$store.dispatch('getPhotos', this.$route.params.id).then(() => {
+      // on change url pour avoir l'id photo même si inconnu après GET photos
+      const idContest = this.$route.params.id;
+      const idPhoto = this.getId;
+      this.url = `/contest/${idContest}/vote/${idPhoto}`;
+      window.history.replaceState(null, null, this.url);
+    });
   },
 };
