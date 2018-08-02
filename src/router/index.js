@@ -68,8 +68,14 @@ export default new Router({
       beforeEnter: ifAuthenticated,
     },
     {
-      path: '/contest/:id/vote',
+      path: '/contest/:id/vote/', // sans idPhoto
       name: 'Vote',
+      component: brandContestVote,
+      beforeEnter: ifAuthenticated,
+    },
+    {
+      path: '/contest/:id/vote/:photo',
+      name: 'VoteId',
       component: brandContestVote,
       beforeEnter: ifAuthenticated,
     },

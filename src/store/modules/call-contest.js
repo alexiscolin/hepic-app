@@ -1,5 +1,6 @@
 // import axios from 'axios';
 import api from '@/api/contests';
+import findBy from '@/utils/find-by';
 
 // ACTION
 const actions = {
@@ -20,6 +21,15 @@ const actions = {
       reject(res);
     });
   }),
+  getPhotos: ({ commit }, id) => new Promise((resolve, reject) => {
+    api.GET_CONTEST_PHOTOS(id).then((res) => {
+      console.log(res.data);
+      commit('setPhotos', res.data);
+      resolve(res);
+    }).catch((res) => {
+      reject(res);
+    });
+  }),
 };
 
 // MUTATIONS
@@ -33,17 +43,22 @@ const mutations = {
   eraseContest: (state) => {
     state.contest = {};
   },
+  setPhotos: (state, photos) => {
+    state.photos = photos;
+  },
 };
 
 // GETTERS
 const getters = {
-  getContest: state => id => state.all.find(contest => contest.id === parseInt(id, 10)),
+  getContest: state => id => findBy(state.all, id),
+  getContestPhoto: state => id => findBy(state.photos, id),
 };
 
 // STATE
 const state = {
   all: [],
   contest: {},
+  photos: [],
 };
 
 export default {

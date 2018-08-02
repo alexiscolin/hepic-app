@@ -8,19 +8,19 @@ export default {
   props: {
     logo: {
       type: String,
-      required: true,
+      required: false, // a changer en true
     },
     brand: {
       type: String,
-      required: true,
+      required: false, // a changer en true
     },
     desc: {
       type: String,
-      required: true,
+      required: false, // a changer en true
     },
     id: {
       type: Number,
-      required: true,
+      required: false, // a changer en true
     },
   },
   data() {
