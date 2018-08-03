@@ -44,7 +44,12 @@ const getters = {
 // STATE
 const state = {
   all: [],
-  contest: {},
+  contest: {
+    brandName: '',
+    logo: '',
+    desc: '',
+    ban: '',
+  },
   photos: [],
   rules: '',
 };

@@ -1,5 +1,5 @@
 // import axios from 'axios';
-import api from '@/api/contests';
+import api from '@/api/user';
 import apiPromise from '@/utils/api-promise';
 
 // ACTION
@@ -9,17 +9,15 @@ const actions = {
 
 // MUTATIONS
 const mutations = {
-  setUserPhotos: (state, contests) => {
-    state.userPhotos = contests;
+  setUserPhotos: (state, photos) => {
+    state.userPhotos = photos;
   },
 };
 
 // GETTERS
-// const getters = {
-//   getContest: state => id => findBy(state.all, id),
-//   getContestPhoto: state => id => findBy(state.photos, id),
-//   getContestPhotoIndex: state => el => state.photos.indexOf(el),
-// };
+const getters = {
+  getUserPhotos: state => state.userPhotos,
+};
 
 // STATE
 const state = {
@@ -28,7 +26,7 @@ const state = {
 
 export default {
   state,
-  // getters,
+  getters,
   mutations,
   actions,
 };

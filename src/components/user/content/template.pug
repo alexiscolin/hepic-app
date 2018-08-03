@@ -1,9 +1,9 @@
-section.o-profil-pics.d-flex
-  router-link(v-for="item in user.images" :key="item.id" :to="'/user/picture/' + item.id" :class="{'o-profil-pics__img--large': item.rank === 'gold' || item.rank === 'silver'}").o-profil-pics__img.m-025
-    img(:src="item.image")
+section(v-if="userPhotos").o-profil-pics.d-flex
+  router-link(v-for="photo in userPhotos" :key="photo.id" :to="'/user/picture/' + photo.id" :class="{'o-profil-pics__img--large': photo.rank === 'gold' || photo.rank === 'silver'}").o-profil-pics__img.m-025
+    img(:src="photo.file")
     .o-profil-logo
-      img(:src="item.brand").w-100.h-100.brad-100
-    div(:class="{'o-ico-sprite--num': Number.isInteger(item.rank), 'o-ico-sprite--or': item.rank === 'gold', 'o-ico-sprite--argent': item.rank === 'silver', 'o-ico-sprite--bronze': item.rank === 'bronze'}").o-ico-sprite.o-ico-sprite--little.va-mid.f-center
-      span(v-if="Number.isInteger(item.rank)").p-abs.p-vhcenter-abs.pt-025.f-sxs.f-bold.f-lgrey {{ item.rank }}
+      img(:src="photo.logo").w-100.h-100.brad-100
+    div(:class="{'o-ico-sprite--num': Number.isInteger(photo.rank), 'o-ico-sprite--or': photo.rank === 'gold', 'o-ico-sprite--argent': photo.rank === 'silver', 'o-ico-sprite--bronze': photo.rank === 'bronze'}").o-ico-sprite.o-ico-sprite--little.va-mid.f-center
+      span(v-if="Number.isInteger(photo.rank)").p-abs.p-vhcenter-abs.pt-025.f-sxs.f-bold.f-lgrey {{ photo.rank }}
   
     

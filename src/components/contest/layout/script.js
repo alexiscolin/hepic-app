@@ -8,7 +8,7 @@ export default {
   },
   computed: {
     contest: function $contest() {
-      return this.data;
+      return this.$store.state.callcontest.contest;
     },
   },
 };
