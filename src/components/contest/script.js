@@ -17,6 +17,11 @@ export default {
       return this.$store.state.popin.displayed;
     },
 
+    // règles du concours
+    rules: function $rules() {
+      return this.$store.state.callcontest.rules.content;
+    },
+
     // données en cache depuis le flux ou req
     contest: function $contest() {
       const id = this.$route.params.id;
@@ -39,11 +44,15 @@ export default {
     const idContest = this.$route.params.id;
     let contest = this.$store.getters.getContest(idContest);
 
+    // récup contest API si pas de cache
     if (!contest) {
       this.$store.dispatch('getContest', idContest).then((res) => {
         contest = res.data;
       });
     }
+
+    // récupération des règles
+    this.$store.dispatch('getContestRules', idContest);
   },
   beforeRouteLeave: function $beforeRouteLeave(to, from, next) {
     to.name !== 'Vote' && this.$store.commit('eraseContest'); // effacer le contenu du store avant changement de page

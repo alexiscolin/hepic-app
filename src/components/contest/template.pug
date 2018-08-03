@@ -32,8 +32,8 @@ shell-app
         
       div.pl-4.pr-4.mt-4
         h3.p-rel.sep-bef.f-stl.f-reg Règlement complet
-        p(v-html="contest.rules").pt-1.f-grey.f-stl
+        p(v-html="rules").pt-1.f-grey.f-stl
       
     //- popin de reglement ici
     layer-popin(v-show="displayedPopin")
-      validation-rules(:brandName="contest.brandName" :logo="contest.logo" :desc="contest.desc" :rules="contest.rules" :ban="contest.ban")
+      validation-rules(:brandName="contest.brandName" :logo="contest.logo" :desc="contest.desc" :rules="rules" :ban="contest.ban")

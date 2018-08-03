@@ -15,6 +15,11 @@ const GET_CONTEST_PHOTOS = function $GET_CONTEST_PHOTOS(id) {
   return axios.get(`https://api.hepic.fr/photos/by_contest/${id}`);
 };
 
+// GET - contest photos list
+const GET_CONTEST_RULES = function $GET_CONTEST_RULES(id) {
+  return axios.get(`https://api.hepic.fr/rules/${id}`);
+};
+
 // POST - contest picture
 const postContestPicture = function postContestPicture(data) {
   const opt = {
@@ -31,4 +36,5 @@ export default {
   GET_CONTESTS,
   GET_CONTEST,
   GET_CONTEST_PHOTOS,
+  GET_CONTEST_RULES,
 };

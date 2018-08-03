@@ -8,6 +8,7 @@ const actions = {
   getContests: ({ commit }, data) => apiPromise(api.GET_CONTESTS(data), 'setContests', commit),
   getContest: ({ commit }, id) => apiPromise(api.GET_CONTEST(id), 'setContest', commit),
   getPhotos: ({ commit }, id) => apiPromise(api.GET_CONTEST_PHOTOS(id), 'setContestPhotos', commit),
+  getContestRules: ({ commit }, id) => apiPromise(api.GET_CONTEST_RULES(id), 'setContestRules', commit),
 };
 
 // MUTATIONS
@@ -28,6 +29,9 @@ const mutations = {
     // effacer selection de photo en vote
     state.photos = [];
   },
+  setContestRules: (state, rules) => {
+    state.rules = rules;
+  },
 };
 
 // GETTERS
@@ -42,6 +46,7 @@ const state = {
   all: [],
   contest: {},
   photos: [],
+  rules: '',
 };
 
 export default {
