@@ -11,12 +11,15 @@ export default {
     layerPopin,
     infoPopin,
   },
-  data() {
-    return {
-      displayedPopin: false,
-    };
-  },
+  // data() {
+  //   return {
+  //     displayedPopin: false,
+  //   };
+  // },
   computed: {
+    displayedPopin: function $displayedPopin() {
+      return this.$store.state.popin.displayed;
+    },
     media: function $media() {
       const id = parseInt(this.$route.params.id, 10);
       return config.pictures.find(item => item.id === id); // recup item verifiant l'id demandé
@@ -26,8 +29,9 @@ export default {
     },
   },
   methods: {
-    displayPopin: function $displayPopin(e) {
-      this.displayedPopin = e;
+    displayPopin: function $displayPopin() {
+      // this.displayedPopin = e;
+      this.$store.commit('popinDisplay');
       this.$store.commit('hideOptin');
     },
   },
