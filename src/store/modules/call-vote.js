@@ -1,4 +1,4 @@
-import api from '@/api/photos';
+import api from '@/api/vote';
 import apiPromise from '@/utils/api-promise';
 
 // ACTION

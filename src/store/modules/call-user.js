@@ -4,7 +4,7 @@ import apiPromise from '@/utils/api-promise';
 
 // ACTION
 const actions = {
-  getUserPhoto: ({ commit }, data) => apiPromise(api.GET_USER_PHOTOS(id), 'setUserPhotos', commit),
+  getUserPhotos: ({ commit }, id) => apiPromise(api.GET_USER_PHOTOS(id), 'setUserPhotos', commit),
 };
 
 // MUTATIONS

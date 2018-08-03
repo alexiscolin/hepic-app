@@ -3,7 +3,8 @@ import Vuex from 'vuex';
 import connexion from './modules/connexion';
 import popin from './modules/popin';
 import layerOptin from './modules/layer-optin';
-import callPhoto from './modules/call-photo';
+import callVote from './modules/call-vote';
+import callUser from './modules/call-user';
 import callcontest from './modules/call-contest';
 import contestEntry from './modules/contest-entry';
 
@@ -14,7 +15,8 @@ export default new Vuex.Store({
     connexion,
     popin,
     layerOptin,
-    callPhoto,
+    callVote,
+    callUser,
     callcontest,
     contestEntry,
   },
