@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-// axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-
 // POST - Test connexion to BDD
 const postConnectId = function $postConnectId(data) {
   const opt = {

@@ -5,7 +5,7 @@ export default {
   //     type: String,
   //     required: true,
   //   },
-  //   brand: {
+  //   brandName: {
   //     type: Number, // string
   //     required: true,
   //   },
@@ -22,7 +22,7 @@ export default {
   //     required: true,
   //   },
   // },
-  props: ['logo', 'desc', 'brand', 'rules', 'ban'],
+  props: ['logo', 'desc', 'brandName', 'rules', 'ban'],
   data() {
     return {
       rulesAccepted: false,
