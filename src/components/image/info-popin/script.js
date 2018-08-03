@@ -1,3 +1,5 @@
+import AppContestInfos from '@/components/layout/AppContestInfos';
+
 export default {
   name: 'infoPopin',
   props: {
@@ -17,6 +19,9 @@ export default {
       type: Number,
       required: true,
     },
+  },
+  components: {
+    AppContestInfos,
   },
   methods: {
     displayOptin: function $displayOptin() {

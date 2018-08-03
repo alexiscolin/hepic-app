@@ -5,12 +5,7 @@ shell-app
         use(xlink:href="#ico-arrow")
           
     .d-row-flex.f-center.d-flex-vm.d-flex-hm.mb-2    
-      div.d-row-flex.d-flex-vm
-        router-link(to="/contest").no-link
-          img(:src="contest.logo").o-profil-pic.p-hcenter-rel.b-reg.d-block.brad-100
-          h2.d-block.m-025.mb-0.f-bold.f-stm {{ contest.brand }}
-          span.d-block.pl-05.f-grey {{ contest.desc }}
-          span.d-block.f-sxs.f-grey Voir la page du concours
+      AppContestInfos(:logo="contest.logo" :brand="contest.brand" :desc="contest.desc" :id="$route.params.id"  )
         
     .o-width-container.p-rel.d-inblock
       .d-row-flex.d-flex-spacebet.pl-1.pr-1

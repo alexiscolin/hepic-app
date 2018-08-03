@@ -4,12 +4,8 @@ div
       use(xlink:href="#ico-arrow")
         
   .d-row-flex.f-center.d-flex-vm.d-flex-hm.mb-1.mt-2   
-    div.d-row-flex.d-flex-vm
-      router-link(to="/contest").no-link
-        img(:src="logo").o-profil-pic.p-hcenter-rel.b-reg.d-block.brad-100
-        h2.d-block.m-025.mb-0.f-bold.f-stm {{ brand }}
-        span.d-block.pl-05.f-grey {{ desc }}
-        span.d-block.f-sxs.f-grey Voir la page du concours
+    AppContestInfos(:logo="logo" :brand="brand" :desc="desc" :id="$route.params.id"  )
+
   hr.o-sep
               
   ul.d-col-flex.d-flex-vm.mb-1.no-list
