@@ -28,7 +28,7 @@ const ifAuthenticated = (to, from, next) => {
   next('/');
 };
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   routes: [
     {
@@ -97,3 +97,10 @@ export default new Router({
     return savedPosition || to.hash || { x: 0, y: 0 };
   },
 });
+
+router.beforeEach((to, from, next) => {
+  store.commit('popinHide'); // effacer popin du store en cas de changement de page
+  next();
+});
+
+export default router;
