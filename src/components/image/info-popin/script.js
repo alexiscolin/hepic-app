@@ -21,7 +21,7 @@ export default {
   methods: {
     displayOptin: function $displayOptin() {
       const data = { id: this.id };
-      this.$store.commit('dispayOptin', {
+      this.$store.commit('displayOptin', {
         reqText: 'Supprimer et quitter le concours',
         cbText: 'Supprimé !',
         type: 'deletePhoto',

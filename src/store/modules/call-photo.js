@@ -1,8 +1,9 @@
-// import axios from 'axios';
-// import api from '@/api/connexion';
+import api from '@/api/photos';
+import apiPromise from '@/utils/api-promise';
 
 // ACTION
 const actions = {
+  postVote: ({ commit }, id) => apiPromise(api.POST_PHOTO_VOTE(id), 'setContestPhotos', commit),
   postSignal: ({ state }, data) => {
     console.log(data.id);
     state.send = true; // utile le send ?

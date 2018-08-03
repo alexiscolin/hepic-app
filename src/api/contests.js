@@ -11,7 +11,7 @@ const GET_CONTEST = function $GET_CONTEST(id) {
 };
 
 // GET - contest photos list
-const GET_CONTEST_PHOTOS = function GET_CONTEST_PHOTOS(id) {
+const GET_CONTEST_PHOTOS = function $GET_CONTEST_PHOTOS(id) {
   return axios.get(`https://api.hepic.fr/photos/by_contest/${id}`);
 };
 

@@ -16,10 +16,13 @@ export default {
       index: 0,
       indexMin: 0,
       indexMax: Math.max(0, this.$store.state.callcontest.photos.length - 1), // load sans photo
-      displayedPopin: false,
+      popinAction: false,
     };
   },
   computed: {
+    displayedPopin: function $displayedPopin() {
+      return this.$store.state.popin.displayed;
+    },
     contest: function $contest() {
       const id = this.$route.params.id;
       return this.$store.getters.getContest(id) || this.$store.state.callcontest.contest;
@@ -46,8 +49,19 @@ export default {
       this.index = (this.index > this.indexMin) ? this.index - 1 : this.indexMin;
     },
     displayPopin: function $displayPopin(e) {
-      this.displayedPopin = e;
+      this.popinAction = e;
+      this.$store.commit('popinDisplay');
       this.$store.commit('hideOptin');
+      const data = {};
+      if (e === 1) {
+        this.$store.commit('displayOptin', {
+          reqText: 'Valider le vote',
+          cbText: 'Vote comptabilisé !',
+          type: 'votePhoto',
+          central: true, // zone d'affichage centrale
+          data,
+        });
+      }
     },
   },
   created: function $created() {

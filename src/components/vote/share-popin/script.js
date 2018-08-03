@@ -40,11 +40,12 @@ export default {
   methods: {
     displayOptin: function $displayOptin() {
       const data = { id: this.id };
-      this.$store.commit('dispayOptin', {
-        reqText: 'Signaler cette photo',
-        cbText: 'Photo signalée!',
-        type: 'signalPhoto',
-        data,
+      this.$store.commit('displayOptin', {
+        reqText: 'Signaler cette photo', // texte du btn
+        cbText: 'Photo signalée!', // texte de restitution
+        type: 'signalPhoto', // type d'action
+        central: false, // zone d'affichage
+        data, // data à transmettre API
       });
     },
   },

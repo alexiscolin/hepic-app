@@ -1,3 +1,4 @@
-div(v-show="display").o-optin
-  a(@click="action" :class="color").d-block.w100.p-1.c-backbg.brad-4.f-stm.f-center {{ text }}
+div(v-show="display" :class="zone").o-optin
+  div( :class="{'f-bold': $store.state.layerOptin.central}").d-block.w100.p-1.c-backbg.brad-4.f-stm.f-center
+    a(@click="action" :class="color") {{ text }}
   a(@click="hide").d-block.mt-2.f-center.f-white.f-dec-it annuler

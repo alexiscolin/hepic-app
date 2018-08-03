@@ -15,7 +15,7 @@ shell-app
     .o-width-container.p-rel.d-inblock
       .d-row-flex.d-flex-spacebet.pl-1.pr-1
         span.f-light n°{{ index + 1}}
-        a(@click="displayPopin").no-link
+        a(@click="displayPopin(0)").no-link
           span.o-more
       img(:src="displayImage").o-plain-img
     
@@ -23,7 +23,7 @@ shell-app
       a(@click="prevImg").h-100.w-30.f-center
         svg(v-show="index !== indexMin" viewBox="0 0 132.98 257").o-svg-btn.va-mid.h-100.w-30
           use(xlink:href="#ico-leftArrow")
-      a(href="/vote-validation.html").brad-100.h-100.w-30.f-center
+      a(@click="displayPopin(1)").brad-100.h-100.w-30.f-center
         svg(viewBox="0 0 42 42").o-votefor.h-100.p-05.brad-100.b-regFg
           use(xlink:href="#ico-vote")
       a(@click="nextImg").h-100.w-30.f-center
@@ -31,4 +31,4 @@ shell-app
           use(xlink:href="#ico-leftArrow")
   
   layer-popin(v-show="displayedPopin")
-    share-popin(@displayPopin="displayPopin" :id="getId" :url="url" :brand="contest.brand" :desc="contest.desc" :logo="contest.logo")
+    share-popin(v-show="!popinAction" @displayPopin="displayPopin" :id="getId" :url="url" :brand="contest.brand" :desc="contest.desc" :logo="contest.logo")
