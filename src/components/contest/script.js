@@ -12,12 +12,11 @@ export default {
     layerPopin,
     validationRules,
   },
-  data() {
-    return {
-      displayPopin: false,
-    };
-  },
   computed: {
+    displayedPopin: function $displayedPopin() {
+      return this.$store.state.popin.displayed;
+    },
+
     // données en cache depuis le flux ou req
     contest: function $contest() {
       const id = this.$route.params.id;

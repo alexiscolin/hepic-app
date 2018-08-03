@@ -24,7 +24,7 @@ shell-app
               div {{ getEndDate }}
               
       div.d-col-flex.mt-2.pr-4.pl-4
-        a(@click="displayPopin = true" v-if="!contest.participation").f-bold.f-sfat.pt-05.pb-05.f-center.c-grad-yo.shadbox-light.brad-4 Participer
+        a(@click="$store.commit('popinDisplay')" v-if="!contest.participation").f-bold.f-sfat.pt-05.pb-05.f-center.c-grad-yo.shadbox-light.brad-4 Participer
         router-link(:to="$route.path +'/vote'").no-link.f-center.shadbox-light.pt-1.pb-1.mt-1.brad-4 
           svg(viewBox="0 0 42 42").mt-neg025.o-svgh-ico.o-svg-btn.mr-05.va-mid
             use(xlink:href="#ico-vote")
@@ -35,5 +35,5 @@ shell-app
         p(v-html="contest.rules").pt-1.f-grey.f-stl
       
     //- popin de reglement ici
-    layer-popin(v-show="displayPopin")
-      validation-rules(@update:popin="displayPopin = $event" :brand="contest.brand" :logo="contest.logo" :desc="contest.desc" :rules="contest.rules" :ban="contest.ban")
+    layer-popin(v-show="displayedPopin")
+      validation-rules(:brand="contest.brand" :logo="contest.logo" :desc="contest.desc" :rules="contest.rules" :ban="contest.ban")
