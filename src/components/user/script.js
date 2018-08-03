@@ -19,7 +19,11 @@ export default {
   data() {
     return {
       user: config.user,
-      displayPopin: false,
     };
+  },
+  computed: {
+    displayedPopin: function $displayedPopin() {
+      return this.$store.state.popin.displayed;
+    },
   },
 };
