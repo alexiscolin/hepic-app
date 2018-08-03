@@ -8,6 +8,7 @@ import displayImage from '@/components/image';
 import brandContest from '@/components/contest';
 import brandContestVote from '@/components/vote';
 import brandContestUpload from '@/components/contest/upload';
+import RouteNotFound from '@/components/RouteNotFound';
 import store from '../store';
 
 Vue.use(Router);
@@ -92,14 +93,20 @@ const router = new Router({
         next('/');
       },
     },
+    {
+      path: '*', // 404
+      component: RouteNotFound,
+      beforeEnter: ifAuthenticated,
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     return savedPosition || to.hash || { x: 0, y: 0 };
   },
 });
 
+// effacer popin du store en cas de changement de page
 router.beforeEach((to, from, next) => {
-  store.commit('popinHide'); // effacer popin du store en cas de changement de page
+  store.commit('popinHide');
   next();
 });
 
