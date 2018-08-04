@@ -4,13 +4,19 @@ import apiPromise from '@/utils/api-promise';
 
 // ACTION
 const actions = {
-  getUserPhotos: ({ commit }, id) => apiPromise(api.GET_USER_PHOTOS(id), 'setUserPhotos', commit),
+  getUserPhotos: ({ commit }, id) => {
+    commit('eraseUserPhotos');
+    apiPromise(api.GET_USER_PHOTOS(id), 'setUserPhotos', commit);
+  },
 };
 
 // MUTATIONS
 const mutations = {
   setUserPhotos: (state, photos) => {
     state.userPhotos = photos;
+  },
+  eraseUserPhotos: (state) => {
+    state.userPhotos = [];
   },
 };
 

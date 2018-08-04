@@ -25,4 +25,7 @@ export default {
   created: function $created() {
     this.getPhotos();
   },
+  // beforeDestroy: function $beforeDestroy() {
+  //   this.$store.commit('eraseUserPhotos');
+  // },
 };
