@@ -36,8 +36,9 @@ const mutations = {
 
 // GETTERS
 const getters = {
-  getContest: state => id => findBy(state.all, id),
-  getContestPhoto: state => id => findBy(state.photos, id),
+  getContestById: state => id => findBy(state.all, id),
+  getContest: state => state.contest,
+  getContestPhotoById: state => id => findBy(state.photos, id),
   getContestPhotoIndex: state => el => state.photos.indexOf(el),
 };
 
@@ -45,6 +46,8 @@ const getters = {
 const state = {
   all: [],
   contest: {
+    id: 0,
+    brand: '',
     brandName: '',
     logo: '',
     desc: '',

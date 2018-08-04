@@ -1,14 +1,14 @@
 export default {
   name: 'contestLayout',
   props: {
-    data: {
+    contest: {
       type: Object,
       required: true,
     },
   },
-  computed: {
-    contest: function $contest() {
-      return this.$store.state.callcontest.contest;
-    },
-  },
+  // computed: {
+  //   // contest: function $contest() {
+  //   //   return this.$store.getters.getContest;
+  //   // },
+  // },
 };

@@ -5,7 +5,7 @@ shell-app
         use(xlink:href="#ico-arrow")
           
     .d-row-flex.f-center.d-flex-vm.d-flex-hm.mb-2    
-      AppContestInfos(:logo="contest.logo" :brand="contest.brand" :desc="contest.desc" :id="$route.params.id"  )
+      AppContestInfos(:logo="contest.logo" :brandName="contest.brandName" :desc="contest.desc" :id="parseInt($route.params.id)"  )
         
     .o-width-container.p-rel.d-inblock
       .d-row-flex.d-flex-spacebet.pl-1.pr-1
@@ -26,4 +26,4 @@ shell-app
           use(xlink:href="#ico-leftArrow")
   
   layer-popin(v-show="displayedPopin")
-    share-popin(v-show="!popinAction" @displayPopin="displayPopin" :id="getId" :url="url" :brand="contest.brand" :desc="contest.desc" :logo="contest.logo")
+    share-popin(v-show="!popinAction" @displayPopin="displayPopin" :id="getId" :url="url" :brandName="contest.brandName" :desc="contest.desc" :logo="contest.logo")

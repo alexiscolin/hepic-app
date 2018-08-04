@@ -16,6 +16,10 @@ export default {
       type: Number, // a changer String
       required: false, // a changer en true
     },
+    brandName: {
+      type: String, // a changer String
+      required: false, // a changer en true
+    },
     desc: {
       type: String,
       required: false, // a changer en true

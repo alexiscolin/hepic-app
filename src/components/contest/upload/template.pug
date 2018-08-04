@@ -1,5 +1,5 @@
 shell-app
-  contest-layout(:data="contest")
+  contest-layout(:contest="contest")
   
     div(v-show="!picUploaded").d-col-flex.mt-10.pr-4.pl-4
       input(type="file" @change="upload($event)")#participer.o-participation

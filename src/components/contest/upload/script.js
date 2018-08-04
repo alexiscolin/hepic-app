@@ -1,4 +1,5 @@
 import { mapState, mapActions } from 'vuex';
+import store from '@/store';
 import shellApp from '@/components/layout/shell';
 import contestLayout from '../layout';
 
@@ -58,11 +59,20 @@ export default {
       // API post
       this.$store.dispatch('postPicture', formData).then((res) => {
         console.log(res);
+        // eraseState entry-contest
       }).catch((res) => {
         console.log(`error ${res}`);
       });
 
       this.picValidated = true;
     },
+  },
+  beforeRouteEnter(to, from, next) {
+    // test provenance du load afin de valider agreement sur la page de contest
+    if (from.name !== 'Contest' || store.getters.getAgreement !== true) {
+      next('/flux');
+    } else {
+      next();
+    }
   },
 };

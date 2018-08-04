@@ -32,18 +32,23 @@ const actions = {
 // MUTATIONS
 const mutations = {
   populateState(state, contest) {
-    state.contest.brand = contest.brand;
+    state.contest.brand = contest.brandName;
     state.contest.logo = contest.logo;
     state.contest.desc = contest.desc;
     state.contest.ban = contest.ban;
     state.contest.agreement = contest.agreement;
   },
 
-  eraseState(state) {
+  eraseAgreement(state) {
     window.console.log('erase now');
     Object.keys(state.contest).forEach((v) => { state.contest[v] = null; });
     window.console.log(state.contest);
   },
+};
+
+// GETTERS
+const getters = {
+  getAgreement: state => state.contest.agreement,
 };
 
 // STATE
@@ -59,6 +64,7 @@ const state = {
 
 export default {
   state,
+  getters,
   mutations,
   actions,
 };

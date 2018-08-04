@@ -27,16 +27,16 @@ export default {
     },
     contest: function $contest() {
       const id = this.$route.params.id;
-      return this.$store.getters.getContest(id) || this.$store.state.callcontest.contest;
+      return this.$store.getters.getContestById(id) || this.$store.getters.getContest;
     },
     getId: function $getId() {
       // id photo demandé par la route ou la première tableau
       const idPhoto = this.$route.params.photo;
       const photo1 = this.$store.state.callcontest.photos[0];
-      const photoX = this.$store.getters.getContestPhoto(idPhoto);
+      const photoX = this.$store.getters.getContestPhotoById(idPhoto);
       this.index = photoX ? this.$store.getters.getContestPhotoIndex(photoX) : 0;
 
-      return idPhoto ? (photoX && photoX.id) : photo1 && photo1.id;
+      return idPhoto ? (photoX && parseInt(photoX.id, 10)) : photo1 && parseInt(photo1.id, 10);
     },
     displayImage: function $displayImage() {
       const photo = this.$store.state.callcontest.photos[this.index];
@@ -68,7 +68,7 @@ export default {
   },
   created: function $created() {
     const idContest = this.$route.params.id;
-    let contest = this.$store.getters.getContest(idContest);
+    let contest = this.$store.getters.getContestById(idContest);
 
     // recherche en cache si venu depuis le flux
     if (!contest) {

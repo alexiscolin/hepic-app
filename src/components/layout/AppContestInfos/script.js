@@ -6,6 +6,10 @@ export default {
       required: true,
     },
     brand: {
+      type: Number,
+      required: false,
+    },
+    brandName: {
       type: String,
       required: true,
     },
