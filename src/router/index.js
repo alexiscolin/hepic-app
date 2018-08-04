@@ -43,7 +43,6 @@ const router = new Router({
       path: '/authcallback',
       name: 'AuthCallback',
       component: RouteCallback,
-      beforeEnter: ifNotAuthenticated,
     },
     {
       path: '/flux',
