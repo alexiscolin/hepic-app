@@ -31,10 +31,9 @@ module.exports = {
       allowTernary: true,
       // allowTaggedTemplates: true,
     }],
-    "object-curly-newline": ["error", {
-        "ObjectExpression": "always",
-        "ObjectPattern": { "multiline": false },
-    }],
+    // "object-curly-newline": ["error", {
+    //     // "ExportDeclaration": { "multiline": true},
+    // }],
     "prefer-destructuring": ["error", {
       "VariableDeclarator": {
         "array": false,

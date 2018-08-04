@@ -9,6 +9,7 @@ import brandContest from '@/components/contest';
 import brandContestVote from '@/components/vote';
 import brandContestUpload from '@/components/contest/upload';
 import RouteNotFound from '@/components/RouteNotFound';
+import RouteCallback from '@/components/RouteCallback';
 import store from '../store';
 
 Vue.use(Router);
@@ -36,6 +37,12 @@ const router = new Router({
       path: '/',
       name: 'Index',
       component: indexHp,
+      beforeEnter: ifNotAuthenticated,
+    },
+    {
+      path: '/authcallback',
+      name: 'AuthCallback',
+      component: RouteCallback,
       beforeEnter: ifNotAuthenticated,
     },
     {
