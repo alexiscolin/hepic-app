@@ -7,8 +7,13 @@ const actions = {
     return new Promise((resolve, reject) => {
       commit('authRequest');
       api.postConnectId(data).then((res) => {
-        const token = res.data.token;
+        const { data: user, data: { token } } = res;
+        user.id = 2;
         localStorage.setItem('user-token', token); // rec token
+        localStorage.setItem('user-data', JSON.stringify(user)); // rec datas
+
+        console.log(JSON.parse(localStorage.getItem('user')));
+
         axios.defaults.headers.common.Authorization = `Token ${token}`;
         commit('authSuccess', token);
         resolve(res);

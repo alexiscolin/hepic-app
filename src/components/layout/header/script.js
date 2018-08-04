@@ -7,6 +7,7 @@ export default {
       msg: 'Hello tout le monde !',
       hidden: false,
       yPos: 0,
+      userId: JSON.parse(localStorage.getItem('user-data')).id,
     };
   },
   methods: {

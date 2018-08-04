@@ -11,7 +11,18 @@ export default {
       return this.$store.getters.getUserPhotos;
     },
   },
+  watch: {
+    '$route.params.user': function $routeParamsChange() {
+      this.getPhotos(); // changement de params dans la route
+    },
+  },
+  methods: {
+    getPhotos: function $getPhotos() {
+      const userId = this.$route.params.user;
+      this.$store.dispatch('getUserPhotos', userId);
+    },
+  },
   created: function $created() {
-    this.$store.dispatch('getUserPhotos', 2);
+    this.getPhotos();
   },
 };

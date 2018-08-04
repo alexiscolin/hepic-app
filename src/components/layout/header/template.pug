@@ -4,7 +4,7 @@ header.o-main-header.p-init.w-100
       svg(viewBox="0 0 304.29 250").o-svgh-ico
         use(xlink:href="#ico-puzzle")
           
-    router-link(to="/user", title="Profil").p-rel.o-inlinebox.h-100
+    router-link(:to="'/user/' + userId", title="Profil").p-rel.o-inlinebox.h-100
       //- zone de notif --
       span.o-notif.p-abs.brad-100
       //- fin de zone de notif --

@@ -29,4 +29,7 @@ export default {
       this.$store.commit('hideOptin');
     },
   },
+  created: function $created() {
+    // dispatch('')
+  },
 };

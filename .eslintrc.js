@@ -25,10 +25,15 @@ module.exports = {
     'no-underscore-dangle': ["error", {
       "allow": ["__isRetryRequest"]
     }],
+
     'no-unused-expressions': ['error', {
       allowShortCircuit: true,
       allowTernary: true,
       // allowTaggedTemplates: true,
+    }],
+    "object-curly-newline": ["error", {
+        "ObjectExpression": "always",
+        "ObjectPattern": { "multiline": false },
     }],
     "prefer-destructuring": ["error", {
       "VariableDeclarator": {
