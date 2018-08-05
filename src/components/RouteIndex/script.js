@@ -1,10 +1,10 @@
-import socialBtn from './social-btn';
-import installBtn from './install-btn';
+import SocialBtn from './IndexSocialBtn';
+import InstallBtn from './IndexInstallBtn';
 
 export default {
   name: 'index',
   components: {
-    installBtn,
-    socialBtn,
+    InstallBtn,
+    SocialBtn,
   },
 };
