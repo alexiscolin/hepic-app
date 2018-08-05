@@ -1,10 +1,10 @@
 import shellApp from '@/components/AppLayout/TheShell';
 import layerPopin from '@/components/AppLayout/layer-popin';
 import config from './config.json';
-import userProfile from './profile';
-import userContent from './content';
+import userProfile from './UserProfile';
+import userContent from './UserContent';
 import userSettings from './settings-routes';
-import userNotification from './notification';
+import userNotification from './UserNotification';
 
 export default {
   name: 'user',
