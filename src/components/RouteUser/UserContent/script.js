@@ -1,11 +1,5 @@
 export default {
   name: 'userContent',
-  // props: {
-  //   user: {
-  //     type: Object,
-  //     required: true,
-  //   },
-  // },
   computed: {
     userPhotos: function $userPhotos() {
       return this.$store.getters.getUserPhotos;
@@ -25,7 +19,4 @@ export default {
   created: function $created() {
     this.getPhotos();
   },
-  // beforeDestroy: function $beforeDestroy() {
-  //   this.$store.commit('eraseUserPhotos');
-  // },
 };

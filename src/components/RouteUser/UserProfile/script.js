@@ -5,7 +5,10 @@ export default {
       return parseInt(this.$route.params.user, 10) === parseInt(JSON.parse(localStorage.getItem('user-data')).profile_id, 10);
     },
     user: function $profilData() {
-      return JSON.parse(localStorage.getItem('user-data'));
+      return this.isMyProfile ? JSON.parse(localStorage.getItem('user-data')) : this.$store.getters.getUserProfil;
     },
+  },
+  created: function $created() {
+    !this.isMyProfile && this.$store.dispatch('getUserProfil', this.$route.params.user);
   },
 };
