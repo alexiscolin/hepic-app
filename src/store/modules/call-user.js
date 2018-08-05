@@ -34,7 +34,6 @@ const mutations = {
 const getters = {
   getUserPhotos: state => state.userPhotos,
   getUserProfil: state => state.userProfile,
-
 };
 
 // STATE
