@@ -7,7 +7,7 @@
 
 <script>
 import axios from 'axios';
-import spriteSvg from './components/layout/svg';
+import spriteSvg from './components/layout/AppSvg';
 
 export default {
   name: 'App',
