@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import indexHp from '@/components/index';
+import indexHp from '@/components/RouteIndex';
 import RouteFlux from '@/components/RouteFlux';
 import userProfile from '@/components/user';
 import userSettings from '@/components/user/settings';
