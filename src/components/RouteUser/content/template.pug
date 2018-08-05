@@ -1,5 +1,5 @@
 section(v-if="userPhotos").o-profil-pics.d-flex
-  router-link(v-for="photo in userPhotos" :key="photo.id" :to="'/user/picture/' + photo.id" :class="{'o-profil-pics__img--large': photo.rank === 'gold' || photo.rank === 'silver'}").o-profil-pics__img.m-025
+  router-link(v-for="photo in userPhotos" :key="photo.id" :to="'/photo/' + photo.id" :class="{'o-profil-pics__img--large': photo.rank === 'gold' || photo.rank === 'silver'}").o-profil-pics__img.m-025
     img(:src="photo.file")
     .o-profil-logo
       img(:src="photo.logo").w-100.h-100.brad-100

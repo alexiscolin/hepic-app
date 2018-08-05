@@ -52,11 +52,8 @@ export default {
       Object.keys(dataKeys).forEach(key => formData.append(key, dataKeys[key]));
 
       // API post
-      this.$store.dispatch('postContestPhoto', formData).then((res) => {
+      this.$store.dispatch('postContestPhoto', formData).catch((res) => {
         console.log(res);
-        console.log('posté');
-      }).catch((res) => {
-        console.log(`error ${res}`);
       });
 
       this.picValidated = true;

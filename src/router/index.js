@@ -63,7 +63,7 @@ const router = new Router({
       beforeEnter: ifAuthenticated,
     },
     {
-      path: '/user/:user/picture/:id',
+      path: '/photo/:id',
       name: 'Image',
       component: RouteImage,
       beforeEnter: ifAuthenticated,
