@@ -4,7 +4,7 @@ import indexHp from '@/components/RouteIndex';
 import RouteFlux from '@/components/RouteFlux';
 import RouteUser from '@/components/RouteUser';
 import userSettings from '@/components/RouteUser/settings';
-import displayImage from '@/components/image';
+import RouteImage from '@/components/RouteImage';
 import RouteContest from '@/components/RouteContest';
 import RouteVote from '@/components/RouteVote';
 import brandContestUpload from '@/components/RouteContest/upload';
@@ -65,7 +65,7 @@ const router = new Router({
     {
       path: '/user/:user/picture/:id',
       name: 'Image',
-      component: displayImage,
+      component: RouteImage,
       beforeEnter: ifAuthenticated,
     },
     {
