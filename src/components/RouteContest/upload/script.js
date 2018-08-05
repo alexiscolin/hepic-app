@@ -1,5 +1,6 @@
 import { mapState } from 'vuex';
 import store from '@/store';
+import createFormData from '@/utils/form-data';
 import shellApp from '@/components/AppLayout/TheShell';
 import contestLayout from '../AppContestLayout';
 
@@ -44,12 +45,10 @@ export default {
     },
     validate: function $validate() {
       // crea formulaire
-      const formData = new FormData();
-      const dataKeys = {
+      const formData = createFormData({
         contest: this.contest.id,
         file: this.picture,
-      };
-      Object.keys(dataKeys).forEach(key => formData.append(key, dataKeys[key]));
+      });
 
       // API post
       this.$store.dispatch('postContestPhoto', formData).catch((res) => {

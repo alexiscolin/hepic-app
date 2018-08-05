@@ -1,3 +1,5 @@
+import createFormData from '@/utils/form-data';
+
 export default {
   name: 'socialBtn',
   methods: {
@@ -6,10 +8,12 @@ export default {
       hello(network).login().then(() => { // helloJS connexion
         const authRes = hello(network).getAuthResponse();
 
-        this.$store.dispatch('getToken', { // demande au store de récupérer infos sur API Hepic
+        const dataNetwork = createFormData({
           platform: network,
           token: authRes.access_token,
-        }).then(() => {
+        });
+
+        this.$store.dispatch('getToken', dataNetwork).then(() => {
           this.$router.push('/flux'); // redirection
         });
       });
