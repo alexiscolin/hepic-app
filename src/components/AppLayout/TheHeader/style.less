@@ -2,10 +2,15 @@
 
 .o-main-header{
   position: fixed;
+  transition: transform .5s ease;
+  z-index: 5999;
+}
+
+
+.o-main-header__nav{
+  display: block;
   height: @space-h-unit;
   background: @grad;
-  transition: transform .4s ease;
-  z-index: 5999;
 }
 
 .o-notif{
@@ -18,7 +23,20 @@
 }
 
 .o-profilepic{
-  width: 25px;
-  height: 25px;
+  width: @space-h-unit - 5px;
+  height: @space-h-unit - 5px;
   border-radius: 100%;
+}
+
+.o-search{
+  position: relative;
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom:  @space;
+    left:  @space * 2;
+    right:  @space * 2;
+    border-bottom: 1px solid @fg;
+  }
 }
