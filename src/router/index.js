@@ -2,11 +2,11 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import indexHp from '@/components/RouteIndex';
 import RouteFlux from '@/components/RouteFlux';
-import userProfile from '@/components/RouteUser';
+import RouteUser from '@/components/RouteUser';
 import userSettings from '@/components/RouteUser/settings';
 import displayImage from '@/components/image';
 import RouteContest from '@/components/RouteContest';
-import brandContestVote from '@/components/vote';
+import RouteVote from '@/components/RouteVote';
 import brandContestUpload from '@/components/RouteContest/upload';
 import RouteNotFound from '@/components/RouteNotFound';
 import RouteCallback from '@/components/RouteCallback';
@@ -53,7 +53,7 @@ const router = new Router({
     {
       path: '/user/:user',
       name: 'User',
-      component: userProfile,
+      component: RouteUser,
       beforeEnter: ifAuthenticated,
     },
     {
@@ -77,13 +77,13 @@ const router = new Router({
     {
       path: '/contest/:id/vote/', // sans idPhoto
       name: 'Vote',
-      component: brandContestVote,
+      component: RouteVote,
       beforeEnter: ifAuthenticated,
     },
     {
       path: '/contest/:id/vote/:photo',
       name: 'VoteId',
-      component: brandContestVote,
+      component: RouteVote,
       beforeEnter: ifAuthenticated,
     },
     {
