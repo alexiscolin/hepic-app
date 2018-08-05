@@ -23,7 +23,7 @@ module.exports = {
   css: {
     sourceMap: true
   },
-  
+
   configureWebpack: {
     resolve: {
       alias: {
