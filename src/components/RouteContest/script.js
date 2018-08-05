@@ -42,14 +42,10 @@ export default {
   },
   created: function $created() {
     const idContest = this.$route.params.id;
-    let contest = this.$store.getters.getContestById(idContest);
+    const contest = this.$store.getters.getContestById(idContest);
 
     // récup contest API si pas de cache
-    if (!contest) {
-      this.$store.dispatch('getContest', idContest).then((res) => {
-        contest = res.data;
-      });
-    }
+    !contest && this.$store.dispatch('getContest', idContest);
 
     // récupération des règles
     this.$store.dispatch('getContestRules', idContest);
