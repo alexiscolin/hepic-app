@@ -9,6 +9,7 @@ const actions = {
   getContest: ({ commit }, id) => apiPromise(api.GET_CONTEST(id), 'setContest', commit),
   getPhotos: ({ commit }, id) => apiPromise(api.GET_CONTEST_PHOTOS(id), 'setContestPhotos', commit),
   getContestRules: ({ commit }, id) => apiPromise(api.GET_CONTEST_RULES(id), 'setContestRules', commit),
+  postContestPhoto: ({ commit }, data) => apiPromise(api.POST_CONTEST_PHOTO(data), 'eraseAgreement', commit),
 };
 
 // MUTATIONS

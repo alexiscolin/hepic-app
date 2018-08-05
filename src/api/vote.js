@@ -1,6 +1,8 @@
 
 import axios from 'axios';
 
+const HEPIC_URL = 'https://api.hepic.fr';
+
 // // GET - info contests
 // const GET_CONTESTS = function $GET_CONTESTS() {
 //   return axios.get('https://api.hepic.fr/contests/');
@@ -22,7 +24,7 @@ const POST_PHOTO_VOTE = function $POST_PHOTO_VOTE(data) {
     method: 'post',
     headers: { 'Content-Type': 'multipart/form-data' },
     data,
-    url: 'http://ptsv2.com/t/5ipu6-1532204830/post',
+    url: `${HEPIC_URL}/5ipu6-1532204830/post`,
   };
   return axios(opt);
 };

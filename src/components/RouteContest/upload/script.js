@@ -1,4 +1,4 @@
-import { mapState, mapActions } from 'vuex';
+import { mapState } from 'vuex';
 import store from '@/store';
 import shellApp from '@/components/AppLayout/TheShell';
 import contestLayout from '../AppContestLayout';
@@ -42,9 +42,6 @@ export default {
       }, false);
       this.picture && reader.readAsDataURL(this.picture);
     },
-    ...mapActions({
-
-    }),
     validate: function $validate() {
       // crea formulaire
       const formData = new FormData();
@@ -52,14 +49,12 @@ export default {
         contest: this.contest.id,
         file: this.picture,
       };
-      console.log(dataKeys);
-      console.log(this.contest);
       Object.keys(dataKeys).forEach(key => formData.append(key, dataKeys[key]));
 
       // API post
-      this.$store.dispatch('postPicture', formData).then((res) => {
+      this.$store.dispatch('postContestPhoto', formData).then((res) => {
         console.log(res);
-        // eraseState entry-contest
+        console.log('posté');
       }).catch((res) => {
         console.log(`error ${res}`);
       });
