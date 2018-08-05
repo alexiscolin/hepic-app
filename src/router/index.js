@@ -1,13 +1,13 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import indexHp from '@/components/index';
-import tilesFlux from '@/components/flux';
+import RouteFlux from '@/components/RouteFlux';
 import userProfile from '@/components/user';
 import userSettings from '@/components/user/settings';
 import displayImage from '@/components/image';
-import brandContest from '@/components/contest';
+import RouteContest from '@/components/RouteContest';
 import brandContestVote from '@/components/vote';
-import brandContestUpload from '@/components/contest/upload';
+import brandContestUpload from '@/components/RouteContest/upload';
 import RouteNotFound from '@/components/RouteNotFound';
 import RouteCallback from '@/components/RouteCallback';
 import store from '../store';
@@ -47,7 +47,7 @@ const router = new Router({
     {
       path: '/flux',
       name: 'Flux',
-      component: tilesFlux,
+      component: RouteFlux,
       beforeEnter: ifAuthenticated,
     },
     {
@@ -71,7 +71,7 @@ const router = new Router({
     {
       path: '/contest/:id',
       name: 'Contest',
-      component: brandContest,
+      component: RouteContest,
       beforeEnter: ifAuthenticated,
     },
     {
