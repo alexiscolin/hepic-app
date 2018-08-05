@@ -1,25 +1,20 @@
 import shellApp from '@/components/AppLayout/TheShell';
 import layerPopin from '@/components/AppLayout/layer-popin';
-import config from './config.json';
-import userProfile from './UserProfile';
-import userContent from './UserContent';
-import userSettings from './settings-routes';
-import userNotification from './UserNotification';
+// import config from './config.json';
+import UserProfile from './UserProfile';
+import UserContent from './UserContent';
+import UserSettings from './settings-routes';
+import UserNotification from './UserNotification';
 
 export default {
   name: 'user',
   components: {
     shellApp,
-    userProfile,
-    userContent,
-    userNotification,
+    UserProfile,
+    UserContent,
+    UserNotification,
     layerPopin,
-    userSettings,
-  },
-  data() {
-    return {
-      user: config.user,
-    };
+    UserSettings,
   },
   computed: {
     displayedPopin: function $displayedPopin() {

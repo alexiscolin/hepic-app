@@ -1,13 +1,11 @@
 shell-app
   main.o-main.pl-1.pr-1.pb-1
-    user-profile(:user="user" @displayPopin="displayPopin = $event")
-      
-    //- uniquement sur page perso
-    user-notification 
-    
-    user-content(:user="user")
+    UserProfile(@displayPopin="displayPopin = $event")
+
+    UserNotification
+    UserContent
       
     layer-popin(v-show="displayedPopin")
-      user-settings
+      UserSettings
 
   
