@@ -1,10 +1,10 @@
-import appHeader from '../header';
-import appFooter from '../footer';
+import theHeader from '../TheHeader';
+import theFooter from '../TheFooter';
 
 export default {
   name: 'layoutShell',
   components: {
-    appHeader,
-    appFooter,
+    theHeader,
+    theFooter,
   },
 };

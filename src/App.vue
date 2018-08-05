@@ -1,24 +1,18 @@
 <template>
   <div id="app">
     <sprite-svg/>
-    <!-- <app-header v-if="$route.path !== '/'"/> -->
     <router-view/>
-    <!-- <app-footer v-if="$route.path !== '/'"/> -->
   </div>
 </template>
 
 <script>
 import axios from 'axios';
 import spriteSvg from './components/layout/svg';
-import appHeader from './components/layout/header';
-import appFooter from './components/layout/footer';
 
 export default {
   name: 'App',
   components: {
     spriteSvg,
-    appHeader,
-    appFooter,
   },
   created: function $created() {
     // Connexion au reload
