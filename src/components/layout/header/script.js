@@ -8,6 +8,7 @@ export default {
       hidden: false,
       yPos: 0,
       userId: JSON.parse(localStorage.getItem('user-data')).id,
+      userPicture: JSON.parse(localStorage.getItem('user-data')).picture,
     };
   },
   methods: {

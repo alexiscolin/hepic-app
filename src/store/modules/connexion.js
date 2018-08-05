@@ -9,6 +9,7 @@ const actions = {
       api.postConnectId(data).then((res) => {
         const { data: user, data: { token } } = res;
         user.id = 2;
+        user.picture = 'https://d33wubrfki0l68.cloudfront.net/0e5ec5090712c1a4595c4d637f47212df25aa696/f852a/assets/img/profil/julie.jpg';
         localStorage.setItem('user-token', token); // rec token
         localStorage.setItem('user-data', JSON.stringify(user)); // rec datas
 
