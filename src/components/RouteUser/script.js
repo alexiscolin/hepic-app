@@ -1,5 +1,5 @@
-import shellApp from '@/components/layout/TheShell';
-import layerPopin from '@/components/layout/layer-popin';
+import shellApp from '@/components/AppLayout/TheShell';
+import layerPopin from '@/components/AppLayout/layer-popin';
 import config from './config.json';
 import userProfile from './profile';
 import userContent from './content';

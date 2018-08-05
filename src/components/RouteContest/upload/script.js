@@ -1,7 +1,7 @@
 import { mapState, mapActions } from 'vuex';
 import store from '@/store';
-import shellApp from '@/components/layout/TheShell';
-import contestLayout from '../layout';
+import shellApp from '@/components/AppLayout/TheShell';
+import contestLayout from '../AppContestLayout';
 
 export default {
   name: 'contestUpload',

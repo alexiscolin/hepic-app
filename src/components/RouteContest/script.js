@@ -1,7 +1,7 @@
-import shellApp from '@/components/layout/TheShell';
-import layerPopin from '@/components/layout/layer-popin';
+import shellApp from '@/components/AppLayout/TheShell';
+import layerPopin from '@/components/AppLayout/layer-popin';
 import dateFormat from '@/utils/date-format';
-import contestLayout from './layout';
+import contestLayout from './AppContestLayout';
 import validationRules from './validation-rules';
 
 export default {

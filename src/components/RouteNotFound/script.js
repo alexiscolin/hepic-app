@@ -1,4 +1,4 @@
-import shellApp from '@/components/layout/TheShell';
+import shellApp from '@/components/AppLayout/TheShell';
 
 export default {
   name: 'routeNotFound',

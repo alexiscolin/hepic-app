@@ -1,5 +1,5 @@
 import socialSharing from 'vue-social-sharing';
-import AppContestInfos from '@/components/layout/AppContestInfos';
+import AppContestInfos from '@/components/AppLayout/AppContestInfos';
 
 export default {
   name: 'sharePopin',

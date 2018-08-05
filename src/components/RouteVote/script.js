@@ -1,6 +1,6 @@
-import shellApp from '@/components/layout/TheShell';
-import AppContestInfos from '@/components/layout/AppContestInfos';
-import layerPopin from '@/components/layout/layer-popin';
+import shellApp from '@/components/AppLayout/TheShell';
+import AppContestInfos from '@/components/AppLayout/AppContestInfos';
+import layerPopin from '@/components/AppLayout/layer-popin';
 import sharePopin from './share-popin';
 
 export default {

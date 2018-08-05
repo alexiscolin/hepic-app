@@ -1,7 +1,6 @@
 import Colcade from 'colcade';
 import { mapState } from 'vuex';
-import shellApp from '@/components/layout/TheShell';
-// import config from './config.json';
+import shellApp from '@/components/AppLayout/TheShell';
 import fluxTile from './tile';
 import fluxPodium from './podium';
 
