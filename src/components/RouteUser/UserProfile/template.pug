@@ -8,7 +8,7 @@
     span.pl-1.f-bold.f-stm.lineh-1 {{ user.name }}
     span.pl-05.f-grey.f-sxs.lineh-1.f-break {{ user.provider_id }}
   
-  button(v-if="isMyProfile" @click="$store.commit('popinDisplay')" value="config", type="button").p-05
+  button(v-if="isMyProfile" @click="$store.commit('popinDisplay')" value="config", type="button").p-05.no-deco
     svg(viewBox="0 0 35.37 35.35").o-svg-btn.va-mid
       use(xlink:href="#ico-config") 
   div(v-else).p-05.op-0
