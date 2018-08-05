@@ -1,4 +1,4 @@
-import shellApp from '@/components/layout/shell';
+import shellApp from '@/components/layout/TheShell';
 import config from './config.json';
 
 export default {

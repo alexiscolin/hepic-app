@@ -1,4 +1,4 @@
-import shellApp from '@/components/layout/shell';
+import shellApp from '@/components/layout/TheShell';
 import layerPopin from '@/components/layout/layer-popin';
 import infoPopin from './info-popin';
 

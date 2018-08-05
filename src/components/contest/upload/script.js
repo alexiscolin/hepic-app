@@ -1,6 +1,6 @@
 import { mapState, mapActions } from 'vuex';
 import store from '@/store';
-import shellApp from '@/components/layout/shell';
+import shellApp from '@/components/layout/TheShell';
 import contestLayout from '../layout';
 
 export default {

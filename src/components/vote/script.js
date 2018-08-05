@@ -1,4 +1,4 @@
-import shellApp from '@/components/layout/shell';
+import shellApp from '@/components/layout/TheShell';
 import AppContestInfos from '@/components/layout/AppContestInfos';
 import layerPopin from '@/components/layout/layer-popin';
 import sharePopin from './share-popin';
