@@ -9,6 +9,10 @@ export default {
       type: String,
       required: true,
     },
+    id: {
+      type: Number,
+      required: true,
+    },
     desc: {
       type: String,
       required: true,
@@ -31,10 +35,11 @@ export default {
     confirm: function $confirm() {
       this.$store.commit({
         type: 'populateState',
-        brand: this.brand,
+        brandName: this.brandName,
         logo: this.logo,
         desc: this.desc,
         ban: this.ban,
+        id: this.id,
         agreement: this.rulesAccepted || false,
       });
       this.rulesAccepted && this.$router.push(`/contest/${this.$route.params.id}/upload`);

@@ -36,6 +36,7 @@ const mutations = {
     state.contest.logo = contest.logo;
     state.contest.desc = contest.desc;
     state.contest.ban = contest.ban;
+    state.contest.id = contest.id;
     state.contest.agreement = contest.agreement;
   },
 
@@ -57,6 +58,7 @@ const state = {
     brand: null,
     logo: null,
     desc: null,
+    id: null,
     ban: null,
     agreement: null,
   },

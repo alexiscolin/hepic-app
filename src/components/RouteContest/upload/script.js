@@ -39,7 +39,6 @@ export default {
       const reader = new FileReader();
       reader.addEventListener('load', () => {
         this.pictureRender = reader.result;
-        console.log(this.pictureRender);
       }, false);
       this.picture && reader.readAsDataURL(this.picture);
     },
@@ -50,10 +49,11 @@ export default {
       // crea formulaire
       const formData = new FormData();
       const dataKeys = {
-        contest: this.contest.brand,
-        image: this.picture,
+        contest: this.contest.id,
+        file: this.picture,
       };
       console.log(dataKeys);
+      console.log(this.contest);
       Object.keys(dataKeys).forEach(key => formData.append(key, dataKeys[key]));
 
       // API post
