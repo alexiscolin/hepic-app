@@ -1,13 +1,12 @@
 import axios from 'axios';
-
-const HEPIC_URL = 'https://api.hepic.fr';
+import endpoints from './config';
 
 // POST - Test connexion to BDD
 const postConnectId = function $postConnectId(data) {
   const opt = {
     method: 'post',
     data,
-    url: `${HEPIC_URL}/auth/login`,
+    url: endpoints.get('getToken'),
   };
   return axios(opt);
 };

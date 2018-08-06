@@ -1,7 +1,7 @@
-
 import axios from 'axios';
+import endpoints from './config';
 
-const HEPIC_URL = 'https://api.hepic.fr';
+
 
 // // GET - info contests
 // const GET_CONTESTS = function $GET_CONTESTS() {
@@ -24,7 +24,7 @@ const POST_PHOTO_VOTE = function $POST_PHOTO_VOTE(data) {
     method: 'post',
     headers: { 'Content-Type': 'multipart/form-data' },
     data,
-    url: `${HEPIC_URL}/5ipu6-1532204830/post`,
+    url: endpoints.get('postPhotoVote'),
   };
   return axios(opt);
 };

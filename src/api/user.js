@@ -1,14 +1,14 @@
 import axios from 'axios';
+import endpoints from './config';
 
-const HEPIC_URL = 'https://api.hepic.fr';
-
-// GET - info contests
+// GET - photos list
 const GET_USER_PHOTOS = function $GET_USER_PHOTOS(id) {
-  return axios.get(`${HEPIC_URL}/photos/by_profile/${id}`);
+  return axios.get(endpoints.get('getUserPhotos') + id);
 };
 
+// GET - info profile
 const GET_USER_PROFILE = function $GET_USER_PROFILE(id) {
-  return axios.get(`${HEPIC_URL}/profile/${id}`);
+  return axios.get(endpoints.get('getUserProfile') + id);
 };
 
 export default {

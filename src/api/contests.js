@@ -1,25 +1,24 @@
 import axios from 'axios';
-
-const HEPIC_URL = 'https://api.hepic.fr';
+import endpoints from './config';
 
 // GET - info contests
 const GET_CONTESTS = function $GET_CONTESTS() {
-  return axios.get(`${HEPIC_URL}/contests/`);
+  return axios.get(endpoints.get('getContests'));
 };
 
 // GET - info contest
 const GET_CONTEST = function $GET_CONTEST(id) {
-  return axios.get(`${HEPIC_URL}/contest/${id}`);
+  return axios.get(endpoints.get('getContest') + id);
 };
 
 // GET - contest photos list
 const GET_CONTEST_PHOTOS = function $GET_CONTEST_PHOTOS(id) {
-  return axios.get(`${HEPIC_URL}/photos/by_contest/${id}`);
+  return axios.get(endpoints.get('getContestPhotos') + id);
 };
 
 // GET - contest photos list
 const GET_CONTEST_RULES = function $GET_CONTEST_RULES(id) {
-  return axios.get(`${HEPIC_URL}/rules/${id}`);
+  return axios.get(endpoints.get('getContestRules') + id);
 };
 
 // POST - contest picture
@@ -28,7 +27,7 @@ const POST_CONTEST_PHOTO = function $POST_CONTEST_PHOTO(data) {
     method: 'post',
     headers: { 'Content-Type': 'multipart/form-data' },
     data,
-    url: `${HEPIC_URL}/photos/`,
+    url: endpoints.get('postContestPhoto'),
   };
   return axios(opt);
 };
