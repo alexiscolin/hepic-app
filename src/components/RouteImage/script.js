@@ -17,11 +17,15 @@ export default {
     },
     media: function $media() {
       const id = parseInt(this.$route.params.id, 10);
-      console.log(this.$store.getters.getUserPhotoById(id));
       return this.$store.getters.getUserPhotoById(id) || this.$store.getters.getPhoto;
       // return config.pictures.find(item => item.id === id); // recup item verifiant l'id demandé
     },
-    getId: function $getId() {
+    profile: function $profile() {
+      const idUser = this.media.profile;
+      console.log(this.$store.getters.getUserProfil);
+      return this.$store.getters.getUserProfil || this.$store('getUserProfil', idUser);
+    },
+    getId: function $getId() { // utile ??
       const idPhoto = this.$route.params.id;
       return parseInt(idPhoto, 10);
     },

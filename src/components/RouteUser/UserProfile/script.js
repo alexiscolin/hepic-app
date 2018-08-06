@@ -9,6 +9,6 @@ export default {
     },
   },
   created: function $created() {
-    !this.isMyProfile && this.$store.dispatch('getUserProfil', this.$route.params.user);
+    !this.isMyProfile ? this.$store.dispatch('getUserProfil', this.$route.params.user) : this.$store.commit('setUserProfile', JSON.parse(localStorage.getItem('user-data')));
   },
 };
