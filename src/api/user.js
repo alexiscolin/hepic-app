@@ -1,5 +1,5 @@
 import axios from 'axios';
-import endpoints from './config';
+import endpoints from './api.config';
 
 // GET - photos list
 const GET_USER_PHOTOS = function $GET_USER_PHOTOS(id) {

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import endpoints from './config';
+import endpoints from './api.config';
 
 // POST - Test connexion to BDD
 const postConnectId = function $postConnectId(data) {

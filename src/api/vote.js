@@ -1,7 +1,5 @@
 import axios from 'axios';
-import endpoints from './config';
-
-
+import endpoints from './api.config';
 
 // // GET - info contests
 // const GET_CONTESTS = function $GET_CONTESTS() {
