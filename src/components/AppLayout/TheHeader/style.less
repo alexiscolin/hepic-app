@@ -11,6 +11,11 @@
   display: block;
   height: @space-h-unit;
   background: @grad;
+
+  // 3 columns at large size
+  @media ( min-width: @desktop ){
+    height: @space-h-unit * 1.2;
+  }
 }
 
 .o-notif{
@@ -26,17 +31,4 @@
   width: @space-h-unit - 5px;
   height: @space-h-unit - 5px;
   border-radius: 100%;
-}
-
-.o-search{
-  position: relative;
-  &:after{
-    content: '';
-    display: block;
-    position: absolute;
-    bottom:  @space;
-    left:  @space * 2;
-    right:  @space * 2;
-    border-bottom: 1px solid @fg;
-  }
 }

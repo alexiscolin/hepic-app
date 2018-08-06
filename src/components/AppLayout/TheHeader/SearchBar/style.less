@@ -1,0 +1,16 @@
+@import "~@@/utils/var.less";
+
+.o-search{
+  position: relative;
+  max-width: @main-maxwidth;
+  margin: @space auto 0;
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: @space / 2;
+    left: @space * 2;
+    right: @space * 2;
+    border-bottom: @border-width solid @fg;
+  }
+}

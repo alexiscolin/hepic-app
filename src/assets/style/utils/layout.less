@@ -37,7 +37,7 @@ button{
 .o-main{
   padding-top: @maintop-margin;
   min-height: 100vh;
-  max-width: 1250px;
+  max-width: @main-maxwidth;
   margin: 0 auto;
 }
 
@@ -320,6 +320,45 @@ button{
   outline: 1px solid #ddd; /* focus style */
 }
 
+.o-participation{
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.o-participation__label{
+  display: inline-block;
+  cursor: pointer;
+  &:extend(.c-grad-yo);
+  &:extend(.brad-4);
+  &:extend(.shadbox-light);
+  &:extend(.pb-05);
+  &:extend(.pt-05);
+  &:extend(.f-sfat);
+  &:extend(.f-bold);
+  &:extend(.f-center);
+}
+
+.o-warning{
+  display: flex;
+  color: @bg;
+  background: @fg;
+  &:extend(.p-1);
+}
+
+.o-warning__title{
+  &:extend(.f-bold);
+  &:extend(.f-stm);
+  &:extend(.pr-1);
+}
+
+.o-warning__info{
+  &:extend(.f-light);
+  &:extend(.f-si);
+}
 
 //------- CONTAINER -------
 // --------------------------
