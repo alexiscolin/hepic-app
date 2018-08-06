@@ -1,6 +1,8 @@
 // import axios from 'axios';
 import api from '@/api/user';
 import apiPromise from '@/utils/api-promise';
+import findBy from '@/utils/find-by';
+
 
 // ACTION
 const actions = {
@@ -33,6 +35,7 @@ const mutations = {
 // GETTERS
 const getters = {
   getUserPhotos: state => state.userPhotos,
+  getUserPhotoById: state => id => findBy(state.userPhotos, id),
   getUserProfil: state => state.userProfile,
 };
 

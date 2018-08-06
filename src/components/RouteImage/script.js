@@ -2,7 +2,7 @@ import shellApp from '@/components/AppLayout/TheShell';
 import layerPopin from '@/components/AppLayout/layer-popin';
 import infoPopin from './info-popin';
 
-import config from './config.json';
+// import config from './config.json';
 
 export default {
   name: 'displayImage',
@@ -17,10 +17,13 @@ export default {
     },
     media: function $media() {
       const id = parseInt(this.$route.params.id, 10);
-      return config.pictures.find(item => item.id === id); // recup item verifiant l'id demandé
+      console.log(this.$store.getters.getUserPhotoById(id));
+      return this.$store.getters.getUserPhotoById(id) || this.$store.getters.getPhoto;
+      // return config.pictures.find(item => item.id === id); // recup item verifiant l'id demandé
     },
     getId: function $getId() {
-      return parseInt(this.$route.params.id, 10);
+      const idPhoto = this.$route.params.id;
+      return parseInt(idPhoto, 10);
     },
   },
   methods: {
