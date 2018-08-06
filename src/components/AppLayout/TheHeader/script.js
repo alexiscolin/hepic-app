@@ -1,7 +1,11 @@
 import throttle from '@/utils/throttle';
+import SearchBar from './SearchBar';
 
 export default {
   name: 'appHeader',
+  components: {
+    SearchBar,
+  },
   data() {
     return {
       msg: 'Hello tout le monde !',

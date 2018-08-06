@@ -2,8 +2,6 @@ import shellApp from '@/components/AppLayout/TheShell';
 import layerPopin from '@/components/AppLayout/layer-popin';
 import infoPopin from './info-popin';
 
-// import config from './config.json';
-
 export default {
   name: 'displayImage',
   components: {
@@ -18,10 +16,9 @@ export default {
     media: function $media() {
       const id = parseInt(this.$route.params.id, 10);
       return this.$store.getters.getUserPhotoById(id) || this.$store.getters.getPhoto;
-      // return config.pictures.find(item => item.id === id); // recup item verifiant l'id demandé
     },
     profile: function $profile() {
-      const idUser = this.media.profile;
+      const idUser = this.media.profile; // return et watch media ? profile dans then de media ?
       console.log(this.$store.getters.getUserProfil);
       return this.$store.getters.getUserProfil || this.$store('getUserProfil', idUser);
     },

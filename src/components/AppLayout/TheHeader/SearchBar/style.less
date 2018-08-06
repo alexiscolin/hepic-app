@@ -12,5 +12,22 @@
     left: @space * 2;
     right: @space * 2;
     border-bottom: @border-width solid @fg;
+
+    @media (min-width: @tab){
+      max-width: ~"calc(((100% - ((100% * 2) / 100)) / 2) - @{space} * 3)";
+    }
+
+    @media (min-width: @desktop){
+      max-width: ~"calc(((@{main-maxwidth} - (@{space} * 2) - ((@{main-maxwidth} * 4) / 100)) / 3) - @{space} * 2)";
+    }
+  }
+}
+
+.o-search__bar{
+  @media (min-width: @tab){
+    max-width: ~"calc(((100% - ((100% * 2) / 100)) / 2))";
+  }
+  @media (min-width: @desktop){
+    max-width: ~"calc(((@{main-maxwidth} - (@{space} * 2) - ((@{main-maxwidth} * 4) / 100)) / 3))";
   }
 }
