@@ -26,7 +26,7 @@ export default {
         this.hidden = false;
       }
       this.yPos = window.pageYOffset;
-    }, 500),
+    }, 300),
   },
   mounted() {
     window.addEventListener('scroll', this.onScroll, false);
