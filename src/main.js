@@ -3,6 +3,8 @@
 import Vue from 'vue';
 import HelloJs from 'hellojs/dist/hello.all.min';
 import VueHello from 'vue-hellojs';
+import VueColcade from 'vue-colcade';
+// import VueColcade from '@/plugins/vue-colcade';
 import '@/plugins/axios';
 import axios from 'axios';
 import App from './App';
@@ -27,6 +29,7 @@ HelloJs.init({
   redirect_uri: 'authcallback/',
 });
 Vue.use(VueHello, HelloJs);
+Vue.use(VueColcade);
 
 // rec auth token pour axios
 const token = localStorage.getItem('user-token');

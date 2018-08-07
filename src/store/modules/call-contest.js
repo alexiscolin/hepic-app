@@ -17,6 +17,7 @@ const actions = {
 const mutations = {
   setContests: (state, contests) => {
     state.all = contests;
+    state.contests = contests;
   },
   setContest: (state, contest) => {
     state.contest = contest;
@@ -45,13 +46,13 @@ const getters = {
   searchContests: state => (data) => {
     const lowerData = data.toLowerCase();
     return state.all.filter(item => item.brandName.toLowerCase().indexOf(lowerData) !== -1);
-    // return state.all.filter(item => item.brandName.toLowerCase().startsWith(lowerData));
   },
 };
 
 // STATE
 const state = {
   all: [],
+  contests: [],
   contest: {
     id: 0,
     brand: '',

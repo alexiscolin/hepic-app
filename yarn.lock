@@ -8666,6 +8666,12 @@ vue-cli-plugin-pug@^1.0.5:
     pug "^2.0.3"
     pug-plain-loader "^1.0.0"
 
+vue-colcade@^1.0.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/vue-colcade/-/vue-colcade-1.2.1.tgz#4266cae0c60b7931ea3e873d6feb47a06d5af06c"
+  dependencies:
+    colcade "^0.2.0"
+
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-2.0.3.tgz#c268c96c6d94cfe3d938a5f7593959b0ca3360d1"
