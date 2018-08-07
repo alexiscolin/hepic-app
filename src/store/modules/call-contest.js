@@ -10,6 +10,7 @@ const actions = {
   getPhotos: ({ commit }, id) => apiPromise(api.GET_CONTEST_PHOTOS(id), 'setContestPhotos', commit),
   getContestRules: ({ commit }, id) => apiPromise(api.GET_CONTEST_RULES(id), 'setContestRules', commit),
   postContestPhoto: ({ commit }, data) => apiPromise(api.POST_CONTEST_PHOTO(data), 'eraseAgreement', commit),
+  searchContests: ({ getters }, data) => getters.searchContests(data),
 };
 
 // MUTATIONS
@@ -41,6 +42,11 @@ const getters = {
   getContest: state => state.contest,
   getContestPhotoById: state => id => findBy(state.photos, id),
   getContestPhotoIndex: state => el => state.photos.indexOf(el),
+  searchContests: state => (data) => {
+    const lowerData = data.toLowerCase();
+    return state.all.filter(item => item.brandName.toLowerCase().indexOf(lowerData) !== -1);
+    // return state.all.filter(item => item.brandName.toLowerCase().startsWith(lowerData));
+  },
 };
 
 // STATE
