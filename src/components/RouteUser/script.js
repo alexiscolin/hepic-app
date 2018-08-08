@@ -21,4 +21,9 @@ export default {
       return this.$store.state.popin.displayed;
     },
   },
+  beforeRouteUpdate: function $beforeRouteUpdate(from, to, next) {
+    // si on repart sur notre page, on charge notre contenu
+    to.name === 'User' && this.$store.commit('setUserProfile', JSON.parse(localStorage.getItem('user-data')));
+    next();
+  },
 };

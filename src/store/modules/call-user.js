@@ -28,13 +28,13 @@ const mutations = {
     state.userProfile = infos;
   },
   eraseUserProfile: (state) => {
-    state.userProfile = {};
+    state.userProfile = null;
   },
 };
 
 // GETTERS
 const getters = {
-  getUserPhotos: state => state.userPhotos,
+  // getUserPhotos: state => state.userPhotos,
   getUserPhotoById: state => id => findBy(state.userPhotos, id),
   getUserProfil: state => state.userProfile,
 };

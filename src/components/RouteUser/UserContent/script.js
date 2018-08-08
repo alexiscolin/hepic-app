@@ -2,7 +2,7 @@ export default {
   name: 'userContent',
   computed: {
     userPhotos: function $userPhotos() {
-      return this.$store.getters.getUserPhotos;
+      return this.$store.state.callUser.userPhotos;
     },
   },
   watch: {

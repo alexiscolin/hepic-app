@@ -40,7 +40,7 @@ const mutations = {
 // GETTERS
 const getters = {
   getContestById: state => id => findBy(state.all, id),
-  getContest: state => state.contest,
+  // getContest: state => state.contest,
   getContestPhotoById: state => id => findBy(state.photos, id),
   getContestPhotoIndex: state => el => state.photos.indexOf(el),
   searchContests: state => (data) => {

@@ -27,7 +27,7 @@ export default {
     },
     contest: function $contest() {
       const id = this.$route.params.id;
-      return this.$store.getters.getContestById(id) || this.$store.getters.getContest;
+      return this.$store.getters.getContestById(id) || this.$store.state.callcontest.contest;
     },
     getId: function $getId() {
       // id photo demandé par la route ou la première tableau
@@ -77,8 +77,7 @@ export default {
       });
     }
 
-    this.$store.dispatch('getPhotos', idContest).then((res) => {
-      console.log(res.data);
+    this.$store.dispatch('getPhotos', idContest).then(() => {
       // on change url pour avoir l'id photo même si inconnu après GET photos
       const idPhoto = this.getId;
       this.url = `/contest/${idContest}/vote/${idPhoto}`;

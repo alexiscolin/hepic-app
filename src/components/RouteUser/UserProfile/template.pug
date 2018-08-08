@@ -3,7 +3,7 @@
     svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
       use(xlink:href="#ico-arrow")
         
-  div.d-row-flex.d-flex-vm.pr-3.pl-3
+  div(v-if="user").d-row-flex.d-flex-vm.pr-3.pl-3
     img(:src="user.picture").o-profil-pic.brad-100
     span.pl-1.f-bold.f-stm.lineh-1 {{ user.name }}
     span.pl-05.f-grey.f-sxs.lineh-1.f-break {{ user.provider_id }}
