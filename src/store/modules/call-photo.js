@@ -6,7 +6,7 @@ import apiPromise from '@/utils/api-promise';
 const actions = {
   getPhoto: ({ commit }, id) => {
     commit('erasePhoto');
-    apiPromise(api.GET_PHOTO(id), 'setPhoto', commit);
+    return apiPromise(api.GET_PHOTO(id), 'setPhoto', commit);
   },
 };
 
@@ -20,11 +20,6 @@ const mutations = {
   },
 };
 
-// GETTERS
-const getters = {
-  getPhoto: state => state.photo,
-};
-
 // STATE
 const state = {
   photo: {},
@@ -32,7 +27,6 @@ const state = {
 
 export default {
   state,
-  getters,
   mutations,
   actions,
 };

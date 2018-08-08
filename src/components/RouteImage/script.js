@@ -9,22 +9,24 @@ export default {
     layerPopin,
     infoPopin,
   },
+  data() {
+    return {
+      idPhoto: parseInt(this.$route.params.id, 10),
+    };
+  },
   computed: {
     displayedPopin: function $displayedPopin() {
       return this.$store.state.popin.displayed;
     },
     media: function $media() {
-      const id = parseInt(this.$route.params.id, 10);
-      return this.$store.getters.getUserPhotoById(id) || this.$store.getters.getPhoto;
+      return this.$store.getters.getUserPhotoById(this.idPhoto)
+      || this.$store.state.callPhoto.photo;
     },
     profile: function $profile() {
-      const idUser = this.media.profile; // return et watch media ? profile dans then de media ?
-      console.log(this.$store.getters.getUserProfil);
-      return this.$store.getters.getUserProfil || this.$store('getUserProfil', idUser);
+      return this.$store.state.callUser.userProfile;
     },
-    getId: function $getId() { // utile ??
-      const idPhoto = this.$route.params.id;
-      return parseInt(idPhoto, 10);
+    contest: function $contest() {
+      return this.$store.state.callcontest.contest;
     },
   },
   methods: {
@@ -34,6 +36,11 @@ export default {
     },
   },
   created: function $created() {
-    // dispatch('')
+    const photo = this.$store.getters.getUserPhotoById(this.idPhoto);
+    !photo && this.$store.dispatch('getPhoto', this.idPhoto).then((res) => {
+      this.$store.dispatch('getUserProfil', res.data.profile); // Recup infos profile
+      this.$store.dispatch('getContest', res.data.contest); // recup infos contest
+    });
+    photo && this.$store.dispatch('getContest', photo.contest); // recup infos contest
   },
 };

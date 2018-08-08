@@ -7,16 +7,16 @@ shell-app
       
       .p-abs.p-vhcenter-abs.w-100.f-center
         .o-width-container.d-inblock
-          .o-tile__infos--long.d-row-flex.d-flex-spacebet.d-flex-vm.pt-2.pb-1
+          div(v-if="profile && (profile.id || profile.profile_id)").o-tile__infos--long.d-row-flex.d-flex-spacebet.d-flex-vm.pt-2.pb-1
             router-link(:to="'/user/' + profile.profile_id").no-link.d-row-flex.d-flex-spacebet.d-flex-vm 
               img(:src="profile.picture" alt="logo").o-tile__logo--long.b-1.brad-100.mt-neg025
               span.va-mid
                 span.pl-1.f-stm.pr-1.f-grey {{ profile.name }}
                 div(:class="{'o-ico-sprite--none': Number.isInteger(media.rank), 'o-ico-sprite--or': media.rank === 'gold', 'o-ico-sprite--argent': media.rank === 'silver', 'o-ico-sprite--bronze': media.rank === 'bronze'}").o-ico-sprite.o-ico-sprite--inline.va-mid.mt-neg025.f-center    
-            a(@click="displayPopin").no-link
+            a(@click="displayPopin" v-if="contest && contest.id").no-link
               span.o-more
                 
           img(:src="media.file").o-plain-img.o-plain-img--large
 
-    //- layer-popin(v-show="displayedPopin")
-    //-   info-popin(@displayPopin="displayPopin" :id="getId" :brand="media.brand" :desc="media.desc" :logo="media.logo") 
+    layer-popin(v-show="displayedPopin" v-if="contest && contest.id")
+      info-popin( @displayPopin="displayPopin" :id="contest.id" :brandName="contest.brandName" :desc="contest.desc" :logo="contest.logo") 

@@ -41,7 +41,7 @@ const getters = {
 
 // STATE
 const state = {
-  userProfile: {},
+  userProfile: null,
   userPhotos: [],
 };
 
