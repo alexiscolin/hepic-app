@@ -25,7 +25,7 @@ export default {
     // données en cache depuis le flux ou req
     contest: function $contest() {
       const id = this.$route.params.id;
-      return this.$store.getters.getContestById(id) || this.$store.getters.getContest;
+      return this.$store.getters.getContestById(id) || this.$store.state.callcontest.contest;
     },
 
     // conv date deb

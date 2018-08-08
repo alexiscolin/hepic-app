@@ -77,7 +77,8 @@ export default {
       });
     }
 
-    this.$store.dispatch('getPhotos', idContest).then(() => {
+    this.$store.dispatch('getPhotos', idContest).then((res) => {
+      console.log(res.data);
       // on change url pour avoir l'id photo même si inconnu après GET photos
       const idPhoto = this.getId;
       this.url = `/contest/${idContest}/vote/${idPhoto}`;
