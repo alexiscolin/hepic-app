@@ -8,6 +8,6 @@ export default {
         this.$store.state.callcontest.contests = contests;
         this.$colcade.update('flux');
       });
-    }, 1000),
+    }, 600),
   },
 };

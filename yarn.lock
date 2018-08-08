@@ -8667,8 +8667,8 @@ vue-cli-plugin-pug@^1.0.5:
     pug-plain-loader "^1.0.0"
 
 vue-colcade@^1.0.0:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/vue-colcade/-/vue-colcade-1.2.1.tgz#4266cae0c60b7931ea3e873d6feb47a06d5af06c"
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/vue-colcade/-/vue-colcade-1.2.2.tgz#afd3e8af427ef695cd78a4a80d1afd3d7c50f7e9"
   dependencies:
     colcade "^0.2.0"
 
