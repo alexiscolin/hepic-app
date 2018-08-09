@@ -2,7 +2,7 @@ import shellApp from '@/components/AppLayout/TheShell';
 import layerPopin from '@/components/AppLayout/layer-popin';
 import dateFormat from '@/utils/date-format';
 import contestLayout from './AppContestLayout';
-import validationRules from './validation-rules';
+import validationRules from './ContestRulesValidation';
 
 export default {
   name: 'brandContest',

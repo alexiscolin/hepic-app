@@ -7,7 +7,7 @@ import userSettings from '@/components/RouteUser/settings';
 import RouteImage from '@/components/RouteImage';
 import RouteContest from '@/components/RouteContest';
 import RouteVote from '@/components/RouteVote';
-import brandContestUpload from '@/components/RouteContest/upload';
+import brandContestUpload from '@/components/RouteContest/ContestUpload';
 import RouteNotFound from '@/components/RouteNotFound';
 import RouteCallback from '@/components/RouteCallback';
 import store from '../store';
