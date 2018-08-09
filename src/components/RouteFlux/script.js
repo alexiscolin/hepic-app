@@ -2,15 +2,15 @@
 // import colcade from '@/plugins/vue-colcade';
 import { mapState } from 'vuex';
 import shellApp from '@/components/AppLayout/TheShell';
-import fluxTile from './tile';
-import fluxPodium from './podium';
+import TileContest from './TileContest';
+import TilePodium from './TilePodium';
 
 export default {
   name: 'mainFlux',
   components: {
     shellApp,
-    fluxTile,
-    fluxPodium,
+    TileContest,
+    TilePodium,
   },
   data() {
     return {

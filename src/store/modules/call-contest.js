@@ -16,10 +16,12 @@ const actions = {
 // MUTATIONS
 const mutations = {
   setContests: (state, contests) => {
+    console.log(contests);
     state.all = contests;
     state.contests = contests;
   },
   setContest: (state, contest) => {
+    console.log(contest);
     state.contest = contest;
   },
   eraseContest: (state) => {
