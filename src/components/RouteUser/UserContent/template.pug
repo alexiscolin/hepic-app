@@ -3,7 +3,7 @@ section(v-if="userPhotos").o-profil-pics.d-flex
     img(:src="photo.file")
     .o-profil-logo
       img(:src="photo.logo").w-100.h-100.brad-100
-    div(:class="{'o-ico-sprite--num': Number.isInteger(photo.rank), 'o-ico-sprite--or': photo.rank === 'gold', 'o-ico-sprite--argent': photo.rank === 'silver', 'o-ico-sprite--bronze': photo.rank === 'bronze'}").o-ico-sprite.o-ico-sprite--little.va-mid.f-center
-      span(v-if="Number.isInteger(photo.rank)").p-abs.p-vhcenter-abs.pt-025.f-sxs.f-bold.f-lgrey {{ photo.rank }}
+    div(:class="{'o-ico-sprite--num': photo.rank > 3, 'o-ico-sprite--or': photo.rank === 1, 'o-ico-sprite--argent': photo.rank === 2, 'o-ico-sprite--bronze': photo.rank === 3}").o-ico-sprite.o-ico-sprite--little.va-mid.f-center
+      span(v-if="photo.rank > 3").p-abs.p-vhcenter-abs.pt-025.f-sxs.f-bold.f-lgrey {{ photo.rank }}
   
     
