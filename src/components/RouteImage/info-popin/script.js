@@ -23,6 +23,10 @@ export default {
       type: Number,
       required: true,
     },
+    rank: {
+      type: String,
+      required: false,
+    },
   },
   components: {
     AppContestInfos,
