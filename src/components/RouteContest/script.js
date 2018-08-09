@@ -1,5 +1,5 @@
 import shellApp from '@/components/AppLayout/TheShell';
-import layerPopin from '@/components/AppLayout/layer-popin';
+import layerPopin from '@/components/AppLayout/LayerPopin';
 import dateFormat from '@/utils/date-format';
 import contestLayout from './AppContestLayout';
 import validationRules from './ContestRulesValidation';

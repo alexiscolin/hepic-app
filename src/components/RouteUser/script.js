@@ -1,6 +1,5 @@
 import shellApp from '@/components/AppLayout/TheShell';
-import layerPopin from '@/components/AppLayout/layer-popin';
-// import config from './config.json';
+import layerPopin from '@/components/AppLayout/LayerPopin';
 import UserProfile from './UserProfile';
 import UserContent from './UserContent';
 import UserSettings from './settings-routes';

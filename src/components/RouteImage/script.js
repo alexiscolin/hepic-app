@@ -1,5 +1,5 @@
 import shellApp from '@/components/AppLayout/TheShell';
-import layerPopin from '@/components/AppLayout/layer-popin';
+import layerPopin from '@/components/AppLayout/LayerPopin';
 import infoPopin from './InfoPopin';
 
 export default {
