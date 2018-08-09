@@ -1,6 +1,6 @@
 import shellApp from '@/components/AppLayout/TheShell';
 import layerPopin from '@/components/AppLayout/layer-popin';
-import infoPopin from './info-popin';
+import infoPopin from './InfoPopin';
 
 export default {
   name: 'displayImage',
