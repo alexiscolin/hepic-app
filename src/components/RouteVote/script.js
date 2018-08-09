@@ -1,7 +1,7 @@
 import shellApp from '@/components/AppLayout/TheShell';
 import AppContestInfos from '@/components/AppLayout/AppContestInfos';
 import layerPopin from '@/components/AppLayout/layer-popin';
-import sharePopin from './share-popin';
+import sharePopin from './SharePopin';
 
 export default {
   name: 'vote',
