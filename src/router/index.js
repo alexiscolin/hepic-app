@@ -3,7 +3,7 @@ import Router from 'vue-router';
 import indexHp from '@/components/RouteIndex';
 import RouteFlux from '@/components/RouteFlux';
 import RouteUser from '@/components/RouteUser';
-import userSettings from '@/components/RouteUser/settings';
+import userSettings from '@/components/RouteUser/UserSettings';
 import RouteImage from '@/components/RouteImage';
 import RouteContest from '@/components/RouteContest';
 import RouteVote from '@/components/RouteVote';
