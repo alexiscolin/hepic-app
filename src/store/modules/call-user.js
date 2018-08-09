@@ -34,9 +34,7 @@ const mutations = {
 
 // GETTERS
 const getters = {
-  // getUserPhotos: state => state.userPhotos,
   getUserPhotoById: state => id => findBy(state.userPhotos, id),
-  getUserProfil: state => state.userProfile,
 };
 
 // STATE
