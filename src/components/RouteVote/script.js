@@ -65,7 +65,7 @@ export default {
       this.popinAction = e;
       this.$store.commit('popinDisplay');
       this.$store.commit('hideOptin');
-      const data = {};
+      const data = this.$store.state.callcontest.photos[this.index].id;
       if (e === 1) {
         this.$store.commit('displayOptin', {
           reqText: 'Valider le vote',
