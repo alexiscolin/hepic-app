@@ -15,7 +15,7 @@ export default {
     return {
       vote: this.$store.state.callcontest.photos,
       url: this.$route.fullPath,
-      index: 0,
+      index: null,
       indexMin: 0,
       popinAction: false,
     };
@@ -46,11 +46,20 @@ export default {
     },
   },
   methods: {
+    changeUrl: function $changeUrl(idPhoto) {
+      const idContest = this.$route.params.id;
+      this.url = `/contest/${idContest}/vote/${idPhoto}`;
+      window.history.replaceState(null, null, this.url);
+    },
     nextImg: function $nextImg() {
       this.index = (this.index < this.indexMax) ? this.index + 1 : this.indexMax;
+      const idPhoto = this.$store.state.callcontest.photos[this.index].id;
+      this.changeUrl(idPhoto);
     },
     prevImg: function $prevImg() {
       this.index = (this.index > this.indexMin) ? this.index - 1 : this.indexMin;
+      const idPhoto = this.$store.state.callcontest.photos[this.index].id;
+      this.changeUrl(idPhoto);
     },
     displayPopin: function $displayPopin(e) {
       this.popinAction = e;
@@ -79,8 +88,9 @@ export default {
       console.log(res.data);
       // on change url pour avoir l'id photo même si inconnu après GET photos
       const idPhoto = this.getId;
-      this.url = `/contest/${idContest}/vote/${idPhoto}`;
-      window.history.replaceState(null, null, this.url);
+      this.changeUrl(idPhoto);
+      // this.url = `/contest/${idContest}/vote/${idPhoto}`;
+      // window.history.replaceState(null, null, this.url);
     });
   },
   beforeRouteLeave: function $beforeRouteLeave(to, from, next) {
