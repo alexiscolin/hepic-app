@@ -23,16 +23,22 @@ shell-app
               div(v-if="contest") {{ getStartDate }}
               div(v-if="contest") {{ getEndDate }}
               
-      div.d-col-flex.mt-2.pr-4.pl-4
+      div(v-if="contest && !contest.closed").d-col-flex.mt-2.pr-4.pl-4
         a(@click="$store.commit('popinDisplay')" v-if="contest && !contest.participation").f-bold.f-sfat.pt-05.pb-05.f-center.c-grad-yo.shadbox-light.brad-4 Participer
-        router-link(:to="$route.path +'/vote'" v-if="contest && !contest.closed && contest.hasPhoto").no-link.f-center.shadbox-light.pt-1.pb-1.mt-1.brad-4 
+        router-link(:to="$route.path +'/vote'" v-if="contest && contest.hasPhoto").no-link.f-center.shadbox-light.pt-1.pb-1.mt-1.brad-4 
           svg(viewBox="0 0 42 42").mt-neg025.o-svgh-ico.o-svg-btn.mr-05.va-mid
             use(xlink:href="#ico-vote")
           span Photos
         
-      div.pl-4.pr-4.mt-4
+      div(v-if="contest.winners.length === 0" key="contest-rules").pl-4.pr-4.mt-4
         h3.p-rel.sep-bef.f-stl.f-reg Règlement complet
         p(v-html="rules").pt-1.f-grey.f-stl
+      div(v-if="contest.winners.length !== 0" key="contest-winners").o-profil-pics.d-flex.p-1
+        h2.w-100.mt-2.f-center.f-stl Les Gagnants
+        router-link(v-for="winner in contest.winners" :key="winner.profilId" :to="'/user/' + winner.profileId" :class="{'o-profil-pics__img--large': winner.rank === 1}").o-profil-pics__img.m-025
+          img(:src="winner.photo")
+          div(:class="{'o-ico-sprite--or': winner.rank === 1, 'o-ico-sprite--argent': winner.rank === 2, 'o-ico-sprite--bronze': winner.rank === 3}").o-ico-sprite.o-ico-sprite--little.va-mid.f-center
+
       
     //- popin de reglement ici
     layer-popin(v-show="displayedPopin" v-if="contest && contest.id")
