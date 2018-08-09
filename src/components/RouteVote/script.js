@@ -17,11 +17,13 @@ export default {
       url: this.$route.fullPath,
       index: 0,
       indexMin: 0,
-      indexMax: Math.max(0, this.$store.state.callcontest.photos.length - 1), // load sans photo
       popinAction: false,
     };
   },
   computed: {
+    indexMax: function $indexMax() {
+      return Math.max(0, this.$store.state.callcontest.photos.length - 1);
+    },
     displayedPopin: function $displayedPopin() {
       return this.$store.state.popin.displayed;
     },
@@ -68,16 +70,13 @@ export default {
   },
   created: function $created() {
     const idContest = this.$route.params.id;
-    let contest = this.$store.getters.getContestById(idContest);
+    const contest = this.$store.getters.getContestById(idContest);
 
     // recherche en cache si venu depuis le flux
-    if (!contest) {
-      this.$store.dispatch('getContest', idContest).then((res) => {
-        contest = res.data;
-      });
-    }
+    !contest && this.$store.dispatch('getContest', idContest);
 
-    this.$store.dispatch('getPhotos', idContest).then(() => {
+    this.$store.dispatch('getPhotos', idContest).then((res) => {
+      console.log(res.data);
       // on change url pour avoir l'id photo même si inconnu après GET photos
       const idPhoto = this.getId;
       this.url = `/contest/${idContest}/vote/${idPhoto}`;
