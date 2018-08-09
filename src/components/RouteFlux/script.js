@@ -34,13 +34,9 @@ export default {
           items: '.o-tile-grided',
         },
       });
-
-    // this.gridColcade = elem &&
-    // new Colcade(elem, { columns: '.grid-col', items: '.o-tile-grided' });
     });
   },
   destroyed: function $beforeDestroy() {
-    // this.gridColcade.destroy();
     this.$colcade.destroy('flux');
   },
 };
