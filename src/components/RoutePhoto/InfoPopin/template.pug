@@ -11,5 +11,5 @@ div
     li.p-1.f-stl.f-reg
       button(v-if="isMyProfile" @click="displayOptin").no-link.f-dgrey.no-deco Supprimer et quitter le concours
       span(v-else) 
-        span(:class="{'o-ico-sprite--none': Number.isInteger(rank), 'o-ico-sprite--or': rank === 'gold', 'o-ico-sprite--argent': rank === 'silver', 'o-ico-sprite--bronze': rank === 'bronze'}").o-ico-sprite.o-ico-sprite--inline.o-ico-sprite--big.va-mid.mt-neg025
+        span(:class="{'o-ico-sprite--or': rank === 1, 'o-ico-sprite--argent': rank === 2, 'o-ico-sprite--bronze': rank === 3}").o-ico-sprite.o-ico-sprite--inline.o-ico-sprite--big.va-mid.mt-neg025
         span.ml-1.f-st.f-bold Remporté
