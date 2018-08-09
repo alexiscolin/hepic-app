@@ -15,6 +15,10 @@ export default {
       type: String,
       required: true,
     },
+    profile: {
+      type: Number,
+      required: true,
+    },
     id: {
       type: Number,
       required: true,
@@ -22,6 +26,11 @@ export default {
   },
   components: {
     AppContestInfos,
+  },
+  computed: {
+    isMyProfile: function $myProfile() {
+      return parseInt(this.profile, 10) === parseInt(JSON.parse(localStorage.getItem('user-data')).profile_id, 10);
+    },
   },
   methods: {
     displayOptin: function $displayOptin() {

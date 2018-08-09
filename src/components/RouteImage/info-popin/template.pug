@@ -9,5 +9,5 @@ div
               
   ul.d-col-flex.d-flex-vm.mb-1.no-list
     li.p-1.f-stl.f-reg
-      button(@click="displayOptin").no-link.f-dgrey.no-deco Supprimer et quitter le concours
-      
+      button(v-if="isMyProfile" @click="displayOptin").no-link.f-dgrey.no-deco Supprimer et quitter le concours
+      span(v-else) Concours remporté
