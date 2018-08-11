@@ -42,6 +42,7 @@ export default {
     },
     displayImage: function $displayImage() {
       const photo = this.$store.state.callcontest.photos[this.index];
+      console.log(this.$store.state.callcontest.photos);
       return photo && photo.file; // si marche pas -> passer dans un commit du store
     },
   },

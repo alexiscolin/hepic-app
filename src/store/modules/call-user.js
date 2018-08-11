@@ -19,6 +19,7 @@ const actions = {
 // MUTATIONS
 const mutations = {
   setUserPhotos: (state, photos) => {
+    console.log(photos);
     state.userPhotos = photos;
   },
   eraseUserPhotos: (state) => {
