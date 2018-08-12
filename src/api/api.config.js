@@ -16,7 +16,7 @@ const endpoints = {
   // getConfigCGU: `${HEPIC_URL}/cgu/`,
   // getConfigData: `${HEPIC_URL}/personnal-data/`,
   // getConfigMl: `${HEPIC_URL}/ml/`,
-  // postConfigMessage: `${HEPIC_URL}/contact/`,
+  postContactMessage: `${HEPIC_URL}/contacts/`,
 };
 
 const endpointsMap = new Map(Object.entries(endpoints));

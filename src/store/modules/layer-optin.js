@@ -38,7 +38,7 @@ const actions = {
   // faire disparaitre opt-in après un délais
   breakPopin: ({ commit, state }, time = 2000) => {
     setTimeout(() => {
-      state.central && commit('popinDisplay'); // effacer la popin cas optin central
+      state.central ? commit('popinDisplay') : commit('hideOptin'); // effacer la popin ou optin
     }, time);
   },
 };

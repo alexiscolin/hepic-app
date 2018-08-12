@@ -8,11 +8,11 @@ import findBy from '@/utils/find-by';
 const actions = {
   getUserPhotos: ({ commit }, id) => {
     commit('eraseUserPhotos');
-    apiPromise(api.GET_USER_PHOTOS(id), 'setUserPhotos', commit);
+    apiPromise(api.GET_USER_PHOTOS(id), commit, 'setUserPhotos');
   },
   getUserProfil: ({ commit }, id) => {
     commit('eraseUserProfile');
-    apiPromise(api.GET_USER_PROFILE(id), 'setUserProfile', commit);
+    apiPromise(api.GET_USER_PROFILE(id), commit, 'setUserProfile');
   },
 };
 
@@ -24,6 +24,9 @@ const mutations = {
   },
   eraseUserPhotos: (state) => {
     state.userPhotos = [];
+  },
+  deleteUserPhoto: (state, idPhoto) => {
+    console.log(idPhoto);
   },
   setUserProfile: (state, infos) => {
     state.userProfile = infos;

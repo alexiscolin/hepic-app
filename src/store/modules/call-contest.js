@@ -5,23 +5,23 @@ import apiPromise from '@/utils/api-promise';
 
 // ACTION
 const actions = {
-  getContests: ({ commit }, data) => apiPromise(api.GET_CONTESTS(data), 'setContests', commit),
-  getContest: ({ commit }, id) => apiPromise(api.GET_CONTEST(id), 'setContest', commit),
-  getPhotos: ({ commit }, id) => apiPromise(api.GET_CONTEST_PHOTOS(id), 'setContestPhotos', commit),
-  getContestRules: ({ commit }, id) => apiPromise(api.GET_CONTEST_RULES(id), 'setContestRules', commit),
-  postContestPhoto: ({ commit }, data) => apiPromise(api.POST_CONTEST_PHOTO(data), 'eraseAgreement', commit),
+  getContests: ({ commit }, data) => apiPromise(api.GET_CONTESTS(data), commit, 'setContests'),
+  getContest: ({ commit }, id) => apiPromise(api.GET_CONTEST(id), commit, 'setContest'),
+  getPhotos: ({ commit }, id) => apiPromise(api.GET_CONTEST_PHOTOS(id), commit, 'setContestPhotos'),
+  getContestRules: ({ commit }, id) => apiPromise(api.GET_CONTEST_RULES(id), commit, 'setContestRules'),
+  postContestPhoto: ({ commit }, data) => apiPromise(api.POST_CONTEST_PHOTO(data), commit, 'eraseAgreement'),
   searchContests: ({ getters }, data) => getters.searchContests(data),
 };
 
 // MUTATIONS
 const mutations = {
   setContests: (state, contests) => {
-    console.log(contests);
+    // console.log(contests);
     state.all = contests;
     state.contests = contests;
   },
   setContest: (state, contest) => {
-    console.log(contest);
+    // console.log(contest);
     state.contest = contest;
   },
   eraseContest: (state) => {

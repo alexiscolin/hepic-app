@@ -5,9 +5,9 @@ import apiPromise from '@/utils/api-promise';
 const actions = {
   postVote: ({ commit }, id) => {
     console.log(id);
-    return apiPromise(api.POST_PHOTO_VOTE(id), 'setContestPhotos', commit);
+    return apiPromise(api.POST_PHOTO_VOTE(id), commit, 'setContestPhotos');
   },
-  postReport: data => apiPromise(api.POST_PHOTO_REPORT(data)),
+  postReport: ({ commit }, data) => apiPromise(api.POST_PHOTO_REPORT(data), commit),
 };
 
 // MUTATIONS
@@ -17,7 +17,7 @@ const mutations = {
 
 // STATE
 const state = {
-  send: '',
+  send: true,
 };
 
 export default {
