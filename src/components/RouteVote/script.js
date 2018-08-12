@@ -34,7 +34,7 @@ export default {
     getId: function $getId() {
       // cas ou l'id peut être connu
       const storePhoto = this.$store.state.callcontest.photos;
-      if (storePhoto.length !== 0) return storePhoto[this.index].id;
+      if (storePhoto.length !== 0 && this.index) return storePhoto[this.index].id;
 
       // id photo demandé par la route ou la première tableau
       const idPhoto = this.$route.params.photo;
