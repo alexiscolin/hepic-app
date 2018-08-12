@@ -19,4 +19,4 @@ shell-app
           img(:src="media.file").o-plain-img.o-plain-img--large
 
     layer-popin(v-show="displayedPopin" v-if="contest && contest.id && profile")
-      info-popin( @displayPopin="displayPopin" :id="contest.id" :profile="profile.id || profile.profile_id" :brandName="contest.brandName" :desc="contest.desc" :logo="contest.logo") 
+      info-popin( @displayPopin="displayPopin" :photoData="photoData" :rank="media.rank") 

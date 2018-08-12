@@ -28,6 +28,16 @@ export default {
     contest: function $contest() {
       return this.$store.state.callcontest.contest;
     },
+    photoData: function $photoData() {
+      return {
+        idContest: this.contest.id,
+        idPhoto: this.idPhoto,
+        profile: this.profile.id || this.profile.profile_id,
+        contestBrandName: this.contest.brandName,
+        contestDesc: this.contest.desc,
+        contestLogo: this.contest.logo,
+      };
+    },
   },
   methods: {
     displayPopin: function $displayPopin() {

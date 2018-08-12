@@ -4,12 +4,12 @@ const dispatchAction = function $dispatchAction(dispatch, state, entry) {
     dispatch(entry, state.data).then(() => {
       state.text = state.cbText;
       state.color = 'green';
-      state.active = false;
-      dispatch('breakPopin');
     }).catch((error) => {
       console.log(error);
       state.text = 'Une erreur est survenue';
       state.color = 'red';
+    }).finally(() => {
+      state.data = null;
       state.active = false;
       dispatch('breakPopin');
     });

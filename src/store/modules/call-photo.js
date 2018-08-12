@@ -1,6 +1,7 @@
-// import axios from 'axios';
+import route from '@/router';
 import api from '@/api/photo';
 import apiPromise from '@/utils/api-promise';
+
 
 // ACTION
 const actions = {
@@ -8,13 +9,7 @@ const actions = {
     commit('erasePhoto');
     return apiPromise(api.GET_PHOTO(id), commit, 'setPhoto');
   },
-  deletePhoto: ({ commit }, { id }) => {
-    // console.log('la');
-    console.log(id);
-    return true;
-    // commit('deletePhoto', id);
-    // return apiPromise(api.DELETE_PHOTO(id), 'deletePhoto', commit);
-  },
+  deletePhoto: ({ commit }, { id }) => apiPromise(api.DELETE_PHOTO(id), commit, 'deletePhoto'),
 };
 
 // MUTATIONS
@@ -25,11 +20,15 @@ const mutations = {
   erasePhoto: (state) => {
     state.photo = [];
   },
-  deletePhoto: (state, photo) => {
-    console.log('suppr');
-    console.log(photo);
+  deletePhoto: (state) => {
     state.photo = [];
+    route.go(-1);
   },
+};
+
+// GETTERS
+const getters = {
+  getUserPhotoByIdd: () => 2,
 };
 
 // STATE
@@ -39,6 +38,7 @@ const state = {
 
 export default {
   state,
+  getters,
   mutations,
   actions,
 };

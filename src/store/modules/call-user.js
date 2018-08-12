@@ -1,8 +1,6 @@
-// import axios from 'axios';
 import api from '@/api/user';
 import apiPromise from '@/utils/api-promise';
 import findBy from '@/utils/find-by';
-
 
 // ACTION
 const actions = {
@@ -25,9 +23,6 @@ const mutations = {
   },
   eraseUserPhotos: (state) => {
     state.userPhotos = [];
-  },
-  deleteUserPhoto: (state, idPhoto) => {
-    console.log(idPhoto);
   },
   setUserProfile: (state, infos) => {
     state.userProfile = infos;

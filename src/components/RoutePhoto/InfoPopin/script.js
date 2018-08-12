@@ -3,24 +3,8 @@ import AppContestInfos from '@/components/AppLayout/AppContestInfos';
 export default {
   name: 'infoPopin',
   props: {
-    logo: {
-      type: String,
-      required: true,
-    },
-    brandName: {
-      type: String,
-      required: true,
-    },
-    desc: {
-      type: String,
-      required: true,
-    },
-    profile: {
-      type: Number,
-      required: true,
-    },
-    id: {
-      type: Number,
+    photoData: {
+      type: Object,
       required: true,
     },
     rank: {
@@ -33,12 +17,12 @@ export default {
   },
   computed: {
     isMyProfile: function $myProfile() {
-      return parseInt(this.profile, 10) === parseInt(JSON.parse(localStorage.getItem('user-data')).profile_id, 10);
+      return parseInt(this.photoData.profile, 10) === parseInt(JSON.parse(localStorage.getItem('user-data')).profile_id, 10);
     },
   },
   methods: {
     displayOptin: function $displayOptin() {
-      const data = { id: this.id };
+      const data = { id: this.photoData.idPhoto };
       this.$store.commit('displayOptin', {
         reqText: 'Supprimer et quitter le concours',
         cbText: 'Supprimé !',

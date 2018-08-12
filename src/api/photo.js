@@ -8,7 +8,8 @@ const GET_PHOTO = function $GET_PHOTO(id) {
 
 const DELETE_PHOTO = function $DELETE_PHOTO(id) {
   console.log(id);
-  return axios.delete(`${endpoints.get('getPhoto')} bla`);
+  // return axios.delete(`${endpoints.get('getPhoto')} bla`);
+  return axios.delete(endpoints.get('getPhoto') + id);
 };
 
 export default {
