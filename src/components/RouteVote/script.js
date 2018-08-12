@@ -32,6 +32,10 @@ export default {
       return this.$store.getters.getContestById(id) || this.$store.state.callcontest.contest;
     },
     getId: function $getId() {
+      // cas ou l'id peut être connu
+      const storePhoto = this.$store.state.callcontest.photos;
+      if (storePhoto.length !== 0) return storePhoto[this.index].id;
+
       // id photo demandé par la route ou la première tableau
       const idPhoto = this.$route.params.photo;
       const photo1 = this.$store.state.callcontest.photos[0];
@@ -42,7 +46,6 @@ export default {
     },
     displayImage: function $displayImage() {
       const photo = this.$store.state.callcontest.photos[this.index];
-      console.log(this.$store.state.callcontest.photos);
       return photo && photo.file; // si marche pas -> passer dans un commit du store
     },
   },

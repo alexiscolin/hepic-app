@@ -8,10 +8,11 @@ const actions = {
     commit('erasePhoto');
     return apiPromise(api.GET_PHOTO(id), commit, 'setPhoto');
   },
-  deletePhoto: ({ commit }, id) => {
+  deletePhoto: ({ commit }, { id }) => {
     // console.log('la');
-    // console.log(id);
-    commit('deletePhoto', id);
+    console.log(id);
+    return true;
+    // commit('deletePhoto', id);
     // return apiPromise(api.DELETE_PHOTO(id), 'deletePhoto', commit);
   },
 };
