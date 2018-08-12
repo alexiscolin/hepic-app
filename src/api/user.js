@@ -11,7 +11,19 @@ const GET_USER_PROFILE = function $GET_USER_PROFILE(id) {
   return axios.get(endpoints.get('getUserProfile') + id);
 };
 
+// POST - Message to contact admin
+const POST_CONTACT_MESSAGE = function $POST_CONTACT_MESSAGE(data) {
+  const opt = {
+    method: 'post',
+    headers: { 'Content-Type': 'multipart/form-data' },
+    data,
+    url: endpoints.get('postContactMessage'),
+  };
+  return axios(opt);
+};
+
 export default {
   GET_USER_PROFILE,
   GET_USER_PHOTOS,
+  POST_CONTACT_MESSAGE,
 };

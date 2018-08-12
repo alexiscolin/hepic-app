@@ -14,6 +14,7 @@ const actions = {
     commit('eraseUserProfile');
     apiPromise(api.GET_USER_PROFILE(id), commit, 'setUserProfile');
   },
+  postContactMessage: ({ commit }, data) => apiPromise(api.POST_CONTACT_MESSAGE(data), commit, 'setUserProfile'),
 };
 
 // MUTATIONS
