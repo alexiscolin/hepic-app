@@ -1,7 +1,7 @@
-export default function (func, commitDef, commit) {
+export default function (func, commitDef = null, commit) {
   return new Promise((resolve, reject) => {
     func.then((res) => {
-      commit(commitDef, res.data);
+      commitDef && commit(commitDef, res.data);
       resolve(res);
     }).catch((res) => {
       reject(res);

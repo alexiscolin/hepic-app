@@ -9,6 +9,7 @@ const endpoints = {
   postContestPhoto: `${HEPIC_URL}/photos/`,
   // postPhotoVote: `${HEPIC_URL}/photo/vote/`,
   getPhoto: `${HEPIC_URL}/photo/`,
+  postReport: `${HEPIC_URL}/reports/`,
   // deletePhoto: `${HEPIC_URL}/photo/`,
   getUserPhotos: `${HEPIC_URL}/photos/by_profile/`,
   getUserProfile: `${HEPIC_URL}/profile/`,

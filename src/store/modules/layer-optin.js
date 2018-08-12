@@ -24,8 +24,8 @@ const actions = {
       case 'votePhoto':
         dispatchAction(dispatch, state, 'postVote');
         break;
-      case 'signalPhoto':
-        dispatchAction(dispatch, state, 'postSignal');
+      case 'reportPhoto':
+        dispatchAction(dispatch, state, 'postReport');
         break;
       case 'deletePhoto':
         dispatchAction(dispatch, state, 'deletePhoto');

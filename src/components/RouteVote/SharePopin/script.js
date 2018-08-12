@@ -1,4 +1,5 @@
 import socialSharing from 'vue-social-sharing';
+import createFormData from '@/utils/form-data';
 import AppContestInfos from '@/components/AppLayout/AppContestInfos';
 
 export default {
@@ -45,11 +46,13 @@ export default {
   },
   methods: {
     displayOptin: function $displayOptin() {
-      const data = { id: this.id };
+      const data = createFormData({
+        photo: this.id,
+      });
       this.$store.commit('displayOptin', {
         reqText: 'Signaler cette photo', // texte du btn
         cbText: 'Photo signalée!', // texte de restitution
-        type: 'signalPhoto', // type d'action
+        type: 'reportPhoto', // type d'action
         central: false, // zone d'affichage
         data, // data à transmettre API
       });

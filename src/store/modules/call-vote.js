@@ -7,14 +7,7 @@ const actions = {
     console.log(id);
     return apiPromise(api.POST_PHOTO_VOTE(id), 'setContestPhotos', commit);
   },
-  postSignal: ({ state }, data) => {
-    console.log(data.id);
-    state.send = true; // utile le send ?
-  },
-  deletePhoto: ({ state }, data) => {
-    console.log(data.id);
-    state.send = true; // utile le send ?
-  },
+  postReport: data => apiPromise(api.POST_PHOTO_REPORT(data)),
 };
 
 // MUTATIONS
