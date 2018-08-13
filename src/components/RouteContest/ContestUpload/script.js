@@ -58,6 +58,12 @@ export default {
       this.picValidated = true;
     },
   },
+  beforeRouteLeave(to, from, next) {
+    // effacer données concours -> sécurité
+    const contestEntry = this.$store.state.contestEntry;
+    Object.keys(contestEntry.contest).forEach((v) => { contestEntry.contest[v] = null; });
+    next();
+  },
   beforeRouteEnter(to, from, next) {
     // test provenance du load afin de valider agreement sur la page de contest
     if (from.name !== 'Contest' || store.getters.getAgreement !== true) {

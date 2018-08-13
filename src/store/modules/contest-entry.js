@@ -41,9 +41,8 @@ const mutations = {
   },
 
   eraseAgreement(state) {
-    window.console.log('erase now');
-    Object.keys(state.contest).forEach((v) => { state.contest[v] = null; });
-    window.console.log(state.contest);
+    // effacer agreement après upload par sécurité
+    state.contest.agreement = false;
   },
 };
 
