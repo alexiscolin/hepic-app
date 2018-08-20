@@ -146,4 +146,4 @@ Then visit http://localhost:8080/ - or a new browser windows popped-up already -
 Now Netlify will build and deploy your site whenever you push to git.
 Then if you have created a Slack Bot, you will get a notification on the dedicated slack channel.
 
-##Enjoy!! 😸
+## Enjoy!! 😸
