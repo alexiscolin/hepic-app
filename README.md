@@ -150,14 +150,14 @@ SSL configuration should be loaded by `https` protocol, so use the `devServer` f
  },
 ```
 
-### EsLint
+### ESLint
 
 All code is linted by eslint using modified [Airbnb style guide](https://github.com/airbnb/javascript).
 Every modification is located inside the vue configuration file `.eslintrc.js`. **Modifications must be made to follow some of Vue.js libraries rules**.
 
 ### Units and end2end tests
 
-Those tests are not configured to be used by de jaune et de bleu. So, you have to edit them in order to use them. Remember that they make a big use of Jest (unit), Puppeteer and Nightwatch (e2e). All preconf files are already loaded and ready to be used.
+Those tests are not configured to be used by de jaune et de bleu. So, you have to edit them in order to use them. Remember that they make a big use of Jest (unit), Puppeteer and Nightwatch (e2e). All preconf files are already loaded and ready for use.
 
 ## Deploying to Netlify
 
