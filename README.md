@@ -5,7 +5,7 @@
 
 > Hepic app is made with ♡ by de jaune et de bleu
 
-App available on Netlify - https://hepic-app.netlify.com/
+App available on Netlify (de jaune et de bleu's account)- https://hepic-app.netlify.com/
 
 ## Informations
 
@@ -40,7 +40,9 @@ This project requires some Tools
 * Slack (deployment notification)
 
 ##Usage
+
 ###Prerequisites
+
 You need to have the latest/LTS node, yarn and Vue CLI(v3) versions installed in order to use Hepic app under Vue.js.
 
 Next step, clone this repository and run:
@@ -54,14 +56,20 @@ This will take some time and will install all packages necessary to run Hepic Ap
 Then, look at the **Build Setup** section below in order to get more information about common use of Hepic App accross Vue CLI.
 
 ## Hepic Structure
-main
-### API
-### Components
-#### generals
-#### Architecture
-### Utils
-### Store
 
+main
+
+### API
+
+### Components
+
+#### generals
+
+#### Architecture
+
+### Utils
+
+### Store
 
 
 ## Assets management
@@ -98,6 +106,7 @@ Hepic app store management is made by following one rule: **all that need to be 
 Here, the store is built thanks to VueX store modules.
 
 ## SSL & tests
+
 ### EsLint
 
 
