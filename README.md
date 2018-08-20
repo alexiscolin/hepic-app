@@ -55,6 +55,33 @@ This will take some time and will install all packages necessary to run Hepic Ap
 
 Then, look at the **Build Setup** section below in order to get more information about common use of Hepic App accross Vue CLI.
 
+### Build Setup
+
+The Hepic project is served by Yarn package manager.
+
+``` bash
+# install dependencies
+yarn install
+
+# serve with hot reload at localhost:8080
+yarn run serve
+
+# build for production with minification
+yarn run build
+
+# build for production and view the bundle analyzer report
+yarn run lint
+
+# run unit tests
+yarn run test:unit
+
+# run e2e tests
+yarn run test:e2e
+
+```
+
+Then visit http://localhost:8080/ - or a new browser windows popped-up already - to preview your new App. Webpack will automatically reload the CSS or refresh the whole page, when stylesheets or content changes.
+
 ## Hepic Structure
 
 main
@@ -131,34 +158,6 @@ Every modification is located inside the vue configuration file `.eslintrc.js`. 
 ### Units and end2end tests
 
 Those tests are not configured to be used by de jaune et de bleu. So, you have to edit them in order to use them. Remember that they make a big use of Jest (unit), Puppeteer and Nightwatch (e2e). All preconf files are already loaded and ready to be used.
-
-## Build Setup
-
-The Hepic project is served by Yarn package manager.
-
-``` bash
-# install dependencies
-yarn install
-
-# serve with hot reload at localhost:8080
-yarn run serve
-
-# build for production with minification
-yarn run build
-
-# build for production and view the bundle analyzer report
-yarn run lint
-
-# run unit tests
-yarn run test:unit
-
-# run e2e tests
-yarn run test:e2e
-
-```
-
-Then visit http://localhost:8080/ - or a new browser windows popped-up already - to preview your new App. Webpack will automatically reload the CSS or refresh the whole page, when stylesheets or content changes.
-
 
 ## Deploying to Netlify
 
