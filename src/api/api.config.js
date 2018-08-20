@@ -13,7 +13,7 @@ const endpoints = {
   deletePhoto: `${HEPIC_URL}/photo/`,
   getUserPhotos: `${HEPIC_URL}/photos/by_profile/`,
   getUserProfile: `${HEPIC_URL}/profile/`,
-  // getConfigCGU: `${HEPIC_URL}/cgu/`,
+  getConfigCGU: `${HEPIC_URL}/cgu/`,
   // getConfigData: `${HEPIC_URL}/personnal-data/`,
   // getConfigMl: `${HEPIC_URL}/ml/`,
   postContactMessage: `${HEPIC_URL}/contacts/`,

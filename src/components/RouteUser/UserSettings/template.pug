@@ -7,8 +7,8 @@ shell-app
       span.d-block.w-100.f-bold.f-stl.pt-025.f-center {{ title }}
       span(v-if="desc").d-block.w-100.pt-025.f-center.f-grey.f-light.f-si {{ desc }}
 
-    div(v-if="type !== 'contact'").o-setting__content.mt-1
-      | {{ settingsContent }} {{ type }}
+    div(v-if="type !== 'contact'").o-setting__content.mt-1.p-1
+      | {{ settingsContent }}
       
     div(v-else).mt-1
       .p-rel

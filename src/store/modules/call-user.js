@@ -12,13 +12,16 @@ const actions = {
     commit('eraseUserProfile');
     apiPromise(api.GET_USER_PROFILE(id), commit, 'setUserProfile');
   },
+  getConfigCGU: ({ commit }) => {
+    commit('eraseConfigContent');
+    apiPromise(api.GET_USER_CGU(), commit, 'setConfigContent');
+  },
   postContactMessage: ({ commit }, data) => apiPromise(api.POST_CONTACT_MESSAGE(data), commit, 'setUserProfile'),
 };
 
 // MUTATIONS
 const mutations = {
   setUserPhotos: (state, photos) => {
-    console.log(photos);
     state.userPhotos = photos;
   },
   eraseUserPhotos: (state) => {
@@ -29,6 +32,12 @@ const mutations = {
   },
   eraseUserProfile: (state) => {
     state.userProfile = null;
+  },
+  setConfigContent: (state, content) => {
+    state.configContent = content;
+  },
+  eraseConfigContent: (state) => {
+    state.configContent = '';
   },
 };
 
@@ -41,6 +50,7 @@ const getters = {
 const state = {
   userProfile: null,
   userPhotos: [],
+  configContent: '',
 };
 
 export default {

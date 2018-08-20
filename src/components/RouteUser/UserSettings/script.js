@@ -12,10 +12,14 @@ export default {
       data: config.data,
       type: this.$route.params.type,
       title: String,
-      settingsContent: 'blabla from API',
       contactObjet: '',
       contactMessage: '',
     };
+  },
+  computed: {
+    settingsContent: function $settingsContent() {
+      return this.$store.state.callUser.configContent;
+    },
   },
   methods: {
     sendMessage: function $sendMessage() {
@@ -29,6 +33,18 @@ export default {
     },
   },
   created: function $created() {
+    // récup infos perso ou cgu
+    switch (this.$route.params.type) {
+      case 'cgu':
+        this.$store.dispatch('getConfigCGU');
+        break;
+      case 'personal-data':
+        break;
+      default:
+        this.$store.dispatch('getConfigCGU');
+        break;
+    }
+
     const vue = Array.from(this.data).find(el => el.type === this.type);
     this.title = vue.title;
     this.desc = vue.desc || false;

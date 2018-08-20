@@ -11,6 +11,11 @@ const GET_USER_PROFILE = function $GET_USER_PROFILE(id) {
   return axios.get(endpoints.get('getUserProfile') + id);
 };
 
+// GET - config CGU
+const GET_USER_CGU = function $GET_USER_PROFILE() {
+  return axios.get(endpoints.get('getConfigCGU'));
+};
+
 // POST - Message to contact admin
 const POST_CONTACT_MESSAGE = function $POST_CONTACT_MESSAGE(data) {
   const opt = {
@@ -26,4 +31,5 @@ export default {
   GET_USER_PROFILE,
   GET_USER_PHOTOS,
   POST_CONTACT_MESSAGE,
+  GET_USER_CGU,
 };
