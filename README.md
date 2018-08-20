@@ -153,7 +153,7 @@ SSL configuration should be loaded by `https` protocol, so use the `devServer` f
 ### EsLint
 
 All code is linted by eslint using modified [Airbnb style guide](https://github.com/airbnb/javascript).
-Every modification is located inside the vue configuration file `.eslintrc.js`. Modifications must be made to follow some of Vue.js libraries rules.
+Every modification is located inside the vue configuration file `.eslintrc.js`. **Modifications must be made to follow some of Vue.js libraries rules**.
 
 ### Units and end2end tests
 
