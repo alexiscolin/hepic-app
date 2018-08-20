@@ -109,8 +109,8 @@ Here, the store is built thanks to VueX store modules.
 
 ### SSL
 
-Some exemple or test may require SSL connexion. `ssl` folder contains mandatories files and key to generate private ssl certificate. This is a flow created by de jaune et de bleu and all other user must replace them by creating a new certificate.
-SSL configuration should be loaded by `https` protocole, so use the `devServer` field in the `vue.config.js` file to activate it.
+Some exemple or test in localhost may require SSL connexion. `ssl` folder contains mandatories files and keys to generate private ssl certificate. This is a flow created by de jaune et de bleu, so other users must replace them by creating a new certificate.
+SSL configuration should be loaded by `https` protocol, so use the `devServer` field in `vue.config.js` file to activate it.
 
 ``` javaScript
  devServer: {
@@ -125,7 +125,7 @@ SSL configuration should be loaded by `https` protocole, so use the `devServer` 
 
 ### EsLint
 
-All code is linted by eslint using modified [air-banb style guide](https://github.com/airbnb/javascript).
+All code is linted by eslint using modified [Airbnb style guide](https://github.com/airbnb/javascript).
 Every modification is located inside the vue configuration file `.eslintrc.js`. Modifications must be made to follow some of Vue.js libraries rules.
 
 ### Units and end2end tests
