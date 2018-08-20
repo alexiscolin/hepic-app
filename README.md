@@ -39,9 +39,9 @@ This project requires some Tools
 * Git (Github Flow -> Netlify CI connection)
 * Slack (deployment notification)
 
-##Usage
+## Usage
 
-###Prerequisites
+### Prerequisites
 
 You need to have the latest/LTS node, yarn and Vue CLI(v3) versions installed in order to use Hepic app under Vue.js.
 
