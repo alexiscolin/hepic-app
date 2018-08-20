@@ -107,8 +107,30 @@ Here, the store is built thanks to VueX store modules.
 
 ## SSL & tests
 
+### SSL
+
+Some exemple or test may require SSL connexion. `ssl` folder contains mandatories files and key to generate private ssl certificate. This is a flow created by de jaune et de bleu and all other user must replace them by creating a new certificate.
+SSL configuration should be loaded by `https` protocole, so use the `devServer` field in the `vue.config.js` file to activate it.
+
+``` javaScript
+ devServer: {
+   https: {
+     key: fs.readFileSync('./ssl/server.key'),
+     cert: fs.readFileSync('./ssl/server.crt'),
+     ca: fs.readFileSync('./ssl/rootCA.pem'),
+   },
+   hot: true,
+ },
+```
+
 ### EsLint
 
+All code is linted by eslint using modified [air-banb style guide](https://github.com/airbnb/javascript).
+Every modification is located inside the vue configuration file `.eslintrc.js`. Modifications must be made to follow some of Vue.js libraries rules.
+
+### Units and end2end tests
+
+Those tests are not configured to be used by de jaune et de bleu. So, you have to edit them in order to use them. Remember that they make a big use of Jest (unit), Puppeteer and Nightwatch (e2e). All preconf files are already loaded and ready to be used.
 
 ## Build Setup
 
