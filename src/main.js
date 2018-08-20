@@ -25,6 +25,8 @@ new Vue({
 
 HelloJs.init({
   facebook: 699411133760678,
+  instagram: '9bd7f761ed5144e5a03f10b7566f8efa',
+  google: '300864522244-ne7ai6o2ufvkbi86co14s96unt706fl9.apps.googleusercontent.com',
 }, {
   redirect_uri: 'authcallback/',
 });
