@@ -86,7 +86,31 @@ Then visit http://localhost:8080/ - or a new browser windows popped-up already -
 
 Hepic app structure is based on vue components system. The entire architecture follow the principle of functional modules. Notation, file name and composition is structured by the Vue.js style guide and the global architecture is proposed by VueCli, <s>following the PWA methods (vue-cli 2 and PWA template)</s> following the PWA plugin. Some of the code has been modified in order to shape the Hepic challenge.
 
+Hepic app is structured around distinct groups over the components, api and store:
+
+- Connexion
+- contests
+- photo
+- user
+- vote
+
+Hepic features and design have created this distinction of methods accross behavior. Those groups follow them and make them easier to maintain and scale.
+You will find this group structure all over the App.
+
 ### API
+
+All apis are located inside the `api` folder. This foldeer contains pure API, ie nothing else than request to [api.hepic.fr](api.hepic.fr). 
+
+```
+|--src                    // Everything in here will be built with Vue.js
+|  |--api                 // API folder - all requests to api.hepic.fr are here
+|  |  |--api.config.js    // API configuration - list of URLs to request
+|  |  |--connexion.js     // Pure API request made for connexion
+|  |  |--contests.js      // Pure API request made for contests
+|  |  |--photo.js         // Pure API request made for connexion
+|  |  |--user.js          // Pure API request made for user
+|  |  |--vote.js          // Pure API request made for vote
+```
 
 ### Components
 
