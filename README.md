@@ -99,7 +99,7 @@ You will find this group structure all over the App.
 
 ### API
 
-All apis are located inside the `api` folder. This foldeer contains pure API, ie nothing else than request to [api.hepic.fr](api.hepic.fr). 
+All apis are located inside the `api` folder. This foldeer contains pure API, ie nothing else than request to [api.hepic.fr](https://api.hepic.fr). 
 
 ```
 |--src                    // Everything in here will be built with Vue.js
