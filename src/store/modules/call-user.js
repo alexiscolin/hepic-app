@@ -44,6 +44,9 @@ const mutations = {
   setUserNotification: (state, notif) => {
     state.userNotification = notif;
   },
+  eraseUserNotification: (state) => {
+    state.userNotification = '';
+  },
 };
 
 // GETTERS
