@@ -55,8 +55,6 @@ This will take some time and will install all packages necessary to run Hepic Ap
 
 Then, look at the **Build Setup** section below in order to get more information about common use of Hepic App accross Vue CLI.
 
-Every tools listed above are managed by customed runtime control `.rc` files and `vue.config.js` file.
-
 ### Build Setup
 
 The Hepic project is served by Yarn package manager.
@@ -127,11 +125,6 @@ Every components is focused on just only one task. A component module always hos
 - `style.less` - design of the component when it requires BEM style (Less) - *Optional*
 - `config.json` - statics data needed by the component - *Optional*
 
-**Among that, the starting point of the app is `main.js` file that initializes the Vue app to the `App.vue` file wich mounts the app inside the `index.html` file (`public` folder).**
-
-``` html
-<div id="app"></div>
-```
 
 #### Architecture
 
