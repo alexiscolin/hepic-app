@@ -55,6 +55,8 @@ This will take some time and will install all packages necessary to run Hepic Ap
 
 Then, look at the **Build Setup** section below in order to get more information about common use of Hepic App accross Vue CLI.
 
+Every tools listed above are managed by customed runtime control `.rc` files and `vue.config.js` file. 
+
 ### Build Setup
 
 The Hepic project is served by Yarn package manager.
