@@ -8,12 +8,16 @@ export default {
   },
   data() {
     return {
-      msg: 'Hello tout le monde !',
       hidden: false,
       yPos: 0,
       userId: JSON.parse(localStorage.getItem('user-data')).profile_id,
       userPicture: JSON.parse(localStorage.getItem('user-data')).picture,
     };
+  },
+  computed: {
+    hasNotification: function $hasNotification() {
+      return this.$store.state.callUser.userNotification !== '' || false;
+    },
   },
   methods: {
     onScroll: throttle(function $throttleOnScroll() {
