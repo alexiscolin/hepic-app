@@ -120,6 +120,8 @@ All apis are located inside the `api` folder. This foldeer contains pure API, ie
 
 ### Utils
 
+This `utils` folder contains some of usefull function that are needed accross the whole App. Those functions are built as Js modules imported by WebPack where they are asked. 
+
 ### Store
 
 The store is configured throught Vuex modules. Modules are not namespaced.
