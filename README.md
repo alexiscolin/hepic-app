@@ -95,11 +95,11 @@ Hepic app is structured around distinct groups over the components, api and stor
 - vote
 
 Hepic features and design have created this distinction of methods accross behavior. Those groups follow them and make them easier to maintain and scale.
-You will find this group structure all over the App.
+Those groups rule the structure all over the App.
 
-### API
+### APIs
 
-All apis are located inside the `api` folder. This foldeer contains pure API, ie nothing else than request to [api.hepic.fr](https://api.hepic.fr). 
+All apis are located inside the `api` folder. This foldeer contains pure API, ie nothing else than request to [api.hepic.fr](https://api.hepic.fr).
 
 ```
 |--src                    // Everything in here will be built with Vue.js
@@ -121,6 +121,23 @@ All apis are located inside the `api` folder. This foldeer contains pure API, ie
 ### Utils
 
 ### Store
+
+The store is configured throught Vuex modules. Modules are not namespaced.
+
+```
+|--src                          // Everything in here will be built with Vue.js
+|  |--store                     // Store folder - all Vuex files (commit, dispatch, state) are here
+|  |  |--index.js               // Store configuration - export differents store modules
+|  |  |--modules                // List of store modules
+|  |  |  |--call-contest.js     // Store related to contests APIs
+|  |  |  |--call-photo.js       // Store related to photo APIs
+|  |  |  |--call-user.js        // Store related to user APIs
+|  |  |  |--call-vote.js        // Store related to vote APIs
+|  |  |  |--connexion.js        // Store related to connexion settings
+|  |  |  |--contest-entry.js    // Store managing contests rules validation
+|  |  |  |--layer-optin.js      // Store managing optin displayed functions
+|  |  |  |--popin.js            // Store managing popin display functions
+```
 
 
 ## Assets management
