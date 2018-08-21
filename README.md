@@ -120,7 +120,7 @@ All apis are located inside the `api` folder. This foldeer contains pure API, ie
 
 ### Utils
 
-This `utils` folder contains some of usefull function that are needed accross the whole App. Those functions are built as Js modules imported by WebPack where they are asked. 
+This `utils` folder contains some of usefull function that are needed accross the whole App. Those functions are built as Js modules imported by WebPack where they are asked.
 
 ### Store
 
@@ -168,6 +168,8 @@ Static folder manage all asset that will not be processed by Webpack and require
 <s>All assets localised in `root` folder will be copied at the root of the `dist` folder. It's a usefull system to manage asset that are required for environement and should avoid be processed by Webpack. It's a modification from VueCLi boilerplate. Hepic may use it for Netlify redir as exemple.</s>
 
 ## Router
+
+Hepic app router is managed by official plugin vue-router. The `router` folder hosts the routing management system. It follows the HTML5 history mode and all the Auth check methods inside navigation guards. 
 
 ## Store
 
