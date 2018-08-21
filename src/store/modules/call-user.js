@@ -12,6 +12,9 @@ const actions = {
     commit('eraseUserProfile');
     apiPromise(api.GET_USER_PROFILE(id), commit, 'setUserProfile');
   },
+  getNotification: ({ commit }) => {
+    apiPromise(api.GET_USER_NOTIFICATION(), commit, 'setUserNotification');
+  },
   getConfigCGU: ({ commit }) => {
     commit('eraseConfigContent');
     apiPromise(api.GET_USER_CGU(), commit, 'setConfigContent');
@@ -39,6 +42,9 @@ const mutations = {
   eraseConfigContent: (state) => {
     state.configContent = '';
   },
+  setUserNotification: (state, notif) => {
+    state.userNotification = notif;
+  },
 };
 
 // GETTERS
@@ -51,6 +57,7 @@ const state = {
   userProfile: null,
   userPhotos: [],
   configContent: '',
+  userNotification: '',
 };
 
 export default {

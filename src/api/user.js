@@ -16,6 +16,22 @@ const GET_USER_CGU = function $GET_USER_PROFILE() {
   return axios.get(endpoints.get('getConfigCGU'));
 };
 
+// GET - notification
+const GET_USER_NOTIFICATION = function $GET_USER_NOTIFICATION() {
+  return axios.get(endpoints.get('getNotification'));
+};
+
+// POST - notification
+const POST_USER_NOTIFICATION = function $POST_USER_NOTIFICATION(data) {
+  const opt = {
+    method: 'post',
+    headers: { 'Content-Type': 'multipart/form-data' },
+    data,
+    url: endpoints.get('postNotification'),
+  };
+  return axios(opt);
+};
+
 // POST - Message to contact admin
 const POST_CONTACT_MESSAGE = function $POST_CONTACT_MESSAGE(data) {
   const opt = {
@@ -31,5 +47,7 @@ export default {
   GET_USER_PROFILE,
   GET_USER_PHOTOS,
   POST_CONTACT_MESSAGE,
+  GET_USER_NOTIFICATION,
+  POST_USER_NOTIFICATION,
   GET_USER_CGU,
 };

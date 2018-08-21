@@ -113,6 +113,7 @@ const router = new Router({
 // effacer popin du store en cas de changement de page
 router.beforeEach((to, from, next) => {
   store.commit('popinHide');
+  store.dispatch('getNotification');
 
   // effacer mention agreement si signé et sortie de page
   // if ((from.name === 'Contest' || from.name === 'Upload') && to.name !== 'Upload') {
