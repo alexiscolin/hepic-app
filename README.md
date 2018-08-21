@@ -84,7 +84,7 @@ Then visit http://localhost:8080/ - or a new browser windows popped-up already -
 
 ## Hepic Structure
 
-main
+Hepic app structure is based on vue components system. The entire architecture follow the principle of functional modules. Notation, file name and composition is structured by the Vue.js style guide and the global architecture is proposed by VueCli, <s>following the PWA methods (vue-cli 2 and PWA template)</s> following the PWA plugin. Some of the code has been modified in order to shape the Hepic challenge.
 
 ### API
 
