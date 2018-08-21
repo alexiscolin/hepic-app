@@ -12,13 +12,12 @@ const actions = {
     commit('eraseUserProfile');
     apiPromise(api.GET_USER_PROFILE(id), commit, 'setUserProfile');
   },
-  getNotification: ({ commit }) => {
-    apiPromise(api.GET_USER_NOTIFICATION(), commit, 'setUserNotification');
-  },
   getConfigCGU: ({ commit }) => {
     commit('eraseConfigContent');
     apiPromise(api.GET_USER_CGU(), commit, 'setConfigContent');
   },
+  getNotification: ({ commit }) => apiPromise(api.GET_USER_NOTIFICATION(), commit, 'setUserNotification'),
+  postNotification: ({ commit }, data) => apiPromise(api.GET_USER_NOTIFICATION(data), commit),
   postContactMessage: ({ commit }, data) => apiPromise(api.POST_CONTACT_MESSAGE(data), commit, 'setUserProfile'),
 };
 
