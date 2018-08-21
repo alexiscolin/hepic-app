@@ -88,7 +88,7 @@ Then visit http://localhost:8080/ - or a new browser windows popped-up already -
 
 Hepic app structure is based on vue components system. The entire architecture follow the principle of functional modules. Notation, file name and composition is structured by the Vue.js style guide and the global architecture is proposed by VueCli, <s>following the PWA methods (vue-cli 2 and PWA template)</s> following the PWA plugin. Some of the code has been modified in order to shape the Hepic challenge.
 
-Hepic app is structured around distinct groups over the components, api and store:
+**Hepic app is structured around distinct groups over the components, api and store:**
 
 - Connexion
 - contests
@@ -119,7 +119,7 @@ All apis are located inside the `api` folder. This foldeer contains pure API, ie
 #### generals
 
 Components are the heart of Hepic app. They are dedicated to be the MVC pattern of the app.
-Every components is focused on just only one task. A component module hosts other sub-components and those files:
+Every components is focused on just only one task. A component module always hosts other sub-components and those files:
 
 - `index.vue` - module bundler - Mandatory
 - `script.js` - logical part of the component (ES6 - Linted) - *Mandatory*
@@ -127,7 +127,7 @@ Every components is focused on just only one task. A component module hosts othe
 - `style.less` - design of the component when it requires BEM style (Less) - *Optional*
 - `config.json` - statics data needed by the component - *Optional*
 
-Among that, the starting point of the app is `main.js` file that initializes the Vue app to the `App.vue` file wich mounts the app inside the `index.html` file (`public` folder).
+**Among that, the starting point of the app is `main.js` file that initializes the Vue app to the `App.vue` file wich mounts the app inside the `index.html` file (`public` folder).**
 
 ``` html
 <div id="app"></div>
@@ -211,6 +211,17 @@ This folder is the basic one that you should use by default for your assets. Web
 
 #### Architecture
 
+```
+|--src                          // Everything in here will be built with Vue.js
+|  |--assets                    // Assets folder - all static assets are here
+|  |  |--fonts                  // List of web fonts
+|  |  |--img                    // List of images
+|  |  |--style                  // List of Less styles
+|  |  |  |--style.less          // General Less modul bundler
+|  |  |  |--utils               // Atomic CSS files and BEM config
+
+```
+
 ### Public folder
 
 Static folder manage all asset that will not be processed by Webpack and require an absolute URL: useful for these situations:
@@ -218,8 +229,6 @@ Static folder manage all asset that will not be processed by Webpack and require
 * You need a file with a specific name in the build output.
 * You have thousands of images and need to dynamically reference their paths.
 * Some library may be incompatible with Webpack and you have no other option but to include it as a `<script>` tag.
-
-#### Architecture
 
 ### Root folder (depreciated)
 
