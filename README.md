@@ -118,6 +118,47 @@ All apis are located inside the `api` folder. This foldeer contains pure API, ie
 
 #### Architecture
 
+```
+|--src                               // Everything in here will be built with Vue.js
+|  |--components                     // Components folder - all components modules are here
+|  |  |--AppLayout                   // List of general components - components shared accross the entire app
+|  |  |  |--AppContestInfos          // Display info about a contest
+|  |  |  |  |--index.vue             // Module heart of the component (find it inside every modules)
+|  |  |  |  |--script.js             // Logical system of the component (find it inside every modules)
+|  |  |  |  |--template.pug          // Template of the component (find it inside every modules)
+|  |  |  |  |--style.less            // Style of the component that are not ruled by atomic CSS -> BEM inside (find it inside many modules)
+|  |  |  |  |--config.json           // JSON data to configure the components (find it inside few modules)
+|  |  |  |--AppSvg                   // SVG sprite
+|  |  |  |--LayerOptin               // Layer validation system
+|  |  |  |--LayerPopin               // Layer popin wrapper
+|  |  |  |--TheFooter                // App footer
+|  |  |  |--TheHeader                // App header
+|  |  |  |  |--SearchBar             // SearchBar for contest (use vue-colcade to interact with the flux component)
+|  |  |  |--TheShell                 // App general shell wrapper
+|  |  |--RouteCallback               // Route used to host the loggin callback
+|  |  |--RouteContest                // Route for contests
+|  |  |  |--AppContestLayout         // Contest information wrapper (banner, logo...)
+|  |  |  |--ContestRulesValidation   // Contest rules apply system
+|  |  |  |--ContestUpload            // Upload file system
+|  |  |--RouteFlux                   // Route for the general flux
+|  |  |  |--TileContest              // Basic contest tile
+|  |  |  |--TilePodium               // Podium tile to display contest winners
+|  |  |--RouteIndex                  // Route for connexion index
+|  |  |  |--IndexInstallBtn          // Installation button
+|  |  |  |--IndexSocialBtn           // Loggin social buttons
+|  |  |--RouteNotFound               // Route for 404
+|  |  |--RoutePhoto                  // Route for photo view (zoom mode)
+|  |  |  |--InfoPopin                // Informations about the photo
+|  |  |--RouteUser                   // Route for specific user account
+|  |  |  |--UserContent              // Display user's pictures
+|  |  |  |--UserNotification         // Display notification
+|  |  |  |--UserProfile              // Display user information (user picture, name...)
+|  |  |  |--UserSettings             // Display private user settings (your own account)
+|  |  |  |--UserSettingsRoutes       // Display routes to user settings
+|  |  |--RouteVote                   // Route for vote
+|  |  |  |--SharePopin               // Sharing system popin
+```
+
 ### Utils
 
 This `utils` folder contains some of usefull function that are needed accross the whole App. Those functions are built as Js modules imported by WebPack where they are asked.
@@ -169,7 +210,7 @@ Static folder manage all asset that will not be processed by Webpack and require
 
 ## Router
 
-Hepic app router is managed by official plugin vue-router. The `router` folder hosts the routing management system. It follows the HTML5 history mode and all the Auth check methods inside navigation guards. 
+Hepic app router is managed by official plugin vue-router. The `router` folder hosts the routing management system. It follows the HTML5 history mode and all the Auth check methods inside navigation guards.
 
 ## Store
 
