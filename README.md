@@ -88,7 +88,7 @@ Hepic app structure is based on vue components system. The entire architecture f
 
 **Hepic app is structured around distinct groups over the components, api and store:**
 
-- Connexion
+- connexion
 - contests
 - photo
 - user
@@ -251,7 +251,6 @@ SSL configuration should be loaded by `https` protocol, so use the `devServer` f
      cert: fs.readFileSync('./ssl/server.crt'),
      ca: fs.readFileSync('./ssl/rootCA.pem'),
    },
-   hot: true,
  },
 ```
 
