@@ -16,6 +16,7 @@ export default {
       vote: this.$store.state.callcontest.photos,
       url: this.$route.fullPath,
       index: null,
+      voted: true,
       idPhoto: null,
       indexMin: 0,
       popinAction: false,
@@ -47,6 +48,7 @@ export default {
     },
     displayImage: function $displayImage() {
       const photo = this.$store.state.callcontest.photos[this.index];
+      this.voted = photo && photo.i_voted; // Trop de requetes, dans l'API contest si 1 vote/contest
       return photo && photo.file; // si marche pas -> passer dans un commit du store
     },
   },
@@ -85,7 +87,6 @@ export default {
   created: function $created() {
     const idContest = this.$route.params.id;
     const contest = this.$store.getters.getContestById(idContest);
-
 
     // recherche en cache si venu depuis le flux
     !contest && this.$store.dispatch('getContest', idContest);
