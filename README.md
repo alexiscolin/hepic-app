@@ -22,26 +22,31 @@ Webpack is setup to use [LESS](http://lesscss.org/) for CSS and [Babel](https://
 #### Frameworks & preprocessors
 This project is written using frameworks and libraries and various preprocessors for HTML, JS and CSS
 
-* VueJS (js ES6 -> VueX / VueRouter / Axios)
-* Axios (RESTfull APIs)
-* Colcade library (grid style)
-* LESS (Atomic CSS - BEM style)
-* PUG/Jade (Web Components OOP)
-* HelloJS (Social Login)
+| Frameworks    | Usage                      |
+| ------------- |:---------------------------|
+| VueJS         | js ES6 -> VueX / VueRouter |
+| Axios         | RESTfull APIs              |
+| Colcade       | grid style                 |
+| LESS          | Atomic CSS - BEM style     |
+| PUG/Jade      | Web Components OOP         |
+| HelloJS       | Social Login               |
+
 
 
 #### Tools
 This project requires some Tools
 
-* Webpack (assets management)
-* Babel (transpiling)
-* EsLint (js correction -> airBnB rules)
-* PostCSS (not directly used here)
-* Puppeteer (Prerender SPA Plugin)
-* Jest (Unit Test)
-* Nightwatch (Automated testing)
-* Git (Github Flow -> Netlify CI connection)
-* Slack (deployment notification)
+| Frameworks    | Usage                                |
+| ------------- |:-------------------------------------|
+| Webpack       | js ES6 -> VueX / VueRouter .         |
+| Babel         | RESTfull APIs                        |
+| EsLint        | grid style                           |
+| PostCSS       | Atomic CSS - BEM style               |
+| Puppeteer     | Web Components OOP                   |
+| Jest          | Social Login                         |
+| Nightwatch    | Social Login                         |
+| Git           | Github Flow -> Netlify CI connection |
+| Slack         | deployment notificatio               |
 
 ## Usage
 
