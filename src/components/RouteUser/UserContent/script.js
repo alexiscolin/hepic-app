@@ -2,6 +2,7 @@ export default {
   name: 'userContent',
   computed: {
     userPhotos: function $userPhotos() {
+      console.log(this.$store.state.callUser.userPhotos);
       return this.$store.state.callUser.userPhotos;
     },
   },
