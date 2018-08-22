@@ -11,8 +11,6 @@ const actions = {
         localStorage.setItem('user-token', token); // rec token
         localStorage.setItem('user-data', JSON.stringify(user)); // rec datas
 
-        console.log(JSON.parse(localStorage.getItem('user-data')));
-
         axios.defaults.headers.common.Authorization = `Token ${token}`;
         commit('authSuccess', token);
 

@@ -14,11 +14,6 @@ const actions = {
   postReport: ({ commit }, data) => apiPromise(api.POST_PHOTO_REPORT(data), commit),
 };
 
-// MUTATIONS
-const mutations = {
-
-};
-
 // STATE
 const state = {
   send: true,
@@ -26,6 +21,5 @@ const state = {
 
 export default {
   state,
-  mutations,
   actions,
 };

@@ -1,5 +1,3 @@
-// import Colcade from 'colcade';
-// import colcade from '@/plugins/vue-colcade';
 import { mapState } from 'vuex';
 import shellApp from '@/components/AppLayout/TheShell';
 import TileContest from './TileContest';

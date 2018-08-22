@@ -118,7 +118,6 @@ router.beforeEach((to, from, next) => {
 });
 router.afterEach((to, from) => {
   const isMyProfileOnUserRoute = to.name === 'User' && parseInt(to.params.user, 10) === parseInt(JSON.parse(localStorage.getItem('user-data')).profile_id, 10);
-  console.log(isMyProfileOnUserRoute);
   const getNotif = function $getNotif() {
     store.dispatch('getNotification').then(() => isMyProfileOnUserRoute && store.dispatch('putNotification'));
   };

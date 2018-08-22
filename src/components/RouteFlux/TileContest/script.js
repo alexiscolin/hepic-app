@@ -9,7 +9,6 @@ export default {
     },
   },
   computed: {
-
     // conv date début
     getStartDate: function $getStartDate() {
       const contestDateStart = new Date(this.data.dateStart);

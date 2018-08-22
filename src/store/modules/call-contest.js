@@ -1,4 +1,3 @@
-// import axios from 'axios';
 import api from '@/api/contests';
 import findBy from '@/utils/find-by';
 import apiPromise from '@/utils/api-promise';
@@ -16,12 +15,10 @@ const actions = {
 // MUTATIONS
 const mutations = {
   setContests: (state, contests) => {
-    // console.log(contests);
     state.all = contests;
     state.contests = contests;
   },
   setContest: (state, contest) => {
-    // console.log(contest);
     state.contest = contest;
   },
   eraseContest: (state) => {
@@ -31,7 +28,6 @@ const mutations = {
     state.photos = photos;
   },
   eraseContestPhotos: (state) => {
-    // effacer selection de photo en vote
     state.photos = [];
   },
   setContestRules: (state, rules) => {

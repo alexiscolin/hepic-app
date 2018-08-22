@@ -3,7 +3,6 @@ const mutations = {
   popinDisplay(state) {
     state.displayed = !state.displayed === true;
   },
-
   popinHide(state) {
     state.displayed = false;
   },

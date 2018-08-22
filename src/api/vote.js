@@ -12,7 +12,7 @@ const POST_PHOTO_VOTE = function $POST_PHOTO_VOTE(data) {
   return axios(opt);
 };
 
-// POST - picture report
+// POST - picture report (JSON -> change pour FORM_DATA)
 const POST_PHOTO_REPORT = function $POST_PHOTO_REPORT(data) {
   const opt = {
     method: 'post',

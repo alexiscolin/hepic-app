@@ -2,20 +2,6 @@ import api from '@/api/connexion';
 
 // ACTION
 const actions = {
-  // POST - picture et data
-  // postPicture({ commit }, data) {
-  //   return new Promise((resolve, reject) => {
-  //     api.postContestPicture(data).then((res) => {
-  //       commit('eraseState');
-  //       resolve(res);
-  //     }, (error) => {
-  //       reject(error);
-  //     });
-  //   });
-  //
-  //   // api.getContestInfo();
-  // },
-
   // GET - infos sur le contest
   getInfos({ commit }, data) {
     return new Promise((resolve, reject) => {
@@ -41,7 +27,6 @@ const mutations = {
   },
 
   eraseAgreement(state) {
-    // effacer agreement après upload par sécurité
     state.contest.agreement = false;
   },
 };
