@@ -111,14 +111,10 @@ const router = new Router({
 });
 
 // effacer popin du store en cas de changement de page
+// récup notification au chargement auth
 router.beforeEach((to, from, next) => {
   store.commit('popinHide');
-  store.dispatch('getNotification');
-
-  // effacer mention agreement si signé et sortie de page
-  // if ((from.name === 'Contest' || from.name === 'Upload') && to.name !== 'Upload') {
-  //   store.commit('eraseAgreement');
-  // }
+  to.name !== 'Index' && setTimeout(() => store.dispatch('getNotification'), 1000);
   next();
 });
 

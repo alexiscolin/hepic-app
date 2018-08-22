@@ -17,8 +17,8 @@ const endpoints = {
   // getConfigData: `${HEPIC_URL}/personnal-data/`,
   // getConfigMl: `${HEPIC_URL}/ml/`,
   postContactMessage: `${HEPIC_URL}/contacts/`,
-  postNotification: `${HEPIC_URL}/notifications/`,
-  getNotification: `${HEPIC_URL}/notifications/`,
+  // postNotification: `${HEPIC_URL}/notifications/`,
+  getNotification: `${HEPIC_URL}/notifications/not_read`,
 };
 
 const endpointsMap = new Map(Object.entries(endpoints));
