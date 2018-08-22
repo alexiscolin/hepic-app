@@ -15,6 +15,7 @@ const actions = {
 
         axios.defaults.headers.common.Authorization = `Token ${token}`;
         commit('authSuccess', token);
+
         resolve(res);
       }, (error) => {
         commit('authError', error);

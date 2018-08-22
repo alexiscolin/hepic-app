@@ -17,7 +17,7 @@ const actions = {
     apiPromise(api.GET_USER_CGU(), commit, 'setConfigContent');
   },
   getNotification: ({ commit }) => apiPromise(api.GET_USER_NOTIFICATION(), commit, 'setUserNotification'),
-  postNotification: ({ commit }, data) => apiPromise(api.GET_USER_NOTIFICATION(data), commit),
+  putNotification: ({ commit }, data) => apiPromise(api.PUT_USER_NOTIFICATION(data), commit),
   postContactMessage: ({ commit }, data) => apiPromise(api.POST_CONTACT_MESSAGE(data), commit, 'setUserProfile'),
 };
 

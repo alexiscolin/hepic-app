@@ -14,11 +14,9 @@ const endpoints = {
   getUserPhotos: `${HEPIC_URL}/photos/by_profile/`,
   getUserProfile: `${HEPIC_URL}/profile/`,
   getConfigCGU: `${HEPIC_URL}/cgu/`,
-  // getConfigData: `${HEPIC_URL}/personnal-data/`,
-  // getConfigMl: `${HEPIC_URL}/ml/`,
   postContactMessage: `${HEPIC_URL}/contacts/`,
-  // postNotification: `${HEPIC_URL}/notifications/`,
   getNotification: `${HEPIC_URL}/notifications/not_read`,
+  putNotification: `${HEPIC_URL}/notifications/mark_as_read`,
 };
 
 const endpointsMap = new Map(Object.entries(endpoints));

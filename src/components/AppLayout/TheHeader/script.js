@@ -16,7 +16,8 @@ export default {
   },
   computed: {
     hasNotification: function $hasNotification() {
-      return this.$store.state.callUser.userNotification !== '' || false;
+      const notif = this.$store.state.callUser.userNotification;
+      return (notif && notif.length > 0) || false;
     },
   },
   methods: {
