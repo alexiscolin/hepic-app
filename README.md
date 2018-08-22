@@ -36,7 +36,7 @@ This project is written using frameworks and libraries and various preprocessors
 #### Tools
 This project requires some Tools
 
-| Frameworks    | Usage                                |
+| Tool          | Usage                                |
 | ------------- |:-------------------------------------|
 | Webpack       | js ES6 -> VueX / VueRouter .         |
 | Babel         | RESTfull APIs                        |
