@@ -53,7 +53,7 @@ export default {
     changeUrl: function $changeUrl(idPhoto) {
       const idContest = this.$route.params.id;
       this.url = `/contest/${idContest}/vote/${idPhoto}`;
-      window.history.replaceState(null, null, this.url);
+      this.$router.replace({ path: this.url });
     },
     nextImg: function $nextImg() {
       this.index = (this.index < this.indexMax) ? this.index + 1 : this.indexMax;
@@ -62,7 +62,6 @@ export default {
     },
     prevImg: function $prevImg() {
       this.index = (this.index > this.indexMin) ? this.index - 1 : this.indexMin;
-          console.log(this.index);
       const idPhoto = this.$store.state.callcontest.photos[this.index].id;
       this.changeUrl(idPhoto);
     },
