@@ -1,7 +1,7 @@
 import axios from 'axios';
 import endpoints from './api.config';
 
-// POST - contest picture
+// POST - vote pour photo
 const POST_PHOTO_VOTE = function $POST_PHOTO_VOTE(data) {
   const opt = {
     method: 'post',
@@ -12,7 +12,7 @@ const POST_PHOTO_VOTE = function $POST_PHOTO_VOTE(data) {
   return axios(opt);
 };
 
-// POST - contest picture
+// POST - picture report
 const POST_PHOTO_REPORT = function $POST_PHOTO_REPORT(data) {
   const opt = {
     method: 'post',

@@ -62,6 +62,7 @@ export default {
     },
     prevImg: function $prevImg() {
       this.index = (this.index > this.indexMin) ? this.index - 1 : this.indexMin;
+          console.log(this.index);
       const idPhoto = this.$store.state.callcontest.photos[this.index].id;
       this.changeUrl(idPhoto);
     },
@@ -88,13 +89,10 @@ export default {
     // recherche en cache si venu depuis le flux
     !contest && this.$store.dispatch('getContest', idContest);
 
-    this.$store.dispatch('getPhotos', idContest).then((res) => {
-      console.log(res.data);
+    this.$store.dispatch('getPhotos', idContest).then(() => {
       // on change url pour avoir l'id photo même si inconnu après GET photos
       const idPhoto = this.getId;
       this.changeUrl(idPhoto);
-      // this.url = `/contest/${idContest}/vote/${idPhoto}`;
-      // window.history.replaceState(null, null, this.url);
     });
   },
   beforeRouteLeave: function $beforeRouteLeave(to, from, next) {

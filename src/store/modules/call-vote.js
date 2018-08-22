@@ -5,7 +5,11 @@ import apiPromise from '@/utils/api-promise';
 const actions = {
   postVote: ({ commit }, id) => {
     console.log(id);
-    return apiPromise(api.POST_PHOTO_VOTE(id), commit, 'setContestPhotos');
+    console.log('OK');
+    const data = {
+      photo: id,
+    };
+    return apiPromise(api.POST_PHOTO_VOTE(data), commit, 'setContestPhotos');
   },
   postReport: ({ commit }, data) => apiPromise(api.POST_PHOTO_REPORT(data), commit),
 };
