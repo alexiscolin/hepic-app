@@ -9,7 +9,7 @@ shell-app
 
     div(v-if="type !== 'contact'").o-setting__content.mt-1.p-1
       div(v-if="$route.params.type === 'personal-data'")
-        div(v-for="(value, key) of settingsContent").pb-1 {{ key }} : {{ value }}
+        div(v-for="(value, key) of settingsContent" :key="value").pb-1 {{ key }} : {{ value }}
       span(v-else).ws-pwrap {{ settingsContent }}
     div(v-else).mt-1
       .p-rel

@@ -1,2 +1,2 @@
 span(v-if="notifications").p-rel.mb-05
-  p(v-for="notif in notifications").mb-1.f-si.f-reg.c-grad-yo {{ notif.message }}
+  p(v-for="notif in notifications" :key="notif.pk").mb-1.f-si.f-reg.c-grad-yo {{ notif.message }}
