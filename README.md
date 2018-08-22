@@ -7,6 +7,10 @@
 
 App available on Netlify (de jaune et de bleu's account)- https://hepic-app.netlify.com/
 
+## Important note
+
+**- THIS REPO IS CREATED, MANAGED, USED BY DJDB AND MUST REMAIN SO. PLEASE, FORK OR DOWNLOAD IT TO PUSH YOUR OWN MONDIFICATIONS -**
+
 ## Informations
 
 This app is created by using [VueJS](https://vuejs.org/) in order to build user interfaces and makes a big use of VueJS dependencies library as [Vue-router](https://router.vuejs.org/) that controls every routing management or [VueX](https://vuex.vuejs.org/) that is a pattern for state management.
