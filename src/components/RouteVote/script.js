@@ -16,6 +16,7 @@ export default {
       vote: this.$store.state.callcontest.photos,
       url: this.$route.fullPath,
       index: null,
+      idPhoto: null,
       indexMin: 0,
       popinAction: false,
     };
@@ -40,7 +41,7 @@ export default {
       const idPhoto = this.$route.params.photo;
       const photo1 = this.$store.state.callcontest.photos[0];
       const photoX = this.$store.getters.getContestPhotoById(idPhoto);
-      this.index = photoX ? this.$store.getters.getContestPhotoIndex(photoX) : 0;
+      // this.index = photoX ? this.$store.getters.getContestPhotoIndex(photoX) : 0;
 
       return idPhoto ? (photoX && parseInt(photoX.id, 10)) : photo1 && parseInt(photo1.id, 10);
     },
@@ -53,7 +54,7 @@ export default {
     changeUrl: function $changeUrl(idPhoto) {
       const idContest = this.$route.params.id;
       this.url = `/contest/${idContest}/vote/${idPhoto}`;
-      this.$router.replace({ path: this.url });
+      window.history.replaceState({}, document.title, this.url);
     },
     nextImg: function $nextImg() {
       this.index = (this.index < this.indexMax) ? this.index + 1 : this.indexMax;
@@ -85,12 +86,17 @@ export default {
     const idContest = this.$route.params.id;
     const contest = this.$store.getters.getContestById(idContest);
 
+
     // recherche en cache si venu depuis le flux
     !contest && this.$store.dispatch('getContest', idContest);
-
     this.$store.dispatch('getPhotos', idContest).then(() => {
       // on change url pour avoir l'id photo même si inconnu après GET photos
       const idPhoto = this.getId;
+
+      // récup de l'index au premier load depuis accès direct
+      const photoX = this.$store.getters.getContestPhotoById(idPhoto);
+      this.index = photoX ? this.$store.getters.getContestPhotoIndex(photoX) : 0;
+
       this.changeUrl(idPhoto);
     });
   },

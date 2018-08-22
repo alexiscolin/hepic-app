@@ -5,7 +5,9 @@ import endpoints from './api.config';
 const POST_PHOTO_VOTE = function $POST_PHOTO_VOTE(data) {
   const opt = {
     method: 'post',
-    headers: { 'Content-Type': 'multipart/form-data' },
+    headers: {
+      'Content-Type': 'application/json',
+    },
     data,
     url: endpoints.get('postPhotoVote'),
   };

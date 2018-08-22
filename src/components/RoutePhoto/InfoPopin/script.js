@@ -8,7 +8,7 @@ export default {
       required: true,
     },
     rank: {
-      type: String,
+      type: Number,
       required: false,
     },
   },
