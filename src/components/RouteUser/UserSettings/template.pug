@@ -8,7 +8,8 @@ shell-app
       span(v-if="desc").d-block.w-100.pt-025.f-center.f-grey.f-light.f-si {{ desc }}
 
     div(v-if="type !== 'contact'").o-setting__content.mt-1.p-1
-      div(v-if="$route.params.type === 'personal-data'")
+      //- WORKAROUND pour récup infos persos
+      div(v-if="$route.params.type === 'personal-data'") 
         div(v-for="(value, key) of settingsContent" :key="value").pb-1 {{ key }} : {{ value }}
       span(v-else).ws-pwrap {{ settingsContent }}
     div(v-else).mt-1
