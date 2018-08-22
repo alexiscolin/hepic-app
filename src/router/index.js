@@ -114,8 +114,10 @@ const router = new Router({
 // récup notification au chargement auth
 router.beforeEach((to, from, next) => {
   store.commit('popinHide');
-  to.name !== 'Index' && setTimeout(() => store.dispatch('getNotification'), 1000);
   next();
+});
+router.afterEach((to, from) => {
+  if (to.name !== 'Index') from.name ? store.dispatch('getNotification') : setTimeout(() => store.dispatch('getNotification'), 1000);
 });
 
 export default router;

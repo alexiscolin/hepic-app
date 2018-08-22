@@ -4,7 +4,6 @@ export default {
   name: 'userNotification',
   computed: {
     notifications: function $notification() {
-      console.log(this.$store.state.callUser.userNotification);
       return this.$store.state.callUser.userNotification || false;
     },
   },
