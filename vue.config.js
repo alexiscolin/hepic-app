@@ -13,7 +13,7 @@ module.exports = {
   // },
 
   pwa: {
-    // appleMobileWebAppCapable: 'no',
+    appleMobileWebAppCapable: 'yes',
     themeColor: '#ec6730',
     msTileColor: '#FFFFFF',
   },
