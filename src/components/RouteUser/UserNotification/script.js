@@ -3,7 +3,8 @@ import createFormData from '@/utils/form-data';
 export default {
   name: 'userNotification',
   computed: {
-    notification: function $notification() {
+    notifications: function $notification() {
+      console.log(this.$store.state.callUser.userNotification);
       return this.$store.state.callUser.userNotification || false;
     },
   },
