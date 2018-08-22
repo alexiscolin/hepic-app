@@ -8,10 +8,12 @@ shell-app
       span(v-if="desc").d-block.w-100.pt-025.f-center.f-grey.f-light.f-si {{ desc }}
 
     div(v-if="type !== 'contact'").o-setting__content.mt-1.p-1
+      
       //- WORKAROUND pour récup infos persos
       div(v-if="$route.params.type === 'personal-data'") 
         div(v-for="(value, key) of settingsContent" :key="value").pb-1 {{ key }} : {{ value }}
       span(v-else).ws-pwrap {{ settingsContent }}
+      
     div(v-else).mt-1
       .p-rel
         span.p-abs.p-vcenter-abs.ml-1.f-si.f-bold.cur-none Objet :
@@ -19,7 +21,3 @@ shell-app
         
       textarea(type="text" v-model="contactMessage" placeholder="Votre message").o-setting__textarea.w-100.brad-4.b-reg.mt-2.p-1.p-1.b-noresize.no-deco
       a(@click="sendMessage").d-block.f-bold.f-stl.pt-05.pb-05.pl-2.pr-2.mt-2.f-center.c-grad-yo.shadbox-light.brad-4.no-link envoyer
-        
-      
-  
-    
