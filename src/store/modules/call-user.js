@@ -16,6 +16,10 @@ const actions = {
     commit('eraseConfigContent');
     apiPromise(api.GET_USER_CGU(), commit, 'setConfigContent');
   },
+  getConfigPersonal: ({ commit }, id) => {
+    commit('eraseConfigContent');
+    apiPromise(api.GET_USER_PROFILE(id), commit, 'setConfigContent');
+  },
   getNotification: ({ commit }) => apiPromise(api.GET_USER_NOTIFICATION(), commit, 'setUserNotification'),
   putNotification: ({ commit }, data) => apiPromise(api.PUT_USER_NOTIFICATION(data), commit),
   postContactMessage: ({ commit }, data) => apiPromise(api.POST_CONTACT_MESSAGE(data), commit, 'setUserProfile'),

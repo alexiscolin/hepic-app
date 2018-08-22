@@ -39,6 +39,7 @@ export default {
         this.$store.dispatch('getConfigCGU');
         break;
       case 'personal-data':
+        this.$store.dispatch('getConfigPersonal', JSON.parse(localStorage.getItem('user-data')).profile_id);
         break;
       default:
         this.$store.dispatch('getConfigCGU');

@@ -8,8 +8,9 @@ shell-app
       span(v-if="desc").d-block.w-100.pt-025.f-center.f-grey.f-light.f-si {{ desc }}
 
     div(v-if="type !== 'contact'").o-setting__content.mt-1.p-1
-      | {{ settingsContent }}
-      
+      div(v-if="$route.params.type === 'personal-data'")
+        div(v-for="(value, key) of settingsContent").pb-1 {{ key }} : {{ value }}
+      span(v-else).ws-pwrap {{ settingsContent }}
     div(v-else).mt-1
       .p-rel
         span.p-abs.p-vcenter-abs.ml-1.f-si.f-bold.cur-none Objet :
