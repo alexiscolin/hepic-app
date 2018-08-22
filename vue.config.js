@@ -3,8 +3,6 @@ const fs = require('fs');
 const PrerenderSpaPlugin = require('prerender-spa-plugin');
 
 module.exports = {
-  // assetsDir: '/',
-  //
   // devServer: {
   //   https: {
   //     key: fs.readFileSync('./ssl/server.key'),
@@ -13,11 +11,13 @@ module.exports = {
   //   },
   //   hot: true,
   // },
+
   pwa: {
     // appleMobileWebAppCapable: 'no',
     themeColor: '#ec6730',
     msTileColor: '#FFFFFF',
   },
+
   baseUrl: process.env.NODE_ENV === 'production' ? 'https://hepic-app.netlify.com/' : '/',
 
   css: {
@@ -30,12 +30,10 @@ module.exports = {
         '@@': path.resolve('src/assets/style'),
       }
     },
-
     plugins: [
       new PrerenderSpaPlugin({
         staticDir: path.join(__dirname, 'dist'),  // Required - le chemin de création du prérendu.
         routes: [ '/' ], // Required - Routes vers le rendu.
-
       })
     ]
   }
