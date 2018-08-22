@@ -85,9 +85,7 @@ Then visit http://localhost:8080/ - or a new browser windows popped-up already -
 As explained above, you have to **run the build command to create the dist folder** that you will be able to host on a dedicated server: `yarn run build`
 As the Hepic app is a SPA, don't forget to create proper redirection rules on the server.
 
-> Note that a prerender tool (Puppeteer plugin) is used to generate static page for SEO - *index.html in our case*.
-
-``` bash
+```
 # APACHE (HTTP)
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -103,6 +101,8 @@ location / {
   try_files $uri $uri/ /index.html;
 }
 ```
+
+> Note that a prerender tool (Puppeteer plugin) is used to generate static page for SEO - *index.html in our case*.
 
 ## Hepic Structure
 
