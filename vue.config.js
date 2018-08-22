@@ -13,7 +13,7 @@ module.exports = {
   // },
 
   pwa: {
-    appleMobileWebAppCapable: 'yes',
+    // appleMobileWebAppCapable: 'no', // pour splashscreen quand bug ios sera résolu PWA
     themeColor: '#ec6730',
     msTileColor: '#FFFFFF',
   },
