@@ -30,7 +30,7 @@ module.exports = {
         },
         {
           urlPattern: /^https:\/\/cdn\.hepic\.fr\//,
-          handler: 'cacheFirst',
+          handler: 'staleWhileRevalidate',
         },
         {
           urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
