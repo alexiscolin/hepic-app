@@ -21,16 +21,15 @@ module.exports = {
         {
           urlPattern: /^https:\/\/(?:cdn|api)\.hepic\.fr\//,
           handler: 'cacheFirst',
-          options: {
-            expiration: {
-              maxEntries: 10,
-              maxAgeSeconds: 120,
-            },
-          },
         },
         {
-          urlPattern: /^https:\/\/cdn\.hepic\.fr\//,
-          handler: 'staleWhileRevalidate',
+          urlPattern: 'https://cdn.hepic.fr/.*',
+          handler: 'cacheFirst',
+          options: {
+            cacheableResponse: {
+              statuses: [0, 200],
+            }
+          }
         },
         {
           urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
