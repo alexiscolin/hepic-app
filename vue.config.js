@@ -13,9 +13,9 @@ module.exports = {
   // },
 
   pwa: {
-    // appleMobileWebAppCapable: 'no', // pour splashscreen quand bug ios sera résolu PWA
     themeColor: '#ec6730',
     msTileColor: '#FFFFFF',
+    name: 'Hepic'
   },
 
   baseUrl: process.env.NODE_ENV === 'production' ? 'https://hepic-app.netlify.com/' : '/',
