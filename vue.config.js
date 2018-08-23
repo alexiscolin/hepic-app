@@ -23,7 +23,7 @@ module.exports = {
           handler: 'cacheFirst'
         },
         {
-          urlPattern: new RegExp('^https:\/\/cdn.hepic.fr\/(.*)'),
+          urlPattern: /^https:\/\/cdn.hepic.fr\//,
           handler: 'cacheFirst',
         },
         {
