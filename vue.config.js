@@ -20,11 +20,21 @@ module.exports = {
       runtimeCaching: [
         {
           urlPattern: /^https:\/\/(?:cdn|api)\.hepic\.fr\//,
-          handler: 'cacheFirst'
+          handler: 'cacheFirst',
+          options: {
+            expiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 120,
+            },
+          },
         },
         {
           urlPattern: /^https:\/\/cdn\.hepic\.fr\//,
+<<<<<<< HEAD
           handler: 'cacheFirst',
+=======
+          handler: 'staleWhileRevalidate',
+>>>>>>> de4bff5c8c277827359b52a46916dd160e50586f
         },
         {
           urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
