@@ -23,8 +23,13 @@ module.exports = {
           handler: 'cacheFirst',
         },
         {
-          urlPattern: /^https:\/\/cdn\.hepic\.fr\//,
+          urlPattern: 'https://cdn.hepic.fr/.*',
           handler: 'staleWhileRevalidate',
+          options: {
+            cacheableResponse: {
+              statuses: [0, 200],
+            }
+          }
         },
         {
           urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
@@ -37,6 +42,7 @@ module.exports = {
           },
         },
       ],
+      skipWaiting: true,
       navigateFallback: '/index.html',
     },
   },
