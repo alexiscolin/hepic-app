@@ -23,6 +23,10 @@ module.exports = {
           handler: 'cacheFirst'
         },
         {
+          urlPattern: new RegExp('^https:\/\/cdn.hepic.fr\/(.*)'),
+          handler: 'cacheFirst',
+        },
+        {
           urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
           handler: 'cacheFirst',
           options: {
