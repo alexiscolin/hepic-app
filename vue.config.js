@@ -24,7 +24,7 @@ module.exports = {
         },
         {
           urlPattern: 'https://cdn.hepic.fr/.*',
-          handler: 'cacheFirst',
+          handler: 'staleWhileRevalidate',
           options: {
             cacheableResponse: {
               statuses: [0, 200],
@@ -42,6 +42,7 @@ module.exports = {
           },
         },
       ],
+      skipWaiting: true,
       navigateFallback: '/index.html',
     },
   },
