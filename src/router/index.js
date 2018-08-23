@@ -119,7 +119,7 @@ router.beforeEach((to, from, next) => {
 router.afterEach((to, from) => {
   const isMyProfileOnUserRoute = to.name === 'User' && parseInt(to.params.user, 10) === parseInt(JSON.parse(localStorage.getItem('user-data')).profile_id, 10);
   const getNotif = function $getNotif() {
-    store.dispatch('getNotification').then(() => isMyProfileOnUserRoute && store.dispatch('putNotification'));
+    store.dispatch('getNotification').then(res => isMyProfileOnUserRoute && res.data.length > 1 && store.dispatch('putNotification'));
   };
 
   if (to.name !== 'Index') from.name ? getNotif() : setTimeout(() => getNotif(), 1000);
