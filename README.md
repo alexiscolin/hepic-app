@@ -38,15 +38,16 @@ This project requires some Tools
 
 | Tool          | Usage                                |
 | ------------- |:-------------------------------------|
-| Webpack       | js ES6 -> VueX / VueRouter .         |
+| Webpack       | js ES6 -> VueX / VueRouter           |
 | Babel         | RESTfull APIs                        |
 | EsLint        | grid style                           |
 | PostCSS       | Atomic CSS - BEM style               |
 | Puppeteer     | Web Components OOP                   |
+| Workbox       | Progressive Web App                  |
 | Jest          | Social Login                         |
 | Nightwatch    | Social Login                         |
 | Git           | Github Flow -> Netlify CI connection |
-| Slack         | deployment notificatio               |
+| Slack         | deployment notification              |
 
 ## Usage
 
@@ -267,6 +268,10 @@ Hepic app router is managed by official plugin vue-router. The `router` folder h
 Hepic app store management is made by following one rule: **all that need to be share between two components (excepts for direct linking from a child) needs to be coded inside the store**. This allows us to ensure the constent reliability on data across all components and let us create a two way binding simulation.
 
 Here, the store is built thanks to VueX store modules.
+
+## Progressive Web App (PWA)
+
+Hepic is a Progressive Web App. That means it's a website with an application behaviour. You can download it and consulting it off-line. Hepic app gets an icon, a splashscreen, a shortname, a standalone mode, and a colorset. This works thanks to a combinaison of the `manifest.json` and the `service-worker.js` files. You can modify them accross [Workbox](https://developers.google.com/web/tools/workbox/) plugin. **A config function is available in the `vue.config.js`**.
 
 ## SSL & tests
 
