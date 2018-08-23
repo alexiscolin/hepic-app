@@ -16,9 +16,6 @@ const actions = {
 const mutations = {
   setContests: (state, contests) => {
     state.all = contests;
-    var img = new Image(1,1); // width, height values are optional params
-    img.src = 'https://cdn.hepic.fr/ban/ba181941-54d5-4deb-aa56-1a923416a75c.jpeg';
-
     state.contests = contests;
   },
   setContest: (state, contest) => {
