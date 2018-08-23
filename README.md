@@ -92,7 +92,13 @@ yarn run test:e2e
 
 Then visit http://localhost:8080/ - or a new browser windows popped-up already - to preview your new App. Webpack will automatically reload the CSS or refresh the whole page, when stylesheets or content changes.
 
-As explained above, you have to **run the build command to create the dist folder** that you will be able to host on a dedicated server: `yarn run build`
+As explained above, you have to **run the build command to create the dist folder** that you will be able to host on a dedicated server:
+
+``` bash
+# build for production
+yarn run build
+```
+
 As the Hepic app is a SPA, don't forget to create proper redirection rules on the server.
 
 ```
