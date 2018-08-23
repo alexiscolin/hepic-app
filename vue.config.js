@@ -22,6 +22,10 @@ module.exports = {
           urlPattern: /^https:\/\/api\.hepic\.fr\//,
           handler: 'cacheFirst'
         },
+        {
+          urlPattern: /^https:\/\/cdn\.hepic\.fr\//,
+          handler: 'cacheFirst'
+        },
       ]
     },
   },
