@@ -15,7 +15,15 @@ module.exports = {
   pwa: {
     themeColor: '#ec6730',
     msTileColor: '#FFFFFF',
-    name: 'Hepic'
+    name: 'Hepic',
+    workboxOptions: {
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/api\.hepic\.fr\//,
+          handler: 'cacheFirst'
+        },
+      ]
+    },
   },
 
   baseUrl: process.env.NODE_ENV === 'production' ? 'https://hepic-app.netlify.com/' : '/',
