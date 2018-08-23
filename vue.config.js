@@ -26,10 +26,7 @@ module.exports = {
           urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
           handler: 'cacheFirst',
           options: {
-            // Use a custom cache name.
             cacheName: 'images',
-
-            // Only cache 10 images.
             expiration: {
               maxEntries: 60,
             },
