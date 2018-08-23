@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import createPersistedState from 'vuex-persistedstate';
 import connexion from './modules/connexion';
 import popin from './modules/popin';
 import layerOptin from './modules/layer-optin';
@@ -23,5 +22,4 @@ export default new Vuex.Store({
     callcontest,
     contestEntry,
   },
-  plugins: [createPersistedState()],
 });
