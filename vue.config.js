@@ -19,7 +19,7 @@ module.exports = {
     workboxOptions: {
       runtimeCaching: [
         {
-          urlPattern: /^https:\/\/api\.hepic\.fr\//,
+          urlPattern: /^https:\/\/(api|cdn)\.hepic\.fr\//,
           handler: 'cacheFirst'
         },
         {
