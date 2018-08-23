@@ -23,8 +23,8 @@ module.exports = {
           handler: 'cacheFirst'
         },
         {
-          urlPattern: urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-          handler: 'cacheFirst'
+          urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+          handler: 'cacheFirst',
           options: {
             // Use a custom cache name.
             cacheName: 'images',
