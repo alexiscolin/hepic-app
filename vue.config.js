@@ -21,12 +21,6 @@ module.exports = {
         {
           urlPattern: /^https:\/\/(?:cdn|api)\.hepic\.fr\//,
           handler: 'cacheFirst',
-          options: {
-            expiration: {
-              maxEntries: 10,
-              maxAgeSeconds: 120,
-            },
-          },
         },
         {
           urlPattern: /^https:\/\/cdn\.hepic\.fr\//,
