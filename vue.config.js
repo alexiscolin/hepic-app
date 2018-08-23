@@ -16,6 +16,7 @@ module.exports = {
     themeColor: '#ec6730',
     msTileColor: '#FFFFFF',
     name: 'Hepic',
+    navigateFallback: '/index.html',
     workboxOptions: {
       runtimeCaching: [
         {
