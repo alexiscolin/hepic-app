@@ -38,14 +38,14 @@ This project requires some Tools
 
 | Tool          | Usage                                |
 | ------------- |:-------------------------------------|
-| Webpack       | js ES6 -> VueX / VueRouter           |
-| Babel         | RESTfull APIs                        |
-| EsLint        | grid style                           |
-| PostCSS       | Atomic CSS - BEM style               |
-| Puppeteer     | Web Components OOP                   |
+| Webpack       | assets management                    |
+| Babel         | transpiling                          |
+| EsLint        | js correction -> airBnB rules        |
+| PostCSS       | LESS pipelining                      |
+| Puppeteer     | Prerender SPA Plugin                 |
 | Workbox       | Progressive Web App                  |
-| Jest          | Social Login                         |
-| Nightwatch    | Social Login                         |
+| Jest          | Unit Test                            |
+| Nightwatch    | Automated testing                    |
 | Git           | Github Flow -> Netlify CI connection |
 | Slack         | deployment notification              |
 
