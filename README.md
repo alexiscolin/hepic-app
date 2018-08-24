@@ -1,4 +1,4 @@
-<p align="center"><img src="http://files.de-jaune-et-de-bleu.com/img/github/hepic.png" width="50%"></p>
+<p align="center"><img src="http://files.de-jaune-et-de-bleu.com/img/github/hepic/hepic.png" width="50%"></p>
 <p>&nbsp;</p>
 
 # 🥇 Hepic App
@@ -278,6 +278,9 @@ Here, the store is built thanks to VueX store modules.
 ## Progressive Web App (PWA)
 
 Hepic is a Progressive Web App. That means it's a website with an application behaviour. You can download it and consulting it off-line. Hepic app gets an icon, a splashscreen, a shortname, a standalone mode, and a colorset. This works thanks to a combinaison of the `manifest.json` and the `service-worker.js` files. You can modify them accross [Workbox](https://developers.google.com/web/tools/workbox/) plugin. **A config function is available in the `vue.config.js`**.
+
+<p align="center"><img src="http://files.de-jaune-et-de-bleu.com/img/github/hepic/pwa-audit-hepic.png" width="100%"></p>
+
 
 ## SSL & tests
 
