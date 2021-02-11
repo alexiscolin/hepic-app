@@ -5,7 +5,7 @@
 
 > Hepic app is made with ♡ by de jaune et de bleu
 
-App available on Netlify (de jaune et de bleu's account)- https://hepic-app.netlify.com/
+App available on Netlify - https://hepic-app.netlify.com/
 
 ## Important note
 
@@ -289,7 +289,7 @@ Hepic is a Progressive Web App. That means it's a website with an application be
 ## SSL & tests
 
 ### SSL
-
+_Security issue : Keys are no longer available since they are expired_
 Some exemple or test in localhost may require SSL connexion. `ssl` folder contains mandatories files and keys to generate private ssl certificate. This is a flow created by de jaune et de bleu, so other users must replace them by creating a new certificate.
 SSL configuration should be loaded by `https` protocol, so use the `devServer` field in `vue.config.js` file to activate it.
 
