@@ -1,4 +1,4 @@
-<p align="center"><img src="httpx://files.jaunebleu.co/img/github/hepic/hepic.png" width="50%"></p>
+<p align="center"><img src="https://files.jaunebleu.co/img/github/hepic/hepic.png" width="50%"></p>
 <p>&nbsp;</p>
 
 # 🥇 Hepic App
